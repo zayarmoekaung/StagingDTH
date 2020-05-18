@@ -1,0 +1,31 @@
+<div class="section">
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
+          <h6>Address</h6>
+          <ul class="list-unstyled">
+            <li class="font-secondary text-dark">{{.Site.Params.address | markdownify }}</li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
+          <h6>Contact Info</h6>
+          <ul class="list-unstyled">
+            <li class="font-secondary text-dark">Tel : {{ .Site.Params.mobile | markdownify }}</li>
+            <li class="font-secondary text-dark">Email : {{ .Site.Params.email | markdownify }}</li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
+          <h6>Follow</h6>
+          <ul class="list-inline d-inline-block">
+            {{ range .Site.Params.social }}
+            <li class="list-inline-item"><a href="{{ .URL }}" class="text-dark"><i class="{{ .icon }}"></i></a></li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center pb-3">
+   
+  </div>
