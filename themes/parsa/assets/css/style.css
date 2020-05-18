@@ -24,10 +24,10 @@ VERSION:	0.0.1
   }
 
 .crop{
-  object-fit: scale-down;
+  object-fit: cover;
 
-  width: 34px;
-  height: 34px;
+  width: 300px;
+  height: 300px;
 }
 
 .bgw{

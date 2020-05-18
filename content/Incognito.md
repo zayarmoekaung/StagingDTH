@@ -9,8 +9,10 @@ tags:
   - "Security"
 image: "/images/Launch-Chrome-Incognito-Mode-Featured_4d470f76dc99e18ad75087b1b8410ea9.png"
 ---
-Incognito ဆိုသည်မှာ Chrome တွင်ပါရှိသော private mode တစ်ခုဖြစ်ပါသည်။ Incognito mode အားအသုံးပြုပါက browsing server မှလွဲ၍ မိမိအသုံးပြုခဲ့သောdata များအား မိမိတစ်ယောက်မှလွဲ၍ မည်သူတစ်ဦးတစ်ယောက်မှမသိရှိနိုင်ပါ။
+Incognito ဆိုသည်မှာ Chrome တွင်ပါရှိသော private mode တစ်ခုဖြစ်ပါသည်။ Incognito mode အားအသုံးပြုပါက
 <!--more-->
+ browsing server မှလွဲ၍ မိမိအသုံးပြုခဲ့သောdata များအား မိမိတစ်ယောက်မှလွဲ၍ မည်သူတစ်ဦးတစ်ယောက်မှမသိရှိနိုင်ပါ။
+
 Chrome၏ Incognito mode ကိုအသုံးပြုပါက မိမိ browsingပြုလုပ်ခဲ့သော အချက်အလက်များ၊ cookies နှင့် site အချက်အလက်များ၊ ဖောင်ဖြည့်သွင်းခဲ့သော အချက်အလက်များကို chrome မှ သိမ်းဆည်းထားမည်မဟုတ်ပါ။ သို့သော် မိမိဝင်ရောက်ခဲ့သော website ၏ serverများ၊ ကျောင်း သို့မဟုတ် အဖွဲ့အစည်း၏ထိန်းချုပ်မှုအောက်တွင်ရှိပါက မိမိ dataများအား မကာကွယ်နိုင်ပါ။
 
 {{< title title="Incognito mode အားအသုံးပြုခြင်း">}}

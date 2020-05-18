@@ -2,6 +2,7 @@ baseURL = "/"
 languageCode = "en-us"
 title = "Digital Tea House"
 theme = "parsa"
+summaryLength = "10"
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]
@@ -44,7 +45,7 @@ logo = "/DTHLOGO.PNG"
 
 home = "Home"
 layout = "1"
-summaryLength = "2"
+
 
 [[menu.main]]
 name = "ဒစ်ဂျစ်တယ်ဖတ်စရာများ"
