@@ -55,10 +55,11 @@ URL = "articles"
 [[menu.main]]
 name = "သင်ထောက်ကူများစုစည်းမှု"
 weight = 2
-
+URL = "materials"
 [[menu.main]]
 name = "ဒစ်ဂျစ်တယ်ရေဒီယို"
 weight = 3
+URL = "radio"
 
 [[menu.main]]
 name = "လဖက်ရည်ဆိုင်အကြောင်း"

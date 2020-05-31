@@ -1,0 +1,229 @@
+{{ define "main" }}
+<style type="text/css">
+	.tban{
+position: absolute;
+width: 1000px;
+height: 228px;
+left: 220px;
+top: 225px;
+background: #FFFFFF;
+/* Text Grey */
+
+border: 1px solid #8E8E8E;
+box-sizing: border-box;
+	}
+.banner{
+	position: absolute;
+width: 1000px;
+height: 75px;
+left: 220px;
+top: 225px;
+
+/* orange */
+
+background: #F57000;
+}	
+.mtitle{
+	position: absolute;
+width: 352px;
+height: 41px;
+left: 50px;
+top: 10px;
+
+/* Section Heading */
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 41px;
+display: flex;
+align-items: flex-end;
+text-align: center;
+
+/* f57000 */
+
+color: #FFFFFF
+}
+.mdis{
+	position: absolute;
+width: 585px;
+height: 50px;
+left: 35px;
+top: 105px;
+
+/* Body Text */
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 25px;
+/* or 156% */
+
+display: flex;
+align-items: flex-end;
+
+/* text black */
+
+color: #2E2E2E;
+}
+.mart{
+	position: absolute;
+width: 600px;
+height: 1317px;
+left: 220px;
+top: 522px;
+
+/* Grey */
+
+background: #F2F2F2;
+}
+.marttitle{
+position: absolute;
+width: 234px;
+height: 41px;
+left: 50px;
+top: 22px;
+
+/* Section Heading */
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 41px;
+display: flex;
+align-items: flex-end;
+text-align: center;
+
+/* text black */
+
+color: #2E2E2E;
+}
+.martdate{
+	position: absolute;
+width: 70px;
+height: 28px;
+left: 50px;
+top: 60px;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 28px;
+/* identical to box height */
+
+
+color: #000000
+}
+.fbbox{
+position: absolute;
+width: 570px;
+height: 1124px;
+left: 5px;
+top: 100px;
+
+}
+.mbox{
+position: absolute;
+width: 560px;
+height: 179px;
+left: 5px;
+
+background: #FFFFFF;
+}
+.mboxt{
+	position: absolute;
+left: 2.63%;
+right: 52.81%;
+top: 8.38%;
+bottom: 71.51%;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+line-height: 36px;
+
+/* Text Black */
+
+color: #2E2E2E;
+
+}
+.mboxdis{
+	position: absolute;
+left: 2.63%;
+right: 33.33%;
+top: 28.49%;
+bottom: 29.61%;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 25px;
+/* or 156% */
+
+
+/* Text Black */
+
+color: #2E2E2E;
+}
+.mboxdate{
+position: absolute;
+left: 2.63%;
+right: 84.21%;
+top: 78.77%;
+bottom: 8.94%;
+width: 200px;
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 22px;
+/* identical to box height, or 157% */
+
+
+color: #9C9C9C;
+
+}
+.mboximg{
+	position: absolute;
+left: 69.3%;
+right: 2.63%;
+top: 8.38%;
+bottom: 2.23%;
+
+}
+</style>
+
+<div class="tban">
+<p class="mdis">ဒီစာအုပ်ဆိုင်အကြောင်းရှင်းပြဖို့စာသားဖြစ်,ဒီစာအုပ်ဆိုင်အကြောင်းရှင်းပြဖို့စာသားဖြစ်ပါတယဒီစာအုပ်ဆိုင်အ ကြောင်းရှင်းပြဖို့စာသားဖြစ်ပါတယ်</p>	
+</div>
+<div class="banner">
+	<label class="mtitle">သင်ထောက်ကူများစုစည်းမှု</label>
+</div>
+{{- partial "subscribe.html" . -}}
+<div class="mart">
+	<label class="marttitle">ဆောင်းပါးများ</label>
+	<label class="martdate">June 2020</label>
+	<div class="fbbox">
+		<div class="mbox" style="top: 46px;">
+			<label class="mboxt">အပိုင်း1-ဒီမှာခေါင်းစဉ် ထည့်ပါ</label>
+			<p class="mboxdis">ဒီလူ ဟာ အပြင်မှာလည်း ရုပ်ချော သဘောကောင်း ကူညီတတ် တဲ့ လူကြီးလူကောင်း ဖြစ်သလို</p>
+			<label class="mboxdate">Jun 29, 2020</label>
+			<img class="mboximg" src="/dlu.png">
+		</div>
+		<div class="mbox" style="top: 286px;">
+			<label class="mboxt">အပိုင်း1-ဒီမှာခေါင်းစဉ် ထည့်ပါ</label>
+			<p class="mboxdis">ဒီလူ ဟာ အပြင်မှာလည်း ရုပ်ချော သဘောကောင်း ကူညီတတ် တဲ့ လူကြီးလူကောင်း ဖြစ်သလို</p>
+			<label class="mboxdate">Jun 29, 2020</label>
+			<img class="mboximg" src="/dlu.png">
+		</div>
+		
+	</div>
+</div>
+
+{{end}}

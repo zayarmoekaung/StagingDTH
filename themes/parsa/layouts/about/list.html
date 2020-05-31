@@ -58,6 +58,60 @@ letter-spacing: 0.01em;
 color: #000000;
 
  }
+.conbar{
+  position: absolute;
+width: 1439px;
+height: 108px;
+left: 25px;
+top: 2768px;
+
+background: #F57000;
+}
+.contxt{
+  position: absolute;
+width: 251px;
+height: 48px;
+left: 250px;
+top: 2798px;
+
+/* text/heading */
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 28px;
+line-height: 48px;
+
+color: #FFFFFF;
+}
+.coninfo{
+  position: absolute;
+width: 272px;
+height: 200px;
+left: 376px;
+top: 2976px;
+
+
+}
+.iftxt{
+    font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 28px;
+/* or 175% */
+
+letter-spacing: 0.01em;
+
+color: #000000;
+  position: absolute;
+width: 272px;
+height: 86px;
+left: 136px;
+}
+ 
+ 
+
 </style>
 <section class="abbg">
  <div class="bgrd">
@@ -72,5 +126,35 @@ color: #000000;
 </section>
 
 {{partial "subscribe.html" . }}
+
+<div class="abso">
+  
+  <label class="sot">ဆိုင်ရှင်တို့</label>
+</div>
+<img class="owimg" src="/owner.png">
+<div class="writer" style="top: 1593px;">
+  <img class="wimg" src="/writer.png">
+  <label class="wname">Hnin Thet Wai</label>
+  <label class="wdis">အလုပ်အကိုင် က တော့ IOS Developer, ဝါသနာ ကတော့ခရီးထွက်တာ.</label>
+</div>
+<div class="writer" style="top: 1968px;">
+  <img class="wimg" src="/writer.png">
+  <label class="wname">Hnin Thet Wai</label>
+  <label class="wdis">အလုပ်အကိုင် က တော့ IOS Developer, ဝါသနာ ကတော့ခရီးထွက်တာ.</label>
+</div>
+<div class="writer" style="top: 2343px;">
+  <img class="wimg" src="/writer.png">
+  <label class="wname">Hnin Thet Wai</label>
+  <label class="wdis">အလုပ်အကိုင် က တော့ IOS Developer, ဝါသနာ ကတော့ခရီးထွက်တာ.</label>
+</div>
+<div class="conbar"></div>
+<label class="contxt">ဆက်သွယ်ရန်</label>
+<div class="coninfo">
+   <p class="iftxt" style="top: 0px;"> Innwa Residence, Innwa Street, South Oakkalar Pa Township, Yangon, Myanmar.</p>
+    <p class="iftxt" style="top: 96px;"> +95 (09) 453 336 777</p>
+     <p class="iftxt" style="top: 132px;"> info@digitalteashop.org</p>  
+
+</div>
+
 
 {{ end }}

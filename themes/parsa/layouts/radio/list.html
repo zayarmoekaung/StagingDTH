@@ -1,0 +1,425 @@
+{{ define "main" }}
+<style type="text/css">
+.bgr{
+	position: absolute;
+width: 1001px;
+height: 357px;
+left: 220px;
+top: 225px; 
+background: #FFFFFF;
+/* Text Grey */
+
+border: 1px solid #8E8E8E;
+box-sizing: border-box;
+}
+.banner{
+position: absolute;
+width: 1001px;
+height: 101px;
+
+
+/* orange */
+
+background: #F57000;
+}	
+.txt{
+	font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 41px;
+display: flex;
+align-items: flex-end;
+text-align: center;
+color: #FFFFFF;
+}
+.rtitle{
+position: absolute;
+width: 181px;
+height: 41px;
+left: 50px;
+top: 20px;
+}
+.himg{
+	position: absolute;
+width: 392px;
+height: 262px;
+left: 554px;
+top: 67px;
+}
+.dis{
+position: absolute;
+width: 940px;
+height: 140px;
+left: 50px;
+top: 154px;
+
+/* text/body */
+
+
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 28px;
+/* or 175% */
+
+letter-spacing: 0.01em;
+
+/* Text Black */
+
+color: #2E2E2E;
+}
+.pod{
+	position: absolute;
+width: 107px;
+height: 39px;
+
+top: 300px;
+cursor: pointer;
+}
+.castlist{
+	position: absolute;
+width: 600px;
+height: 1576px;
+left: 220px;
+top: 682px; 
+background: #F2F2F2;
+}
+.casttitle{
+	position: absolute;
+width: 149px;
+height: 41.03px;
+left: 
+43px;
+top: 10px;
+
+/* Section Heading */
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 41px;
+/* identical to box height */
+
+display: flex;
+align-items: flex-end;
+text-align: center;
+
+/* text black */
+
+color: #2E2E2E;
+}
+.podbox{
+	position: absolute;
+width: 570px;
+height: 271px;
+left: 10px;
+top: 83px;
+background: #FFFFFF;
+}
+.date{
+	position: absolute;
+left: 2.63%;
+right: 84.91%;
+top: 5.54%;
+bottom: 86.72%;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 21px;
+/* identical to box height */
+
+display: flex;
+align-items: flex-end;
+text-align: center;
+
+color: #797979;
+}
+.eptitle{
+position: absolute;
+left: 2.63%;
+right: 2.63%;
+top: 13.28%;
+bottom: 75.28%;
+
+
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 31px;
+/* identical to box height */
+
+display: flex;
+align-items: flex-end;
+
+color: #2E2E2E;
+
+}
+.epdis{
+	position: absolute;
+left: 2.63%;
+right: 2.63%;
+top: 25.09%;
+bottom: 43.54%;
+
+/* text/body */
+
+
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 28px;
+/* or 175% */
+
+letter-spacing: 0.01em;
+
+color: #2E2E2E;
+}
+.player{
+
+position: absolute;
+left: 2.63%;
+right: 43.51%;
+top: 60.15%;
+bottom: 5.54%;
+width: 540px;
+/* Shadow */
+
+box-shadow: 0px 3px 10px rgba(150, 150, 150, 0.26);
+background: #FFFFFF;
+}
+.pimg{
+	position: absolute;
+left: 2.81%;
+right: 72.19%;
+top: 10%;
+bottom: 10%;
+}
+.pname{
+	position: absolute;
+left: 29.38%;
+right: 35.45%;
+top: 7.85%;
+bottom: 73.87%;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 10px;
+line-height: 17px;
+display: flex;
+align-items: flex-end;
+
+color: #000000;
+}
+.pdis{
+position: absolute;
+left: 29.32%;
+right: -38.76%;
+top: 40.81%;
+bottom: 30.61%;
+
+
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 21px;
+/* identical to box height */
+
+display: flex;
+align-items: flex-end;
+
+color: #2E2E2E;
+}
+.play{
+position: absolute;
+left: 29.38%;
+right: 59.37%;
+top: 55%;
+bottom: 13%;
+width: 35px;
+height: 35px;
+cursor: pointer;
+/* orange */
+
+
+}
+.time{
+	font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 21px;
+/* identical to box height */
+
+display: flex;
+align-items: flex-end;
+
+color: #000000;
+}
+.current{
+	position: absolute;
+left: 43.44%;
+right: 49.72%;
+top: 70.85%;
+bottom: 31.57%;
+}
+.dur{
+	position: absolute;
+left: 62.63%;
+right: 32.98%;
+top: 70.01%;
+bottom: 16.24%;
+}
+.progress{
+position: absolute;
+left: 37.88%;
+right: -18.89%;
+top: 80.82%;
+bottom: 23.66%;
+
+background: #DDDDDD;
+border-radius: 7px;
+}
+.speaker{
+	position: absolute;
+left: 71.93%;
+right: 25.79%;
+top: 81.55%;
+bottom: 12.83%;
+}
+.volume{
+position: absolute;
+left: 74.93%;
+right: 25.79%;
+top: 81.55%;
+bottom: 12.83%;
+}
+</style>
+
+
+<div class="bgr">
+
+<div class="banner">
+	<label class="txt rtitle">ဒီဂျစ်တယ်ရေဒီယို</label>
+</div>	
+<div class="dis">
+<h6>ဝင်ထိုင်ပါဦး</h6>
+<p >
+	 အပတ်စဥ် သောကြာနေ့တိုင်း နားဆင်နိုင်ဖို့အတွက် ဒစ်ဂျစ်တယ် လုံခြုံရေး သိကောင်းစရာများကို ပေါ့ပေါ့ပါးပါး တင်ဆက်ပေးနေတဲ့ “ ဒစ်ဂျစ်တယ် ရေဒီယိုညနေခင်း “ အစီစဥ်ပဲဖြစ်ပါတယ်။ Podbean , Google Podcast နှင့်အခြား Pod Cast platform များမှာလည်း “ Digital Radio Evening ‘’ ရဲ့ တင်ဆင်မှုများကိုသောတဆင်နိုင်ပါတယ် ။
+</p>
+</div>
+<img class="pod" src="/spoti.png" style="left: 50px;">
+<img class="pod" src="/apple.png" style="left: 180px;">
+<img class="pod" src="/bean.png" style="left: 310px;">
+</div>
+<img class="himg" src="/pod.png">
+
+{{- partial "subscribe.html" . -}}
+
+<div class="castlist">
+	<label class="casttitle">Latest Episode</label>
+	<div class="podbox">
+	<label class="date">June 16, 2020</label>
+	<label class="eptitle">Episode 035 - ခေါင်းစဥ်</label>	
+	<p class="epdis">ကျွန်ုပ်တို့၏ဝက်ဘ်ဆိုက်သို့လာရောက်လည်ပတ်သူးကိုမိတ်ဆက်ပေးပါသည်။ ကျွန်ုပ်တ ို့ဘာ တွေလဲဆိ ကိုရှင်းပြပြီးအရေးကြီးတဲ့အကြောင်း ကိုဆွေးနွေးတယ်။ ကျနော် တို့ ဆွေးနွေးမှုကိုနောက်ဖြစ်ပျက်သွားမယ့်အရာနဲ့အဆုံးသတ်ထားသည်။</p>
+	<div class="player">
+	<img class="pimg" src="/album.png">	
+	<label class="pname">Digital Teahouse Podcast</label>
+	<label class="pdis">Episode 035 - ခေါင်းစဥ်</label>
+	 <img src="/pbt2.png" id="audioControl" onclick="togglePlaying()" class="play">
+	 <audio id="audio" ontimeupdate="updateBar()"  >
+  <source src="https://otamyanmar.podbean.com/mf/play/n8f29q/11.mp3" type="audio/mpeg">
+  
+  </div>
+  <span style="color: #ffff" id="current-time" class="current time"></span>
+  <span style="color: #ffff" id="duration" class="dur time"></span>
+  <canvas id="progress" width="60" height="5" class="progress"></canvas> 
+  <img src="/speaker2.png" class="speaker">
+  <input type="range" min="1" max="100" value="50" class="volume" id="vol-control" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)" > 	
+	</div>
+	</div>
+	
+</div>
+
+<script>
+
+window.SetVolume = function(val)
+{
+    var player = document.getElementById('audio');
+    console.log('Before: ' + player.volume);
+    player.volume = val / 100;
+    console.log('After: ' + player.volume);
+}
+
+
+var canvasWidth = 60
+var audioEl = document.getElementById("audio")
+var canvas = document.getElementById("progress").getContext('2d')
+var ctrl = document.getElementById('audioControl')
+var pp = "play"
+
+audioEl.addEventListener('loadedmetadata', function() {
+  var duration = audioEl.duration
+  var currentTime = audioEl.currentTime
+  document.getElementById("duration").innerHTML = convertElapsedTime(duration)
+  document.getElementById("current-time").innerHTML = convertElapsedTime(currentTime)
+  canvas.fillRect(0, 0, canvasWidth, 50);
+});
+
+function togglePlaying() {
+  
+  var play = pp === 'Play'
+  var method
+
+  if (play) {
+    
+    pp = 'Pause'
+    
+    method = 'play'
+    
+  } else {
+    pp = 'Play'
+    
+    method = 'pause'
+  }
+
+  audioEl[method]()
+
+}
+
+function updateBar() {
+  canvas.clearRect(0, 0, canvasWidth, 50)
+  canvas.fillStyle = "#0000";
+  canvas.fillRect(0, 0, canvasWidth, 50)
+  
+  var currentTime = audioEl.currentTime
+  var duration = audioEl.duration
+  
+  if (currentTime === duration) {
+    ctrl.src = "/pbt.png"
+  }
+  
+  document.getElementById("current-time").innerHTML = convertElapsedTime(currentTime)
+  
+  var percentage = currentTime / duration
+  var progress = (canvasWidth * percentage)
+  canvas.fillStyle = "#f2f2f2"
+  canvas.fillRect(0, 0, progress, 50)
+}
+
+function convertElapsedTime(inputSeconds) {
+  var seconds = Math.floor(inputSeconds % 60)
+  if (seconds < 10) {
+    seconds = "0" + seconds
+  }
+  var minutes = Math.floor(inputSeconds / 60)
+  return minutes + ":" + seconds
+}
+</script>
+
+
+{{ end }}
