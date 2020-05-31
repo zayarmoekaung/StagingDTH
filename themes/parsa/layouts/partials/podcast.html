@@ -427,7 +427,7 @@ var canvasWidth = 200
 var audioEl = document.getElementById("audio")
 var canvas = document.getElementById("progress").getContext('2d')
 var ctrl = document.getElementById('audioControl')
-var pp = "play"
+var pp = "Play"
 
 audioEl.addEventListener('loadedmetadata', function() {
   var duration = audioEl.duration
@@ -447,11 +447,13 @@ function togglePlaying() {
     pp = 'Pause'
     
     method = 'play'
+    audioControl.src="/pause.png"
     
   } else {
     pp = 'Play'
     
     method = 'pause'
+    audioControl.src="/pbt.png"
   }
 
   audioEl[method]()
@@ -467,7 +469,7 @@ function updateBar() {
   var duration = audioEl.duration
   
   if (currentTime === duration) {
-    ctrl.src = "/pbt.png"
+    audioControl.src="/pbt.png"
   }
   
   document.getElementById("current-time").innerHTML = convertElapsedTime(currentTime)
