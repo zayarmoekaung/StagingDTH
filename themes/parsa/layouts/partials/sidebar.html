@@ -1,3 +1,164 @@
-<div class="col-lg-4">
-  <img src="/Radio.jpg" style="width: 100%; height: auto;">
+<style>
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 50px;
+  height: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 8px;
+  height: 8px;
+  background: #f2f2f2;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 5px;
+  height: 5px;
+  background: #f57000;
+  cursor: pointer;
+}
+
+.pod{
+    background-color: #f57000;
+    margin: 20px;
+    padding: 20px
+  }
+.sub{
+    background-color: #f2f2f2;
+    margin: 20px;
+    padding: 20px
+}  
+
+.vol{
+  position: absolute;
+width: 49px;
+height: 5px;
+left: 221px;
+top: 171px;
+
+background: #DDDDDD;
+border-radius: 7px;
+}
+
+</style>
+ 
+<div>
+  <div class=" pod " style="width: 400px; height: 300px;">
+    <h4 style="color: #ffff">ဒီဂျစ်တယ်  ရေဒီယို</h4>
+  <div class="row" >
+    <img  id="audioControl" onclick="togglePlaying()" src="/pbt.png" style="width: 40px;height: 40px; cursor: pointer;">
+    <p class="column" style="color: #ffff">Episode 001: အင်တာနက် အင်တာနက် အင်တာနက်</p>
+  </div>
+  
+  <audio id="audio" ontimeupdate="updateBar()"  >
+  <source src="https://otamyanmar.podbean.com/mf/play/fke692/y2matecom-CoffinDanceMemeAstronomiaViolinCover_xU3XmuwdAoUar5ma.mp3" type="audio/mpeg">
+  </audio>
+   
+   <div class="row">
+    <span style="color: #ffff" id="current-time"></span> /
+    <span style="color: #ffff" id="duration"></span>
+    
+  </div>
+
+  <div class="row" >
+    <canvas id="progress" width="200" height="5"></canvas> 
+
+    <input type="range" min="1" max="100" value="50" class="slider" id="vol-control" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)" style="margin-left: 20px;"> 
+    
+  </div>
+  </div>
+  
+<div class="row sub" style=" width: 400px; height: 300px;">
+    <p>Hello</p>
+  </div>
 </div>
+
+<script>
+
+window.SetVolume = function(val)
+{
+    var player = document.getElementById('audio');
+    console.log('Before: ' + player.volume);
+    player.volume = val / 100;
+    console.log('After: ' + player.volume);
+}
+
+
+var canvasWidth = 200
+var audioEl = document.getElementById("audio")
+var canvas = document.getElementById("progress").getContext('2d')
+var ctrl = document.getElementById('audioControl')
+var pp= "play"
+
+audioEl.addEventListener('loadedmetadata', function() {
+  var duration = audioEl.duration
+  var currentTime = audioEl.currentTime
+  document.getElementById("duration").innerHTML = convertElapsedTime(duration)
+  document.getElementById("current-time").innerHTML = convertElapsedTime(currentTime)
+  canvas.fillRect(0, 0, canvasWidth, 50);
+});
+
+function togglePlaying() {
+
+  var play = pp === 'Play'
+  var method
+
+  if (play) {
+    pp = 'Pause'
+    ctrl.src = "/pause.png"
+    method = 'play'
+  } else {
+    pp = 'Play'
+    ctrl.src = "/pbt.png"
+    method = 'pause'
+  }
+
+  audioEl[method]()
+
+}
+
+function updateBar() {
+  canvas.clearRect(0, 0, canvasWidth, 50)
+  canvas.fillStyle = "#0000";
+  canvas.fillRect(0, 0, canvasWidth, 50)
+  
+  var currentTime = audioEl.currentTime
+  var duration = audioEl.duration
+  
+  if (currentTime === duration) {
+    ctrl.src = "/pbt.png"
+  }
+  
+  document.getElementById("current-time").innerHTML = convertElapsedTime(currentTime)
+  
+  var percentage = currentTime / duration
+  var progress = (canvasWidth * percentage)
+  canvas.fillStyle = "#f2f2f2"
+  canvas.fillRect(0, 0, progress, 50)
+}
+
+function convertElapsedTime(inputSeconds) {
+  var seconds = Math.floor(inputSeconds % 60)
+  if (seconds < 10) {
+    seconds = "0" + seconds
+  }
+  var minutes = Math.floor(inputSeconds / 60)
+  return minutes + ":" + seconds
+}
+</script>

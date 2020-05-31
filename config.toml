@@ -50,6 +50,7 @@ layout = "1"
 [[menu.main]]
 name = "ဒစ်ဂျစ်တယ်ဖတ်စရာများ"
 weight = 1 
+URL = "articles"
 
 [[menu.main]]
 name = "သင်ထောက်ကူများစုစည်းမှု"

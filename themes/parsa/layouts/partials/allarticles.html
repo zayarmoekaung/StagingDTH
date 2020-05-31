@@ -1,0 +1,166 @@
+<style type="text/css">
+	.art{
+position: absolute;
+width: 600px;
+height: 1599px;
+left: 222px;
+top: 674px;
+	}
+.artheader{
+	
+
+
+/* text/heading */
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 28px;
+line-height: 48px;
+
+/* text black */
+
+color: #2E2E2E;
+}	
+.artbox{
+	
+
+width: 570px;
+height: 228px;
+left: 235px;
+top: 1821px;
+margin-bottom: 40px;
+
+background: #FFFFFF;
+}
+.arttitle{
+left: 2.63%;
+right: 65.26%;
+
+
+	font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 21px;
+line-height: 36px;
+
+/* Text Black */
+
+color: #2E2E2E;
+}
+.artinfo{
+
+
+	font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 22px;
+/* identical to box height, or 157% */
+
+
+color: #9C9C9C;
+}
+.tlevel{
+	position: absolute;
+width: 62.91px;
+height: 16px;
+left: 15px;
+top: 78px;
+}
+.postimg{
+	position: absolute;
+left: 69.3%;
+right: 2.63%;
+top: 14.91%;
+bottom: 14.91%;
+}
+.sum{
+position: absolute;
+left: 2.63%;
+right: 33.33%;
+top: 45.61%;
+bottom: 17.54%;
+
+/* text/body */
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 28px;
+
+word-wrap: break-word;
+/* or 175% */
+
+letter-spacing: 0.01em;
+
+/* Text Black */
+
+color: #2E2E2E;
+}
+.duration{
+	position: absolute;
+left: 22.11%;
+right: 66.49%;
+top: 22.37%;
+bottom: 67.98%;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 22px;
+/* identical to box height, or 157% */
+
+
+color: #9C9C9C;
+
+}
+.next{
+	position: absolute;
+width: 570px;
+height: 40px;
+left: 239px;
+top: 2773px;
+}
+</style>
+<div class="art">
+	<label class="artheader">ဆောင်းပါးများ</label>
+
+        {{ $paginator := .Paginate (where .Site.RegularPages "Type" "post") }}
+       
+        <div class="row masonry-container">
+          {{ range $paginator.Pages }}
+
+          <div class="artbox">
+          	
+            <article >
+            	 <h4 class="arttitle"><a class="arttitle" href="{{.Permalink}}">{{.Title}}</a></h4>
+            	
+              <li class="list-inline-item artinfo"><i class="ti-calendar mr-2"></i>{{ .PublishDate.Format "Jan 02, 2006" }}</li>
+              <li class="list-inline-item artinfo"><i class="ti-alarm-clock mr-2 "></i><span class="eta"></span> read</li>
+            </ul>
+            <div class="tlevel">
+            	<img src="/tlevel1.png">
+            </div>
+            	<a href="{{.Permalink}}">
+            		<div class="postimg">
+            		<img class="  crop" src="{{.Params.Image | absURL }}" alt="{{.Params.Image}}">
+            	</div>
+            	</a>
+            	
+             	 
+              
+             <div class="sum"><p >{{ .Summary }}</p></div>
+              
+             
+              
+            </article>
+         
+          </div>
+          {{ end }}
+      	  
+   			
+
+</div>

@@ -12,25 +12,97 @@ img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 800px;
-  position: relative;
-  margin: auto;
-  align-items: center;
+position: absolute;
+width: 1000px;
+height: 500px;
+left: 220px;
+top: 228px;
+overflow-x: scroll;
+margin: auto;
+align-items: center;
+}
+.bimage{
+position: absolute;
+width: 1000px;
+height: 395px;
+left: 0px;
+top: 0px;
+
+/* orange */
+
+background: #F57000;
 }
 
 /* Caption text */
+.caption{
+  position: absolute;
+width: 547px;
+height: 62px;
+left: 50px;
+top: 49px;
 
+/* text/jumboheading */
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 36px;
+line-height: 62px;
+/* identical to box height */
+
+display: flex;
+align-items: flex-end;
+
+color: #FFFFFF;
+}
 
 /* The dots/bullets/indicators */
+.dotline{
+    position: absolute;
+left: 45.48%;
+right: 45.38%;
+top: 81.34%;
+bottom: 14.65%;
+}
 .dot {
+
+   cursor: pointer;
   height: 15px;
   width: 15px;
   margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 2.6s ease;
+  transition: background-color 0.6s ease;
 }
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  top: 46.46%;
+  bottom: 44.81%;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
 
 .active {
   background-color: #717171;
@@ -66,11 +138,41 @@ img {vertical-align: middle;}
 
   
 }
-.mini{
-   position:absolute;
-    margin-right: 20px;
-    bottom:0;
-    right:0;
+.discription{
+  position: absolute;
+width: 570px;
+height: 109px;
+left: 50px;
+top: 161px;
+
+/* text/big */
+
+
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 140%;
+/* or 34px */
+
+letter-spacing: 0.02em;
+
+color: #FFFFFF;
+}
+.fimage{
+  position: absolute;
+width: 250px;
+height: 250px;
+left: 620px;
+top: 174px;
+
+background: #C4C4C4;
+}
+.arrow{
+position: absolute;
+left: 97%;
+right: 1%;
+top: 46.46%;
+bottom: 44.81%;
 }
 
 </style>
@@ -81,38 +183,54 @@ img {vertical-align: middle;}
 
 <div class="slideshow-container" >
 
-<div class="mySlides fade">
-  
-  <img src="/SlideShow.jpg" alt="Banner 1" class="imgsize">
-  <img class="mini" src="/Slidemini.jpg" alt="Banner 1" class="imgsize">
+<div class="mySlides fade ">
+  <div class="bimage">
+     <label class="caption">ဒီဂျစ်တယ်လက်ဖက်ရည်ဆိုင်ကတော့</label>
+  <label class="discription">မိတ်ဆွေများအနေဖြင့်ဒီဂျစ်တယ်လုံခြုံရေးကိုလွယ်ကူစွာလေ့လာနိုင်သော</label>
+  </div>
+ 
+  <img class="fimage" src="/Slidemini.jpg" alt="Banner 1">
  
 </div>
 
-<div class="mySlides fade">
+<div class="mySlides fade ">
 
-  <img src="/SlideShow2.jpg" alt="Banner 2" class="imgsize">
-<img class="mini" src="/Slidemini2.jpg" alt="Banner 1" class="imgsize">
+<div class="bimage">
+     <label class="caption">ဒီဂျစ်တယ်လက်ဖက်ရည်ဆိုင်ကတော့</label>
+  <label class="discription">မိတ်ဆွေများအနေဖြင့်ဒီဂျစ်တယ်လုံခြုံရေးကိုလွယ်ကူစွာလေ့လာနိုင်သော</label>
+  </div>
+<img class="fimage" src="/Slidemini2.jpg" alt="Banner 1">
 </div>
 
-<div class="mySlides fade">
+<div class="mySlides fade ">
 
-  <img src="/SlideShow3.jpg" alt="Banner 2" class="imgsize">
-  <img class="mini" src="/Slidemini3.jpg" alt="Banner 1" class="imgsize">
+  <div class="bimage">
+     <label class="caption">ဒီဂျစ်တယ်လက်ဖက်ရည်ဆိုင်ကတော့</label>
+  <label class="discription">မိတ်ဆွေများအနေဖြင့်ဒီဂျစ်တယ်လုံခြုံရေးကိုလွယ်ကူစွာလေ့လာနိုင်သော</label>
+  </div>
+  <img class="fimage" src="/Slidemini3.jpg" alt="Banner 1">
 </div>
 
 </div>
 <br>
-
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+<div style="text-align:center" class="dotline">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
 </div>
 
 <script>
-var slideIndex = 0;
-showSlides();
+var slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 function showSlides() {
   var i;
   var slides = document.getElementsByClassName("mySlides");

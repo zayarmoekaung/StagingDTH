@@ -2,7 +2,7 @@
 [MAIN STYLESHEET]
 
 PROJECT:	Digital Tea House
-VERSION:	0.0.1
+VERSION:	0.1.1
 -------------------------------------------------------------------*/
 /*------------------------------------------------------------------
 [TABLE OF CONTENTS]
@@ -13,9 +13,21 @@ VERSION:	0.0.1
   
   margin-left: 40px;
   margin-bottom: 40px;
-  background-position: center center; 
-  background-repeat: no-repeat;
-  background-size: cover;
+ 
+  }
+
+  .fmenu{
+    color: #ffff; 
+    font-size: 15pt;
+    }
+ .fmenu:hover{
+   color: #ffff;
+ }   
+  .btt{
+    margin: 10px; 
+    padding: 0px;
+    border: none;
+
   }
 
   .ig  {
@@ -25,12 +37,13 @@ VERSION:	0.0.1
 
 .crop{
   object-fit: cover;
-  width: 200px;
-  height: 200px;
+  width: 160px;
+  height: 160px;
 }
 
 .bgw{
   background-color: #ffffff ;
+  padding-left: 30px;
 }
 .one-slide {
   border-radius: 3px;
@@ -341,11 +354,17 @@ a.text-dark:hover {
 .slick-slide {
   outline: 0;
 }
+.tt{
+ 
+  
+  
 
+}
 .section {
   color: #010101;
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+
 }
 
 .section-sm {
@@ -554,8 +573,8 @@ textarea.form-control {
   visibility: hidden;
   transition: .3s ease;
   opacity: 0;
-  -webkit-transform: translateY(-20px);
-          transform: translateY(-20px);
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
   background: #fff;
 }
 
@@ -564,8 +583,8 @@ textarea.form-control {
     display: none;
     opacity: 1;
     visibility: visible;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
     text-align: center;
   }
 }
@@ -936,8 +955,9 @@ blockquote {
 
 /* Create four equal columns that sits next to each other */
 .column {
-  flex: 25%;
-  max-width: 25%;
+  
+  max-width:60%;
+  height: auto;
   padding: 0 4px;
 }
 
