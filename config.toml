@@ -42,7 +42,7 @@ link = "plugins/search/search.js"
 [params]
 
 logo = "/DTHLOGO.PNG"
-
+description = "Digital Tea House : ကျုပ်တို့  ရဲ့ လက်ဘက်ရည်ဆိုင် 'Digital Tea House'  က ပုံမှန်လက်ဘက်ရည်ဆိုင်မဟုတ်ဘူးဗျ။ ဒစ်ဂျစ်တယ်လက်ဘက်ရည်ဆိုင် ။"
 home = "Home"
 layout = "1"
 
