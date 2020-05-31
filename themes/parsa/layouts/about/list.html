@@ -1,18 +1,76 @@
 {{ define "main" }}
+<style type="text/css">
+  .abbg{
+position: absolute;
+width: 1446px;
+height: 485px;
+margin-left: 25px;
+top: 124px;
+background-image: url(/Background.png);
 
-<section class="section">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <h2 class="mb-4">{{.Title }}</h2>
-        <img src="{{.Params.Image | absURL }}" alt="{{.Site.Params.author}}" class="img-fluid w-100 mb-4">
-        <h3 class="font-weight-light">Hello, I’m <span class="font-weight-bold">{{.Site.Params.author}}</span></h3>
-        {{ .Content }}
-      </div>
-    </div>
+  }
+ .bgrd{
+   position: absolute;
+width: 1440px;
+height: 122px;
+left: 3px;
+top: 360px;
+
+background: rgba(245, 112, 0, 0.6);
+ } 
+ .txt{
+  position: absolute;
+width: 547px;
+height: 62px;
+left: 450px;
+top: 55px;
+
+/* text/jumboheading */
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 36px;
+line-height: 62px;
+/* identical to box height */
+
+display: flex;
+align-items: flex-end;
+
+color: #FFFFFF;
+ }
+ .abbox{
+  position: absolute;
+width: 600px;
+height: 497px;
+left: 220px;
+top: 709px;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 21px;
+line-height: 28px;
+/* or 133% */
+
+letter-spacing: 0.01em;
+
+color: #000000;
+
+ }
+</style>
+<section class="abbg">
+ <div class="bgrd">
+   <label class="txt">ဒီဂျစ်တယ်လက်ဖက်ရည်ဆိုင်ကတော့</label>
+ </div>
+</section>
+<section>
+  <div class="abbox">
+    <h5>ကျုပ်တို့ ရဲ့လက်ဘက်ရည်ဆိုင် က ပုံမှန်လက်ဘက်ရည်ဆိုင် မဟုတ်ဘူးဗျ။</h5>
+    <p> ဒစ်ဂျစ်တယ်လက်ဘက်ရည်ဆိုင် ။ ဒီ အခေါ်အတွေဝေါ်က နည်းနည်းတော့ထူးဆန်းနေလိမ့်မယ်။ ဘာ့ကြောင့်ဆိုတာ ရှင်းပြမယ်။ ကျုပ်တို့ရဲ့ နေ့စဉ်ဘဝမှာ ဒစ်ဂျစ်တယ်ပစ္စည်းတွေ ( အပျော့ထည်ရော၊ အမာထည်ရော) နဲ့ မနက်မိုးလင်းကတည်းက စပြီးတော့ ထိတွေ့သုံးစွဲနေရတယ်။ ကိုယ့်ဘဝထဲမှာ ဒစ်ဂျစ်တယ်ပစ္စည်းတွေက တစ်စိတ်တစ်ပိုင်း နေရာယူလာတယ်ပေါ့ဗျာ။ သို့သော်လည်း ကိုယ့်ရဲ့ဒစ်ဂျစ်တယ်ဘဝမှာ အများနဲ့ သဟဇာတဖြစ်အောင်၊ လုံခြုံအောင်၊ ဘယ်လိုနေထိုင် ကျင့်ကြံမလဲဆိုတဲ့ (Digital Citizenship) နည်းလမ်းတွေကိုဖြင့် ကိုယ့်လူတို့က သိပ်ဂရုစိုက်လေ့မရှိကြဘူး။ ဒစ်ဂျစ်တယ် ဘဝကြီးက ဈေးရုံကြီးတစ်ခု ဆိုရင်၊ ကိုယ့်လူတို့ရဲ့ ဆိုင် က ဈေးထိပ်က လဘက်ရည်ဆိုင်လို၊ နားနေဖို့၊ ဆွေးနွေးဖို့၊ ချွေးသိပ်ဖို့နေရာတစ်ခုပေါ့ဗျာ။ ဒါကြောင့် ကျုပ်တို့ရဲ့ ဒီ “ဒစ်ဂျစ်တယ် လက်ဘက်ရည်ဆိုင်က” ကိုယ့်လူတို့ရဲ့ ဒစ်ဂျစ်တယ်ဘဝတွေမှာ ဘယ်လိုပြုမူနေထိုင်ရင် ပိုပြီး နေသာထိုင်သာရှိမယ်ဆိုတဲ့ သိကောင်းစရာ စာတိုပေစ၊ နည်းတိုလမ်းစ တွေကို ဆွေးနွေးမျှဝေသွားဖို့အတွက် ရည်ရွယ်တဲ့ ဝဘ်ဆိုဒ် တစ်ခု ဖြစ်တယ်။ ဒီပရိုဂရမ်ကိုတော့ “ ဖွံ့ဖြိုးမှုအတွက် မြန် အိုင်စီတီ ” ဘိုလို “ Myanmar ICT for Development Organization (MIDO)” ကနေပြီးတော့ တာဝန်ယူ စီမံခန့်ခွဲနေတာ ဖြစ်ပါတယ်။</p>
   </div>
 </section>
 
-{{partial "instafeed.html" . }}
+{{partial "subscribe.html" . }}
 
 {{ end }}

@@ -63,6 +63,7 @@ weight = 3
 [[menu.main]]
 name = "လဖက်ရည်ဆိုင်အကြောင်း"
 weight = 4
+URL = "about"
 
 [params.preloader]
 enable = true
