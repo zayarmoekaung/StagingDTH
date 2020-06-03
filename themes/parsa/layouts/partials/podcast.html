@@ -1,10 +1,116 @@
 <style>
+
+@media (max-width:480px){
+.wpod{
+  display: none;
+}
+.mpod{
+ 
+  position: fixed;
+  top: 584px;
+z-index: 99;
+width: 360px;
+height: 56px;
+left: 0px;
+
+
+/* Shadow */
+background: #F57000;
+box-shadow: 0px 3px 10px rgba(150, 150, 150, 0.26);
+}
+.topodcast{
+  position: absolute;
+width: 57px;
+height: 21px;
+left: 276px;
+top: 0px;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 21px;
+/* identical to box height */
+
+display: flex;
+align-items: flex-end;
+
+/* f57000 */
+
+color: #FFFFFF;
+}
+.mpodprobar{
+  position: absolute;
+width: 200px;
+height: 4px;
+left: 51px;
+top: 52px;
+
+/* f57000 */
+
+background: #FFFFFF;
+border-radius: 6px;
+}
+.mpodep{
+  position: absolute;
+width: 262px;
+height: 24px;
+left: 52px;
+top: 24px;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 21px;
+display: flex;
+align-items: flex-end;
+
+color: #FFFFFF
+}
+.mpodname{
+  position: absolute;
+width: 121.5px;
+height: 19.04px;
+left: 10px;
+top: 0px;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 10px;
+line-height: 17px;
+display: flex;
+align-items: flex-end;
+
+color: #FFFFFF;
+}
+.mpodpbn{
+  position: absolute;
+width: 32px;
+height: 32px;
+left: 10px;
+top: 20px;
+}
+}
+
+ @media (min-width: 500px){
+ .mpod{
+  display: none;
+
+ }
+ .wpod{
+  display: block;
+ }
+ }
+
+
 .podcast{
-position:absolute;
+position:fixed;
 left: 66.94%;
 right: 15.28%;
-top: 80.98%;
-bottom: 60.73%;
+top: 20%;
+display: none;
 }
 
 	.upper{
@@ -380,15 +486,29 @@ align-items: flex-end;
 color: #FFFFFF;
 }
 </style>
-<div class="podcast">
+<audio id="audio" ontimeupdate="updateBar()"  >
+  <source src="https://otamyanmar.podbean.com/mf/play/n8f29q/11.mp3" type="audio/mpeg">
+  </audio>
+
+<div class="mpod">
+  <label class="mpodname">Digital Teahouse Podcast</label>
+  <img src="/pbt.png" id="audioControl2" onclick="togglePlaying()" class="mpodpbn">
+  <label class="topodcast"> To podcast > </label>
+  <label class="mpodep">Episode 001: Welcome to the podcast and about...</label>
+  <canvas id="progress" width="200" height="5" class="mpodprobar"></canvas> 
+</div>
+
+
+
+
+<div class="wpod">
+<div id="podcast" class="podcast">
   <div class="lower">
 	<div class="upper">
 	<label class="title">ဒီဂျစ်တယ် ရေဒီယို</label>
 	 <img src="/pbt.png" id="audioControl" onclick="togglePlaying()" class="toogle">
    <label class="episode">Black Clover OST : Against The Gods</label>
-      <audio id="audio" ontimeupdate="updateBar()"  >
-  <source src="https://otamyanmar.podbean.com/mf/play/n8f29q/11.mp3" type="audio/mpeg">
-  </audio>
+      
   <div>
     <span style="color: #ffff" id="current-time" class="ctime"></span>
   <span style="color: #ffff" id="duration" class="dtime"></span>
@@ -409,10 +529,24 @@ color: #FFFFFF;
 <a href=""><img src="/Share Button.png" class="sharebtn"></a>
 </div>
 </div>
-
+</div>
 
 
 <script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 80) {
+    podcast.style.display = "block";
+     
+    
+  } else {
+    podcast.style.display = "none";
+    
+    
+  }
+}
+
 
 window.SetVolume = function(val)
 {
@@ -448,12 +582,14 @@ function togglePlaying() {
     
     method = 'play'
     audioControl.src="/pause.png"
+    audioControl2.src="/pause.png"
     
   } else {
     pp = 'Play'
     
     method = 'pause'
     audioControl.src="/pbt.png"
+    audioControl2.src="/pbt.png"
   }
 
   audioEl[method]()
@@ -462,7 +598,7 @@ function togglePlaying() {
 
 function updateBar() {
   canvas.clearRect(0, 0, canvasWidth, 50)
-  canvas.fillStyle = "#0000";
+  canvas.fillStyle = "#f2f2f2";
   canvas.fillRect(0, 0, canvasWidth, 50)
   
   var currentTime = audioEl.currentTime
@@ -476,7 +612,7 @@ function updateBar() {
   
   var percentage = currentTime / duration
   var progress = (canvasWidth * percentage)
-  canvas.fillStyle = "#f2f2f2"
+  canvas.fillStyle = "#006994"
   canvas.fillRect(0, 0, progress, 50)
 }
 

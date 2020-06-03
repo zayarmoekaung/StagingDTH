@@ -1,7 +1,55 @@
 <style type="text/css">
-  .foot{
-    position: absolute;
-width: 1219px;
+
+@media (max-width:480px){
+.footerright{
+  position: absolute;
+width: 100%;
+height: 247px;
+left: 0px;
+top: 3099px;
+background: #F57000;
+padding: 30px;
+} 
+.mbmenu{
+  display: block;
+ }  
+ 
+ .fmbmenuitem{
+  font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 28px;
+/* identical to box height */
+
+display: flex;
+align-items: flex-end;
+
+color: #FFFFFF;
+left: 4.17%;
+right: 73.89%;
+
+cursor: pointer;
+ }
+.footerleft{
+position: absolute;
+width: 100%;
+height: 251px;
+left: 0px;
+top: 3346px;
+background: #FFFFFF;
+margin-top: 20px;
+margin-left: 20px;
+}
+
+}
+
+
+
+ @media (min-width: 500px){
+.foot{
+position: absolute;
+width: 100%;
 height: 232px;
 left: 220px;
 top: 3443px;
@@ -21,9 +69,15 @@ right: 0%;
 top: 0%;
 bottom: 0%;
 }
+.mbmenu{
+  display: none;
+ } 
+}
+
+  
 </style>
 
-<footer class="bg-secondary foot">
+<footer id="foott" class="bg-secondary foot">
   
       
       
@@ -41,14 +95,28 @@ bottom: 0%;
 
         </p>
         </div >
-        <div class="footerright">
-          <a class="fmenu column" href="">ဒီဂျစ်တယ်ဖတ်စရာများ</a>
-          <a class="fmenu column" href="">သင်ထောက်ကူများစုစည်းမှု</a>
-          <a class="fmenu column" href="">ဒီဂျစ်တယ်ရေဒီယို</a>
-          <a class="fmenu column" href="">လဖက်ရည်ဆိုင်အကြောင်း</a>
-          <a class="fmenu column" href="">သိသာစေရန်</a>
+        <div class="footerright" >
+          <div class=" fbar">
+            <a class="fmenu" href="">ဒီဂျစ်တယ်ဖတ်စရာများ</a>
+          <a class="fmenu" href="">သင်ထောက်ကူများစုစည်းမှု</a>
+          <a class="fmenu" href="">ဒီဂျစ်တယ်ရေဒီယို</a>
+          <a class="fmenu" href="">လဖက်ရည်ဆိုင်အကြောင်း</a>
+          </div>
+          <div class=" fbar">
+             
+          <a class="fmenu" href="">သိသာစေရန်</a>
+          </div>
+         
         </div>
-      
+      <div class="footerright fbar" >
+        <div class="mbmenu">
+           <a class="fmbmenuitem" href="">ဒီဂျစ်တယ်ဖတ်စရာများ</a>
+            <a class="fmbmenuitem" href="">သင်ထောက်ကူများစုစည်းမှု</a>
+          <a class="fmbmenuitem" href="">ဒီဂျစ်တယ်ရေဒီယို</a>
+          <a class="fmbmenuitem" href="">လဖက်ရည်ဆိုင်အကြောင်း</a>
+           <a class="fmbmenuitem" href="">သိသာစေရန်</a>
+        </div>
+      </div>
 
   
 
@@ -56,6 +124,7 @@ bottom: 0%;
 </footer>
 
 
+</script>
 {{ if .Site.Params.search.enable }}
 <script>
   var indexURL = {{ "index.json" | absURL }}
@@ -74,6 +143,9 @@ bottom: 0%;
 {{ "<!-- google analitycs -->" | safeHTML }}
 {{ with .Site.Params.google_analitycs_id }}
 <script>
+
+
+
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
