@@ -54,8 +54,8 @@ bottom: 51.11%;
 transform: matrix(-1, 0, 0, 1, 0, 0);
  } 
  .mitem{
-  display: none;
-  position: relative;
+display: none;
+position: relative;
 width: 360px;
 height: 444px;
 
@@ -102,7 +102,7 @@ bottom: 0%;
 
  }
  .menuitem{
-  position: absolute;
+position: absolute;
 width: 360px;
 height: 81px;
 left: -1px;
@@ -110,7 +110,7 @@ justify-content: center;
 background: #FFFFFF;
  }
  .menutxt{
-  position: absolute;
+position: absolute;
 left: 20%;
 right: 0%;
 top: 24.69%;
@@ -129,6 +129,23 @@ text-align: center;
 
 color: #2E2E2E;
  }
+ .searchpg{
+  display: none;
+  position: relative;
+width: 360px;
+height: 640px;
+display: none;
+background: #FFFFFF;
+ }
+ .sbox{
+  position: absolute;
+left: 0%;
+right: 0%;
+top: 14.06%;
+bottom: 73.28%;
+
+background: #FFFFFF;
+ }
 }
 
  @media (min-width: 500px){
@@ -136,8 +153,13 @@ color: #2E2E2E;
   display: none;
 
 }
+.mitem{
+display: none;
+}
 
-
+  .searchpg{
+  display: none;
+}
 
   }
 
@@ -147,6 +169,7 @@ color: #2E2E2E;
   <label class="mmenu" onclick="appear()">menu</label>
   <img class="msearch" src="/search.png">
 </header>
+  
 <div id="menuitem" class="mitem">
   <div class="mbanr">
     <label class="mbantit">menu</label>
@@ -220,10 +243,25 @@ color: #2E2E2E;
     if (isit) {
       menuitem.style.display = "block";
       frame.style.display = "none";
+      section.style.display = "none";
       isit = false;
     }else{
       menuitem.style.display = "none";
       frame.style.display = "block";
+      section.style.display = "block";
+      isit = true;
+    }
+  }
+  function appear() {
+    if (isit) {
+      searchpg.style.display = "block";
+      frame.style.display = "none";
+      section.style.display = "none";
+      isit = false;
+    }else{
+      searchpg.style.display = "none";
+      frame.style.display = "block";
+      section.style.display = "block";
       isit = true;
     }
   }
