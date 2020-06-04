@@ -1,11 +1,15 @@
+
 <style type="text/css">
   @media (max-width:480px){
   .mnavbar{
-    position: absolute;
-width: 360px;
-height: 90px;
-left: 0px;
-top: 0px;
+position: absolute;
+    
+max-width: 480px;
+max-height: 90px; 
+min-width: 480px;
+min-height: 90px;
+
+
 background: #FFFFFF;
   }
   .wnavbar{
@@ -42,7 +46,7 @@ color: #2E2E2E;
 
   }
  .msearch{
-   position: absolute;
+position: absolute;
 left: 85%;
 right: 5%;
 top: 26.67%;
@@ -55,8 +59,9 @@ transform: matrix(-1, 0, 0, 1, 0, 0);
  } 
  .mitem{
 display: none;
-position: relative;
-width: 360px;
+
+width: 100%;
+min-width: 480px;
 height: 444px;
 
 /* grey */
@@ -65,7 +70,8 @@ background: #F2F2F2;
  }
  .mbanr{
   position: absolute;
-width: 360px;
+width: 100%;
+min-width: 480px;
 height: 90px;
 left: 0px;
 top: 0px;
@@ -103,7 +109,8 @@ bottom: 0%;
  }
  .menuitem{
 position: absolute;
-width: 360px;
+width: 100%;
+min-width: 480px;
 height: 81px;
 left: -1px;
 justify-content: center;
@@ -148,7 +155,7 @@ background: #FFFFFF;
  }
 }
 
- @media (min-width: 500px){
+ @media (min-width: 481px){
 .mnavbar{
   display: none;
 
