@@ -1,4 +1,172 @@
-<header class="navigation"  >
+<style type="text/css">
+  @media (max-width:480px){
+  .mnavbar{
+    position: absolute;
+width: 360px;
+height: 90px;
+left: 0px;
+top: 0px;
+background: #FFFFFF;
+  }
+  .wnavbar{
+    display: none;
+  }
+  .mlogo{
+    position: absolute;
+left: 4.17%;
+right: 64.17%;
+top: 23.33%;
+bottom: 32.1%;
+width: 114px;
+height: 50px;
+  }
+  .mmenu{
+    position: absolute;
+left: 60.61%;
+right: 30.83%;
+top: 40.51%;
+bottom: 40.98%;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 25px;
+/* or 156% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #2E2E2E;
+
+  }
+ .msearch{
+   position: absolute;
+left: 85%;
+right: 5%;
+top: 26.67%;
+bottom: 51.11%;
+
+/* orange */
+
+
+transform: matrix(-1, 0, 0, 1, 0, 0);
+ } 
+ .mitem{
+  display: none;
+  position: relative;
+width: 360px;
+height: 444px;
+
+/* grey */
+
+background: #F2F2F2;
+ }
+ .mbanr{
+  position: absolute;
+width: 360px;
+height: 90px;
+left: 0px;
+top: 0px;
+background: #F57000;
+ }
+ .mbantit{
+  position: absolute;
+width: 56px;
+height: 25px;
+left: 151px;
+top: 33px;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 25px;
+/* identical to box height, or 104% */
+
+display: flex;
+align-items: flex-end;
+text-align: center;
+
+color: #FFFFFF;
+ }
+ .mback{
+  position: absolute;
+left: 5%;
+right: 100%;
+top: 20%;
+bottom: 0%;
+
+
+
+ }
+ .menuitem{
+  position: absolute;
+width: 360px;
+height: 81px;
+left: -1px;
+justify-content: center;
+background: #FFFFFF;
+ }
+ .menutxt{
+  position: absolute;
+left: 20%;
+right: 0%;
+top: 24.69%;
+bottom: 24.69%;
+
+
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 41px;
+display: flex;
+align-items: flex-end;
+text-align: center;
+
+/* text black */
+
+color: #2E2E2E;
+ }
+}
+
+ @media (min-width: 500px){
+.mnavbar{
+  display: none;
+
+}
+
+
+
+  }
+
+</style>
+<header class="mnavbar">
+  <img class="mlogo" src="/navlogo.PNG">
+  <label class="mmenu" onclick="appear()">menu</label>
+  <img class="msearch" src="/search.png">
+</header>
+<div id="menuitem" class="mitem">
+  <div class="mbanr">
+    <label class="mbantit">menu</label>
+    <img class="mback" src="/mback.png" onclick="appear()">
+    <div class="menuitem" style="top: 90px;">
+      <label class="menutxt">ဒစ်ဂျစ်တယ်ဖတ်စရာများ</label>
+    </div>
+    <div class="menuitem" style="top: 181px;">
+      <label class="menutxt">သင်ထောက်ကူများစုစည်းမှု</label>
+    </div>
+    <div class="menuitem" style="top: 272px;">
+      <label class="menutxt">ဒစ်ဂျစ်တယ်ရေဒီယို</label>
+    </div>
+    <div class="menuitem" style="top: 363px;">
+      <label class="menutxt">လဖက်ရည်ဆိုင်အကြောင်</label>
+    </div>
+  </div>
+</div>
+
+<header class="navigation wnavbar"  >
   <nav class="navbar navbar-expand-lg navbar-light">
     <h1><a class="navbar-brand" href="{{.Site.BaseURL}}"><img class="img-fluid" src="{{ .Site.Params.logo | absURL }}" alt="{{.Site.Title}}" style="width: auto; height: auto; max-width: 200px; max-height: 180px;"></a></h1>
     <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navogation"
@@ -45,3 +213,18 @@
   </nav>
 
 </header>
+
+<script type="text/javascript">
+  var isit = true
+  function appear() {
+    if (isit) {
+      menuitem.style.display = "block";
+      frame.style.display = "none";
+      isit = false;
+    }else{
+      menuitem.style.display = "none";
+      frame.style.display = "block";
+      isit = true;
+    }
+  }
+</script>
