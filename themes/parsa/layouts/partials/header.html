@@ -6,7 +6,7 @@ position: absolute;
 width: 100%;    
 max-width: 480px;
 max-height: 90px; 
-min-width: 300px;
+min-width: 360px;
 min-height: 90px;
 
 
@@ -14,6 +14,9 @@ background: #FFFFFF;
   }
   .wnavbar{
     display: none;
+    width: 100%;
+max-width: 480px;
+min-width: 360px;
   }
   .mlogo{
     position: absolute;
@@ -64,6 +67,7 @@ width: 100%;
 max-width: 480px;
 min-width: 300px;
 height: 444px;
+
 
 /* grey */
 
@@ -141,8 +145,10 @@ color: #2E2E2E;
  }
  .searchpg{
   display: none;
-  position: relative;
-width: 360px;
+  position: absolute;
+width: 100%;
+max-width: 480px;
+min-width: 360px;
 height: 640px;
 display: none;
 background: #FFFFFF;
@@ -251,15 +257,20 @@ display: none;
   var isit = true
   function appear() {
     if (isit) {
+       isit = false;
       menuitem.style.display = "block";
       frame.style.display = "none";
-      section.style.display = "none";
-      isit = false;
+      abt.style.display="none"
+      alert("Hello! I am an alert box!!");
+     
     }else{
+      isit = true;
       menuitem.style.display = "none";
       frame.style.display = "block";
-      section.style.display = "block";
-      isit = true;
+      abt.style.display="block"
+
+
+      
     }
   }
   function appear2() {
