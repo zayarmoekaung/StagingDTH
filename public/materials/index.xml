@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Materials on Digital Tea House</title>
+    <link>/materials/</link>
+    <description>Recent content in Materials on Digital Tea House</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 31 May 2020 16:51:48 +0630</lastBuildDate>
+    
+	<atom:link href="/materials/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

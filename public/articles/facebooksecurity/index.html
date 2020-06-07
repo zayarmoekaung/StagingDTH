@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>Digital Tea House /articles/facebooksecurity/</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Digital Tea House : ကျုပ်တို့  ရဲ့ လက်ဘက်ရည်ဆိုင် &#39;Digital Tea House&#39;  က ပုံမှန်လက်ဘက်ရည်ဆိုင်မဟုတ်ဘူးဗျ။ ဒစ်ဂျစ်တယ်လက်ဘက်ရည်ဆိုင် ။">
+  
+  <meta name="generator" content="Hugo 0.64.1" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="/plugins/themify-icons/themify-icons.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="/css/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="/images/favicon.png " type="image/x-icon">
+
+
+  
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  <div class="loader">
+    <span class="dot"></span>
+    <div class="dots">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</div>
+<!-- preloader end -->
+
+<style type="text/css">
+  @media (max-width:480px){
+  .mnavbar{
+position: absolute;
+width: 100%;    
+max-width: 480px;
+max-height: 90px; 
+min-width: 360px;
+min-height: 90px;
+
+
+background: #FFFFFF;
+  }
+  .wnavbar{
+    display: none;
+    width: 100%;
+max-width: 480px;
+min-width: 360px;
+  }
+  .mlogo{
+    position: absolute;
+left: 4.17%;
+right: 64.17%;
+top: 23.33%;
+bottom: 32.1%;
+width: 114px;
+height: 50px;
+  }
+  .mmenu{
+    position: absolute;
+left: 60.61%;
+right: 30.83%;
+top: 40.51%;
+bottom: 40.98%;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 25px;
+ 
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #2E2E2E;
+
+  }
+ .msearch{
+position: absolute;
+left: 85%;
+right: 5%;
+top: 26.67%;
+bottom: 51.11%;
+
+ 
+
+
+transform: matrix(-1, 0, 0, 1, 0, 0);
+ } 
+ .mitem{
+display: none;
+position: absolute;
+width: 100%;
+max-width: 480px;
+min-width: 300px;
+height: 444px;
+
+
+ 
+
+background: #F2F2F2;
+ }
+ .mbanr{
+  position: absolute;
+width: 100%;
+max-width: 480px;
+min-width: 300px;
+height: 90px;
+left: 0px;
+top: 0px;
+background: #F57000;
+ }
+ .mbantit{
+  position: absolute;
+width: 56px;
+height: 25px;
+left: 151px;
+top: 33px;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 25px;
+ 
+
+display: flex;
+align-items: flex-end;
+text-align: center;
+
+color: #FFFFFF;
+ }
+ .mback{
+  position: absolute;
+left: 5%;
+right: 100%;
+top: 20%;
+bottom: 0%;
+
+
+
+ }
+ .menuitem{
+position: absolute;
+width: 100%;
+max-width: 480px;
+min-width: 300px;
+height: 81px;
+left: -1px;
+justify-content: center;
+background: #FFFFFF;
+ }
+ .menutxt{
+position: absolute;
+left: 20%;
+right: 0%;
+top: 24.69%;
+bottom: 24.69%;
+
+
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 41px;
+display: flex;
+align-items: flex-end;
+text-align: center;
+
+ 
+
+color: #2E2E2E;
+ }
+ .searchpg{
+  display: none;
+  position: absolute;
+width: 100%;
+max-width: 480px;
+min-width: 360px;
+height: 640px;
+display: none;
+background: #FFFFFF;
+ }
+ .sbox{
+  position: absolute;
+left: 0%;
+right: 0%;
+top: 14.06%;
+bottom: 73.28%;
+
+background: #FFFFFF;
+ }
+}
+
+ @media (min-width: 481px){
+.mnavbar{
+  display: none;
+
+}
+.mitem{
+display: none;
+}
+
+  .searchpg{
+  display: none;
+}
+
+  }
+
+</style>
+<header class="mnavbar">
+  <img class="mlogo" src="/navlogo.PNG">
+  <label class="mmenu" onclick="appear()">menu</label>
+  <img class="msearch" src="/search.png">
+</header>
+  
+<div id="menuitem" class="mitem">
+  <div class="mbanr">
+    <label class="mbantit">menu</label>
+    <img class="mback" src="/mback.png" onclick="appear()">
+    <div class="menuitem" style="top: 90px;">
+      <a href="/articles"><label class="menutxt">ဒစ်ဂျစ်တယ်ဖတ်စရာများ</label></a>
+    </div>
+    <div class="menuitem" style="top: 181px;">
+      <a href="/materials"><label class="menutxt">သင်ထောက်ကူများစုစည်းမှု</label></a>
+    </div>
+    <div class="menuitem" style="top: 272px;">
+      <a href="radio"><label class="menutxt">ဒစ်ဂျစ်တယ်ရေဒီယို</label></a>
+    </div>
+    <div class="menuitem" style="top: 363px;">
+      <a href="/about"><label class="menutxt">လဖက်ရည်ဆိုင်အကြောင်</label></a>
+    </div>
+  </div>
+</div>
+
+<header class="navigation wnavbar"  >
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <h1><a class="navbar-brand" href="/"><img class="img-fluid" src="/DTHLOGO.PNG" alt="Digital Tea House" style="width: auto; height: auto; max-width: 200px; max-height: 180px;"></a></h1>
+    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navogation"
+      aria-controls="navogation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+   
+
+    <div class="collapse navbar-collapse text-center" id="navogation">
+      <ul class="navbar-nav ml-auto">
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link text-uppercase text-dark" href="/articles"> ဒစ်ဂျစ်တယ်ဖတ်စရာများ </a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link text-uppercase text-dark" href="/materials"> သင်ထောက်ကူများစုစည်းမှု </a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link text-uppercase text-dark" href="/radio"> ဒစ်ဂျစ်တယ်ရေဒီယို </a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link text-uppercase text-dark" href="/about"> လဖက်ရည်ဆိုင်အကြောင်း </a>
+        </li>
+        
+        
+      </ul>
+    
+      
+      
+      
+    </div>
+      <a href="">
+        <img src="/search.png" style="width: 40px; height: 40px;">
+      </a>
+  </nav>
+
+</header>
+
+<script type="text/javascript">
+  var isit = true
+  function appear() {
+    if (isit) {
+       isit = false;
+      menuitem.style.display = "block";
+      frame.style.display = "none";
+      abt.style.display="none"
+      alert("Hello! I am an alert box!!");
+     
+    }else{
+      isit = true;
+      menuitem.style.display = "none";
+      frame.style.display = "block";
+      abt.style.display="block"
+
+
+      
+    }
+  }
+  function appear2() {
+    if (isit) {
+      searchpg.style.display = "block";
+      frame.style.display = "none";
+      section.style.display = "none";
+      isit = false;
+    }else{
+      searchpg.style.display = "none";
+      frame.style.display = "block";
+      section.style.display = "block";
+      isit = true;
+    }
+  }
+</script>
+<style type="text/css">
+  .back{
+   
+left: 180px;
+
+top: 180px;
+
+cursor: pointer;
+ 
+
+
+
+  }
+  .atitle{
+   
+width: 282px;
+height: 48px;
+left: 250px;
+top: 180px;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 28px;
+line-height: 48px;
+
+ 
+
+color: #2E2E2E;
+  }
+.continue{
+  
+width: 181px;
+height: 25px;
+
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 25px;
+ 
+
+display: flex;
+align-items: flex-end;
+text-decoration-line: underline;
+
+ 
+
+color: #F57000;
+}  
+.share{
+  
+width: 600px;
+height: 123px;
+left: 220px;
+top: 2455px;
+}
+.sharetxxt{
+  position: absolute;
+left: 0%;
+right: 74.5%;
+top: 0%;
+bottom: 77.42%;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 28px;
+ 
+
+
+ 
+
+color: #2E2E2E;
+}
+</style>
+
+<section >
+        <img class="back" src="/back.png">
+        <label class="atitle">Facebook Security    </label>
+      
+</section>
+
+
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <ul class="list-inline d-flex justify-content-between py-3">
+          <li class="list-inline-item"><i class="ti-calendar mr-2"></i>Feb 27, 2020</li>
+          <li class="list-inline-item"><i ></i>5 minute read</li>
+        </ul>
+        <article class="content">
+          <img src="/images/Facebook-security.jpg" alt="post-thumb" class="img-fluid rounded float-left mr-5 mb-4">
+          
+        
+
+       <p>Facebook ကို လူအများအပြားမှ လူမှုရေး စီးပွားရေး နိုင်ငံရေး အစရှိသည့် နယ်ပယ်ပေါင်းစုံတွင် ရည်ရွယ်ချက်အမျိုးမျိုးဖြင့် ကျယ်ပြန့်စွာ</p>
+<p>အသုံးပြုလာကြရာ အမြတ်ထုတ်မှုများ ၊ မသမာမှုများနှင့် ငွေကြေးခြိမ်းခြောက်လိုမှုများကြောင့်   လုံခြုံရေးဆိုင်ရာပြဿနာတွေကို ကြုံတွေ့လာရပါသည်။</p>
+<p>ထို့ကြောင့် Facebook အနေဖြင့်လည်း ၄င်း၏ လုံခြုံရေးဆိုင်ရာပိုမိုစိတ်ချရသော ပြောင်းလဲမှုတွေကို Application သို့မဟုတ် Offical Website မှာထည့်သွင်းပေးထားပါသည်။အသုံးပြုသူများအနေဖြင့် အနည်းငယ် အားထုတ်လေ့လာရုံဖြင့် Facebook Setting ထဲမှာတင် မိမိရဲ့ လုံခြုံရေးကို တိုးမြှင့်နိုင်ပါသည်။</p>
+<h4>အဆင့် (၁) Facebook Setting and Security</h4>
+<p>Facebook ရဲ့  Setting ထဲကို ဝင်ပါ။ Setting ထဲ တွင် မိမိအကောင့်ကို လုံခြုံရေးကိုတိုးမြှင့်နိုင်သည့် Security ဆိုင်ရာအပြောင်းအလဲတွေလုပ်နိုင်ပါသည်။</p>
+<style type="text/css">
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: auto;
+  max-width: 300px;
+  max-height: 400px;
+
+}
+</style>
+
+<img src="/images/FB1.PNG" alt="" class="center">
+<h4>အဆင့် (၂) Where you’re logged in</h4>
+<p>“Security and Login” ထဲမှာ “Where you’re logged in” ကိုတွေ့နိုင်ပါသည်။ မိမိအကောင့်ကို ထည့်သွင်းအသုံးပြုခဲ့သည့် ဖုန်းတွေ၊ ကွန်ပျူတာတွေကို ဒီမှာပြသပေးထားပါသည်။အသုံးပြုထားသည့် အချိန်၊ နေရာတွေကိုပါ ဖော်ပြပေးထားပါသည်။ ပျောက်ဆုံးသွားသည့် ( သို့မဟုတ် ) ပျက်သွားသည့်  ဖုန်း၊ ကွန်ပျူတာတွေမှာ မိမိအကောင့်ကို ထည့်သွင်းအသုံးပြုထားခဲ့ဖူးသည်ဆိုလျှင် “Where you’re logged in”  ကနေ “Log out” လုပ်လို့ရပါသည်။တစ်ခါမှ အသုံးမပြုဖူးသည့် ဖုန်း ၊ ကွန်ပျူတာကနေ မိမိအကောင့်ကို Log In ဝင်ထားတာပြနေလျှင် အကောင့်ကို တစ်ခြားသူကရရှိထားတာမျိုးဖြစ်နိုင်ပါသည်။ “See More” ကို နှိပ်ပြီး “Log Out Of All Sessions” ကို ရွေးချယ်နိုင်ပါသည်။ ဒါဆိုရင်တော့ အကောင့်ကို Log In ဝင်ထားသမျှ စက်ပစ္စည်းတိုင်းကနေ  ထွက်သွားမှာဖြစ်ပါသည်။</p>
+<p><style type="text/css">
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: auto;
+  max-width: 300px;
+  max-height: 400px;
+
+}
+</style>
+
+<img src="/images/FB2.PNG" alt="" class="center">
+<style type="text/css">
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: auto;
+  max-width: 300px;
+  max-height: 400px;
+
+}
+</style>
+
+<img src="/images/FB3.PNG" alt="" class="center"></p>
+<h4>အဆင့်(၃) Change Password</h4>
+<p>ဖေ့စ်ဘွတ် အကောင့စကားဝှက်တွေကို ပုံမှန် ၆ လတစ်ကြိမ် ( သို့ ) တစ်နှစ်တစ်ကြိမ် အမြဲ ပြောင်းလဲအသုံးပြုနေသင့်ပါသည်။ ဤအဆင့်တွင် မိမိ တို့၏ စကားဝှက်များကို အလွယ်တကူပြောင်းနိုင်ပါသည်။ တစ်ခါတစ်ရံ မိမိဖုန်းထဲသို့ ကုဒ်နံပါတ်တွေဝင်လာတာမျိုးဖြစ်တတ်ပါသည်။ဒီအခြေအနေဟာ တစ်ယောက်ယောက် မိမိအကောင့်ကို ရယူဖို့ကြိုးစားနေတာမျိုးဖြစ်နိုင်ပါသည်။ ထို့ကြောင့် ချက်ချင်း မိမိစကားဝှက်ကို ပြောင်းသင့်ပါသည်။
+စကားဝှက်ပြောင်းမည်ဆိုလျှင် လက်ရှိထားထားသည့် စကားဝှက် (Current Password) ကို ဦးစွာ ရိုက်ထည့်ရမှာဖြစ်ပြီး အသစ်ထားချင်သည့် စကားဝှက် ( New Password) ကို ရိုက်ထည့်ရမှာဖြစ်ပါသည်။
+(Retype new password) ကတော့ ရိုက်ထည့်လိုက်သည့်စကားလုံးအမှားအယွင်း မဖြစ်အောင်တစ်ဆင့်ခံပေးထားခြင်းဖြစ်ပါသည်။</p>
+<p><style type="text/css">
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: auto;
+  max-width: 300px;
+  max-height: 400px;
+
+}
+</style>
+
+<img src="/images/FB4.PNG" alt="" class="center">
+<style type="text/css">
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: auto;
+  max-width: 300px;
+  max-height: 400px;
+
+}
+</style>
+
+<img src="/images/FB5.PNG" alt="" class="center"></p>
+<p>အကယ်၍ မိမိ သည် စကားဝှက်ကို မမှတ်မိဘူးဆိုပါက “Forgot Password? “ ကိုနှိပ်ပြီး ပြန်လည်ရယူနိုင်ပါသည်။“Forgot Password” ကိုနှိပ်ပြီးဝင်လိုက်မည်ဆိုလျှင် မိမိအကောင့်တွင်ထည့်ထား
+သော ဖုန်းနံပါတ်( သို့မဟုတ် ) Gmail, Email အား ဂဏန်းခြောက်လုံးပါ မက်ဆေ့တစ်ခုဝင်လာမည်ဖြစ်ပါသည်။ မိမိအကောင့်ဖြစ်ကြောင်း သက်သေခံဖို့အတွက် လုပ်ဆောင်ရခြင်းဖြစ်ပါသည်။ ဂဏန်းများကို ပြထားသည့် နေရာမှာ ရိုက်ထည့်ပြီး password အသစ်ပြောင်းလဲ ရိုက်ထည့်နိုင်ပါသည်။</p>
+<style type="text/css">
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: auto;
+  max-width: 300px;
+  max-height: 400px;
+
+}
+</style>
+
+<img src="/images/FB6.PNG" alt="" class="center">
+<p>အဆင့် (၄) Two Factor Authentication</p>
+<p>နှစ်ဆင့်ခံစစ်မှန်ကြောင်းအတည်ပြုခြင်း</p>
+<p>Two-factor Authentication သည် သုံးစွဲသူများ၏အသုံးပြုနာမည် ( Username ) ၊ စကားဝှက်( Password ) ထက် ပိုပြီး လုံခြုံသည့် လုပ်ဆောင်ချက်တစ်ခုဖြစ်ပါသည်။ အကောင့်ကို စကားဝှက်သိရုံ၊ နာမည်သိရုံ နှင့် အကောင့်ကို ဝင်မသုံးနိုင်တော့ပါ။ အသုံးပြုနေကြမဟုတ်သည့် ဖုန်းတို့ ၊ ကွန်ပျူတာတို့ကိုသုံးပြီး မိမိအကောင့်ကို သုံးတော့မည်ဆိုလျှင် နောက်ထပ်တစ်ဆင့် ကုဒ်နံပါတ်ကို ရိုက်ထည့်မှသာလျှင် အသုံးပြုနိုင်မှာဖြစ်ပါသည်။ ပို့လာသည့် ကုဒ်တွေဟာလဲ တစ်ချိန်နဲ့ တစ်ချိန် မတူညီသလို အချိန်တစ်ခုကြာသွားလျှင်လဲ ကုဒ်အသစ်ထပ်ပို့သောကြောင့်  လုံခြုံရေးအတွက်စိတ်ချရပါသည်။ ကုဒ်တွေကို Facebook ရဲ့ Code Generator မှရရှိနိုင်ပါသည်။ ဒါ့အပြင် အခြား Third Party Authenticator တွေဖြစ်သည့် Google Authenticator တို့ကိုလဲ အသုံးပြုလို့ရပါသည်။ ဒါတွေကို Facebook Security ရဲ့ Two-Factor Authentication မှာ လုပ်လို့ရပါသည်။
+2FA ၏ အလုပ်လုပ်ပုံအား ဥပမာပေး၍ရှင်းပြရလျှင် −
+မိမိတို့အိမ်တွင် ငွေကြေးနှင့် တန်ဖိုးကြီးလက်၀တ်လက်စားများကို လွယ်လွယ်ကူကူဗီဒိုထဲတွင် ထည့်ထားကြမည်ဆိုပါစို့။ အိမ်သော့ကိုဖျက်၍ သူခိုး၀င်ပြီဆိုလျှင် လွယ်လွယ်ကူကူယူသွားနိိုင်သည်။
+သို့သော်ထိုပစ္စည်းများကိုမီးခံသေတ္တာထဲသို့ ထည့်ထားမည်ဆိုလျှင် အိမ်တံခါးကိုဖြတ်နိုင်ရင်တောင်မှ မီးခံသေတ္တာ ကုတ်နံပါတ်ရမှ သိမှသာ ထိုပစ္စည်းများကိုရယူနိုင်မည်ဖြစ်သည်။ 2FA သည်လည်း ထိုကဲ့ သို့ပင်ဖြစ်သည်။ မိမိ အကောင့်ပါမသွားစေရန် လုံခြုံရေးအဆင့်တိုးမြင့်ထားသော စနစ် တစ်ခုဖြစ်သည်။</p>
+<p>ထိုဖြစ်စဉ်ကို နှိုင်းယှဉ်ကြည့်ကြည့်လျှင် အိမ်တံခါးသော့သည် Password , မီးခံသေတ္တာကို ကုတ်နံပါ တ်ထားခြင်း သည် 2 Factor Authentication process ဖြစ်သည်။
+Two-factor Authentication မှာ Text Message (SMS) Code နဲ့ Third party authentication app ဆိုပြီး နှစ်မျိုးသုံးလို့ရပါသည်။ အများစုကတော့ Message က တစ်ဆင့် အသုံးပြုကြပါသည်။
+Text Message ကို အသုံးပြုမည်ဆိုလျှင် အကောင့်ထဲသွင်းထားသည့် ဖုန်းနံပါတ်ကို ကုဒ်နံပါတ် ၆ လုံးပါသည့် Message ဝင်လာပါလိမ့်မည်။နံပါတ် များကို ရိုက်ထည့်ပြီး စတင်အသုံးပြုနိုင်ပါသည်။ တစ်ဦးဦးက မိမိအကောင့် နာမည်နှင့် စကားဝှက်သိနေခဲ့သည်ဆိုလျှင်တောင် Authenticator က ပို့လိုက်သည့် ကုဒ်သည်မိမိဖုန်းထဲသာဝင်မည်ဖြစ်သည့်အတွက် အကောင့်ကို ဝင်ရောက်အသုံးပြုနိုင်မည်မဟုတ်ပါ။ ဆက်လက်အသုံးမပြုလိုပါက “Turn Off” ပြုလုပ်ပြီး ရပ်နားနိုင်ပါသည်။</p>
+<style type="text/css">
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: auto;
+  max-width: 300px;
+  max-height: 400px;
+
+}
+</style>
+
+<img src="/images/FB7.PNG" alt="" class="center">
+<style type="text/css">
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: auto;
+  max-width: 300px;
+  max-height: 400px;
+
+}
+</style>
+
+<img src="/images/FB8.PNG" alt="" class="center">
+<h4>ခရီးသွား Two Factor</h4>
+<p>Two Factor ခံထားသည့်အချိန်တွက် ခံထားသည့် ဖုန်း ကျန်ခဲ့ခြင်း သို့မဟုတ် ပျောက်ဆုံးခြင်းတို့အတွက် ကြိုတင်ပြုလုပ်ရမည့် လုပ်ဆောင်ချက်များ</p>
+<p>Setting &gt;Security and Login&gt;Use Two-factor authentication</p>
+<h4>Recovery Codes </h4>
+<p>Two-factors ခံထားသော်လည်း ဖုန်းနံပါတ်ထဲသို့ ဂဏန်းခြောက်လုံးပါ ကုဒ် မပို့ခြင်း၊ဖုန်းမေ့ကျန်ခဲ့ခြင်း၊ပျောက်ဆုံးခြင်း တို့အတွက် Recovery
+Codes များယူထားသင့်ပါသည်။ &ldquo;Show Code&rdquo; ကိုနှိပ်ကာ ဂဏန်း ၈လုံးပါ အရေးပေါ် ကုဒ် ၁၀ ခုကိုတွေ့မြင်ရမှာဖြစ်ပါသည်။ အရေးပေါ်ကုဒ်များကို Screenshots ရိုက်၍သိမ်းဆည်းထား နိုင်ပါသည်(သို့မဟုတ်) Print ထုတ်ပြီးလုံခြုံစွာသိမ်းဆည်းထားနိုင်ပါသည်။ အရေးပေါ်ကုဒ်အသုံးပြုသည့်နေရာတွင် ကုဒ်တစ်ခုကို တစ်ကြိမ်သာ အသုံးပြုနိုင်မည်ဖြစ်ပြီး မိမိလိုအပ်သလို ကုဒ်အသစ်များကိုလည်း &quot; Get New Codes&rdquo; နှိပ်ကာ ရယူနိုင်ပါသည်။ &ldquo;Get New Codes&rdquo; နှိပ်ပြီးပါက ယခင်ကုဒ်အဟောင်းများကို အသုံးပြုနိုင်တော့မည်မဟုတ်သဖြင့် ကုဒ်အသစ်များကို ထပ်မံသိမ်းဆည်း
+ထားရန်လိုအပ်ပါသည်။</p>
+<p><h4>အဆင့် ( ၅ ) Get Alerts about unrecognized login</h4>
+မိမိ အကောင့်ကို တစ်ဦးဦးမှ ဝင်ရောက်လျှင် အသိပေးသည့် လုံခြုံရေးစနစ်</p>
+<p>မိမိအကောင့်ကို တစ်ဦးဦးမှ ဝင်ရောက်အသုံးပြုဖို့ကြိုးစားနေမည်ဆိုလျှင် အသိပေးမည့် နည်းတစ်ခုဖြစ်ပါသည်။ &ldquo;Get Alerts about unrecognized login&rdquo; ထဲသို့ ဝင်ရောက်ပြီး Notificaton နှင့် Messenger ကို “Get Notificatons” ပြုလုပ်ထားမည်ဆိုလျှင် Notification ပို့ပေးမှာဖြစ်ပါသည်။ Message နဲ့ Email မှတဆင့်လဲ သတိပေးချက်ပို့ပေးနိုင်ပါသည်။</p>
+<p><style type="text/css">
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: auto;
+  max-width: 300px;
+  max-height: 400px;
+
+}
+</style>
+
+<img src="/images/FB9.PNG" alt="" class="center">
+<style type="text/css">
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: auto;
+  max-width: 300px;
+  max-height: 400px;
+
+}
+</style>
+
+<img src="/images/FB10.PNG" alt="" class="center"></p>
+<p>Choose 3 to 5 friends to contact if you get locked out
+အကောင့်ဝင်မရဖြစ်လျှင် မိတ်ဆွေများထံအကူအညီတောင်းခြင်း</p>
+<p>အကောင့်မှ ထွက်သွားပြီး ဝင်မရဖြစ်နေလျှင် ဤအကောင့်သည် မိမိအကောင့်ဖြစ်ကြောင်း မိတ်ဆွေများထံမှ အသိအမှတ်ပြုပေးမည့် လုပ်ဆောင်ချက်ဖြစ်ပါသည်။ မိတ်ဆွေ ၃ ဦး မှ ၅ ဦးအထိ ရွေးချယ်နိုင်ပြီး ယုံကြည့်ရသည့် စာရင်းထဲထည့်ထားလျှင် မိတ်ဆွေများကို ကုဒ်နံပါတ်များပို့ပေးပြီး မိမိအကောင့်ဖြစ်ကြောင်း သက်သေပြရန် ထိုကုဒ်များကို ရိုက်သွင်းပေးရပါမည်။
+ထိုသို့ဖြင့် မိမိအကောင့်ကို ပြန်လည်ရယူနိုင်ပါသည်။</p>
+<p>“Choose 3 to 5 friends to contact if you get locked out” ထဲသို့ဝင်၍ မိတ်ဆွေများရွေးချယ်ထားနိုင်ပါသည်။</p>
+<style type="text/css">
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: auto;
+  max-width: 300px;
+  max-height: 400px;
+
+}
+</style>
+
+<img src="/images/FB11.PNG" alt="" class="center">
+<p>အဆင့် ( ၆ ) မိမိအကောင့်အား ချိန်းခြောက်ခံနေရမှုမှ ကာကွယ်ခြင်း</p>
+<p>Facebook အကောင့်အား တစ်ယောက်ယောက်က ချိန်းခြောက်နေသည်ဆိုလျှင် ချက်ချင်း အကောင့်ကို “Deactive” လုပ်လိုက်သင့်ပါသည်။ “Deactive” လုပ်လိုက်ခြင်းဖြင့် မိမိ အကောင့်၊ ဓာတ်ပုံများ၊ မိမိ ဝေမျှထားသည်များကို လူတွေမမြင်နိုင်တော့ပါ။ ချွင်းချက်အနေနှင့် မိမိ သူငယ်ချင်းများ၏စာရင်း(Friends List)ထဲတွင် အကောင့်နာမည်ကျန်နေခြင်း၊ စကားပြောထားသည်များပျောက်မသွားခြင်းတို့ဖြစ်နိုင်ပါသည်။</p>
+<p>“Deactivate” ကို General Setting ထဲရှိ Account Management သို့သွားပြီး ပြုလုပ်နိင်ပါသည်။</p>
+<style type="text/css">
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: auto;
+  max-width: 300px;
+  max-height: 400px;
+
+}
+</style>
+
+<img src="/images/FB13.PNG" alt="" class="center">
+<style type="text/css">
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: auto;
+  max-width: 300px;
+  max-height: 400px;
+
+}
+</style>
+
+<img src="/images/FB14.PNG" alt="" class="center">
+<p>နောက်တစ်နည်းမှာတော့ အကောင့်ကို ဖျက်လိုက်ခြင်းဖြင့်လဲ ကာကွယ်နိုင်ပါသည်။ မိမိအချက်အလက်တွေကို ပိုင်ဆိုင်မှုမပေးခင် ဖျက်ပစ်လိုက်ခြင်းက နည်းလမ်းကောင်းတစ်ခုပါသည်။ အကောင့်ကို ဖျက်လိုက်ပြီဆိုလျှင်တော့ ပြန်မရနိုင်တော့ပါ။
+Account Information ထဲ မှ မိမိအကောင့်ကို ဖျက်သိမ်းနိုင်ပါသည်။ အကောင့်အချက်အလက်တွေကို မဖျက်ခင် “Download your information” မှတဆင့် Download ဆွဲ၍၊ သိမ်းဆည်းထားနိုင်ပါသည်။</p>
+<style type="text/css">
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: auto;
+  max-width: 300px;
+  max-height: 400px;
+
+}
+</style>
+
+<img src="/images/FB15.PNG" alt="" class="center">
+
+            
+        </article>
+
+      
+    </div>
+  </div>
+<div class="share">
+  <label class="sharetxxt">ဤဆောင်းပါးကိုမျှဝေရန်</label>
+</div>
+</section>
+
+
+
+<style type="text/css">
+
+@media (max-width:480px){
+.footerright{
+position: absolute;
+width: 100%;
+max-width: 480px;
+min-width: 360px;
+height: 247px;
+
+
+top: 3099px;
+background: #F57000;
+padding: 30px;
+} 
+.mbmenu{
+  display: block;
+ }  
+ 
+ .fmbmenuitem{
+  font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 28px;
+ 
+
+display: flex;
+align-items: flex-end;
+
+color: #FFFFFF;
+left: 4.17%;
+right: 73.89%;
+
+cursor: pointer;
+ }
+.footerleft{
+padding: 20px;  
+position: absolute;
+width: 100%;
+height: 251px;
+max-width: 480px;
+min-width: 360px;
+
+top: 3346px;
+background: #FFFFFF;
+margin-top: 20px;
+margin-left: 20px;
+}
+.foot{
+
+position: absolute;
+
+width: 300px;
+
+
+  }
+}
+
+
+
+ @media (min-width: 500px){
+.foot{
+position: absolute;
+width: 100%;
+height: 232px;
+left: 220px;
+top: 3443px;
+  }
+.footerleft{
+position: absolute;
+left: 0%;
+right: 76.62%;
+top: 0%;
+bottom: 0%;
+background: #FFFFFF;
+}
+.footerright{
+  position: absolute;
+left: 23.38%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+}
+.mbmenu{
+  display: none;
+ } 
+}
+
+  
+</style>
+
+<footer id="foott" class="bg-secondary foot">
+  
+      
+      
+        <div class="footerleft" >
+          <div class="row">
+            <img  src="/logo.png"> 
+            <img  src="/Logo_MIDO.png">
+          </div>
+          
+            <p style="width: 230px;
+            word-wrap: break-word; font-size: 10pt;">
+            Digital Tea House is a campaign launched 
+            by Mido to promote digital safety
+            awareness in MYanmar.
+
+        </p>
+        </div >
+        <div class="footerright" >
+          <div class=" fbar">
+            <a class="fmenu" href="">ဒီဂျစ်တယ်ဖတ်စရာများ</a>
+          <a class="fmenu" href="">သင်ထောက်ကူများစုစည်းမှု</a>
+          <a class="fmenu" href="">ဒီဂျစ်တယ်ရေဒီယို</a>
+          <a class="fmenu" href="">လဖက်ရည်ဆိုင်အကြောင်း</a>
+          </div>
+          <div class=" fbar">
+             
+          <a class="fmenu" href="">သိသာစေရန်</a>
+          </div>
+         
+        </div>
+      <div class="footerright fbar" >
+        <div class="mbmenu">
+           <a class="fmbmenuitem" href="">ဒီဂျစ်တယ်ဖတ်စရာများ</a>
+            <a class="fmbmenuitem" href="">သင်ထောက်ကူများစုစည်းမှု</a>
+          <a class="fmbmenuitem" href="">ဒီဂျစ်တယ်ရေဒီယို</a>
+          <a class="fmbmenuitem" href="">လဖက်ရည်ဆိုင်အကြောင်း</a>
+           <a class="fmbmenuitem" href="">သိသာစေရန်</a>
+        </div>
+      </div>
+
+  
+
+
+</footer>
+
+
+</script>
+
+
+<!-- JS Plugins -->
+
+<script src="/plugins/jQuery/jquery.min.js"></script>
+
+<script src="/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="/plugins/slick/slick.min.js"></script>
+
+<script src="/plugins/headroom/headroom.js"></script>
+
+<script src="/plugins/instafeed/instafeed.min.js"></script>
+
+<script src="/plugins/masonry/masonry.js"></script>
+
+<script src="/plugins/reading-time/readingTime.min.js"></script>
+
+<script src="/plugins/smooth-scroll/smooth-scroll.js"></script>
+
+<script src="/plugins/search/fuse.min.js"></script>
+
+<script src="/plugins/search/mark.js"></script>
+
+<script src="/plugins/search/search.js"></script>
+
+
+<!-- Main Script -->
+
+<script src="/js/script.min.js"></script>
+
+<!-- google analitycs -->
+</body>
+</html>

@@ -1,12 +1,12 @@
 {{ define "main" }}
 
-<!-- page-title -->
-{{- partial "articletitlebar.html" . -}}
-<!-- /page-title -->
+
 <section>
-  {{- partial "allarticles.html" . -}}
-</section>
-<!-- category post -->
+{{- partial "articletitlebar.html" . -}}
+{{- partial "allarticles.html" . -}}
 {{- partial "podcast.html" . -}}
+</section>
+
+
 
 {{ end }}

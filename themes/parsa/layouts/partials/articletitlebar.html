@@ -1,5 +1,222 @@
 <style type="text/css">
-	.tbar{
+@media (max-width:480px){
+.cat1{
+left: 0;
+}
+.catt2{
+left: 0;
+}
+.t1{
+left: 0;
+}
+.t2{
+left: 0;
+}
+
+.filter{
+	width: 300px;
+}	
+.tbar{
+position: absolute;
+width: 100%;
+max-width: 480px;
+min-width: 360px;
+height: 206px;
+left: 0px;
+top: 90px;
+
+background: #FFFFFF;
+/* Text Grey */
+
+border: 1px solid #8E8E8E;
+box-sizing: border-box;
+}
+.tbanner{
+	position: absolute;
+width: 100%;
+max-width: 480px;
+min-width: 360px;
+height: 76px;
+left: 0px;
+top:0%;
+background: #F57000;
+}
+.titletext{
+	position: absolute;
+width: 188px;
+height: 41px;
+left: 20px;
+top: ,20%;
+
+/* Section Heading */
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+line-height: 41px;
+display: flex;
+align-items: flex-end;
+text-align: center;
+
+color: #FFFFFF;
+}
+.fbtn{
+position: absolute;
+left: 25.5%;
+right: 67.76%;
+top: 58.48%;
+bottom: 30.36%;
+}
+.ftext{
+position: absolute;
+width: 100%;
+height: 25px;
+left: 275.4px;
+top: 50%;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 10px;
+line-height: 25px;
+/* identical to box height, or 250% */
+
+display: flex;
+align-items: flex-end;
+text-align: center;
+
+/* text black */
+
+color: #2E2E2E;
+}
+.fimg{
+	position: absolute;
+width: 20px;
+height: 20.29px;
+left: 241px;
+top: 50%;
+cursor: pointer;
+
+/* orange */
+
+
+}
+.articlecount{
+	position: absolute;
+width: 208px;
+height: 25px;
+left: 14px;
+top: 50%;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 25px;
+/* identical to box height, or 139% */
+
+display: flex;
+align-items: flex-end;
+text-align: center;
+
+/* text black */
+
+color: #2E2E2E;
+}
+.indc{
+	font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 28px;
+/* identical to box height */
+
+text-align: center;
+
+/* text black */
+
+color: #2E2E2E;
+}
+.cat{
+position: absolute;
+width: 85px;
+height: 28px;
+left: 14px;
+top: 80%;
+}
+.tlv{
+	position: absolute;
+width: 85px;
+height: 28px;
+left: 135px;
+top: 80%;
+}
+.tg{
+	position: absolute;
+width: 49px;
+height: 28px;
+left: 259px;
+top: 80%;
+}
+.catm{
+position: absolute;
+left: 3%;
+right: 63.5%;
+top: 58.45%;
+bottom: 8.6%;
+}
+.mbtn{
+position: absolute;	
+background: #FFFFFF;
+width: 165px;height: 35px;
+/* Shadow */
+
+box-shadow: 0px 3px 3px rgba(117, 117, 117, 0.26);
+border-radius: 0px;
+border-style: none;
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 25px;
+/* or 179% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+/* orange */
+
+color: #F57000;
+}
+.mbtn:hover {background-color: #F57000;
+	color: #FFFFFF;
+}
+
+.mbtn:active {
+  background-color: #F57000;;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+  color: #FFFFFF;
+}
+
+}
+
+@media (min-width: 500px){
+.cat1{
+left: 200px;
+}
+.catt2{
+left: 30px;
+}
+.t1{
+left: 395;
+}
+.t2{
+left: 565;
+}	
+.tbar{
 position: absolute;
 width: 1000px;
 height: 224px;
@@ -179,6 +396,11 @@ color: #F57000;
   transform: translateY(4px);
   color: #FFFFFF;
 }
+
+}	
+
+
+	
 </style>
 
 <div class="tbar">
@@ -194,39 +416,42 @@ color: #F57000;
 			<label class="indc tg">Tag ( )</label>
 
 		</div>
-		<div id="cate" style="display: none;">
-			<button class="mbtn" style="left: 200px;top:284px;">
+		
+			<div id="cate" style="display: none;">
+			<button class="mbtn" class="cat1" style=" top:284px;">
 				E-mail Safety
 			</button>
-			<button class="mbtn" style="left: 200px;top: 244px;">
+			<button class="mbtn" class="cat1" style=" top: 244px;">
 				Browsing Safety
 			</button>
-			<button class="mbtn" style="left: 200px;top: 204px;">
+			<button class="mbtn" class="cat1" style=" top: 204px;">
 			Application Safet</button>
-			<button class="mbtn" style="left: 30px;top: 284px;">
+			<button class="mbtn" class="cat2" style=" top: 284px;">
 				Hacking & Scam
 			</button>
-			<button class="mbtn" style="left: 30px;top: 244px;">
+			<button class="mbtn" class="cat2" style= "top: 244px;">
 				Mobile Devices
 			</button>
-			<button class="mbtn" style="left: 30px;top: 204px;">
+			<button class="mbtn" class="cat2" style= "top: 204px;">
 			Digital World
 			</button>
 		</div>
 		<div id="teal" style="display: none;">
-			<button class="mbtn" style="left: 395px;top: 204px;">
+			<button class="mbtn" class="t1" style="top: 204px;">
 				<img src="/tlv1.png">
 			</button>
-			<button class="mbtn" style="left: 395px;top: 249px;">
+			<button class="mbtn" class="t1" style="top: 249px;">
 				<img src="/tlv2.png">
 			</button>
-			<button class="mbtn" style="left: 565px;top: 204px;">
+			<button class="mbtn" class="t2" style="top: 204px;">
 				<img src="/tlv3.png">
 			</button>
-			<button class="mbtn" style="left: 565px;top: 249px;">
+			<button class="mbtn" class="t2" style="top: 249px;">
 				<img src="/tlv4.png">
 			</button>
 		</div>
+		
+		
 </div>
 
 <script type="text/javascript">
