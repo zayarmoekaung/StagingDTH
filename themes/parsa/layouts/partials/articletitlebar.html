@@ -383,6 +383,7 @@ height: 19px;
 left: 255px;
 top: 134px;
 cursor: pointer;
+z-index: 99;
 
 /* orange */
 
@@ -486,6 +487,40 @@ color: #F57000;
   transform: translateY(4px);
   color: #FFFFFF;
 }
+.filterbox{
+
+}
+.filterlabel{
+	display: none;
+}
+.cate{
+	display: none;
+	position: absolute;
+left: 15%;
+right: 63.5%;
+top: 30.45%;
+bottom: 8.6%;
+}
+.teal{
+	display: none;
+	position: absolute;
+left: 17%;
+right: 63.5%;
+top: 30.45%;
+bottom: 8.6%;
+}
+.mftitle{
+	display: none;
+}
+.fbtn1{
+top: 204px;
+}
+.fbtn2{
+top: 244px;
+}
+.fbtn3{
+top: 284px;
+}
 
 }	
 
@@ -511,15 +546,17 @@ color: #F57000;
 </div>
 <div id="filterbox" class="filterbox">
 <div id="filterbar" class="filterbar">
+				<div class="mftitle">
 				 <img class="mback" src="/mback.png" onclick="appearart()">
 				 <label class="titlefbar">ပြောင်းရန်</label>
 				 <img class="logofbar"src="/filterw.png">
+				 </div>
 	</div>
 	 <label class="filterlabel" style="top: 110px;">Category</label>
 	  <label class="filterlabel" style="top: 343px;">Cup Level</label>
 	  <label class="filterlabel" style="top: 562px;">Tag</label>
 
-			<div id="cate" style="display: none;">
+			<div id="cate" class="cate" style="display: none;">
 			<button class="mbtn fbtn2"  style=" top:284px;">
 				E-mail Safety
 			</button>
@@ -538,7 +575,7 @@ color: #F57000;
 			Digital World
 			</button>
 		</div>
-		<div id="teal" style="display: none;">
+		<div id="teal" class="teal" style="display: none;">
 			<button class="mbtn fbtn1" class="t1" style="top: 406px;">
 				<img src="/tlv1.png">
 			</button>
@@ -552,17 +589,56 @@ color: #F57000;
 				<img src="/tlv4.png">
 			</button>
 		</div>
+
+		<div id="catew" class="cate" style="display: none;">
+			<button class="mbtn fbtn3"  style=" left:  200px;">
+				E-mail Safety
+			</button>
+			<button class="mbtn fbtn2"  style=" left:  200px;">
+				Browsing Safety
+			</button>
+			<button class="mbtn fbtn1"  style=" left:  200px;">
+			Application Safety</button>
+			<button class="mbtn fbtn3"  style=" left: 30px;">
+				Hacking & Scam
+			</button>
+			<button class="mbtn fbtn2"  style= "left: 30px;">
+				Mobile Devices
+			</button>
+			<button class="mbtn fbtn1"  style= "left: 30px;">
+			Digital World
+			</button>
+		</div>
+		<div id="tealw" class="teal" style="display: none;">
+			<button class="mbtn "  style="left: 395px; top: 204px;">
+				<img src="/tlv1.png">
+			</button>
+			<button class="mbtn "  style=" left: 565px; top: 204px;">
+				<img src="/tlv2.png">
+			</button>
+			<button class="mbtn "  style="left: 395px; top: 249px;">
+				<img src="/tlv3.png">
+			</button>
+			<button class="mbtn "  style="left: 565px; top: 249px;">
+				<img src="/tlv4.png">
+			</button>
+		</div>
+
 		</div>
 <script type="text/javascript">
 	mycat = document.getElementById('cate')
 	mytea = document.getElementById('teal')
+	mycatw = document.getElementById('catew')
+	myteaw = document.getElementById('tealw')
 	var isit = true
 	function appearart() {
+		if (window.screen.width <= 480 ) {
 		if (isit) {
 			mycat.style.display = "block";
 			mytea.style.display = "block";
 			filterbox.style.display = "block";
 			isit = false;
+			alert('click1')
 		}else{
 			mycat.style.display = "none";
 			mytea.style.display = "none";
@@ -570,5 +646,22 @@ color: #F57000;
 			isit = true;
 		}
 	}
+
+	if (window.screen.width >= 480){
+		if (isit) {
+			mycatw.style.display = "block";
+			myteaw.style.display = "block";
+			filterbox.style.display = "block";
+			isit = false;
+			alert('click')
+		}else{
+			mycatw.style.display = "none";
+			myteaw.style.display = "none";
+			filterbox.style.display = "none";
+			isit = true;
+
+	}
+	}
+}
 
 </script>

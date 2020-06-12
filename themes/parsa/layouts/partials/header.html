@@ -21,10 +21,7 @@ background: #FFFFFF;
   border: none;
   border-radius: 0px;
   justify-content: center;
-
-
-
-} 
+ } 
 input[type="text"]::placeholder {  
                   
                 /* Firefox, Chrome, Opera */ 
@@ -48,15 +45,8 @@ max-width: 480px;
 min-width: 300px;
 top: 90px;
 height: 644px;
-
-
-
-/* grey */
-
-background: #F2F2F2;
-
 background: #FFFFFF;
-  } 
+} 
 .wsearchbox{
   display: none;
 }
@@ -64,10 +54,10 @@ background: #FFFFFF;
     overflow: hidden;
     display: none;
     width: 100%;
-}
-max-width: 480px;
-min-width: 360px;
+
   }
+
+
   .mlogo{
     position: absolute;
 left: 4.17%;
@@ -227,8 +217,8 @@ background: #FFFFFF;
  }
 }
 
- @media (min-width: 481px){
-    .msearchbox{
+@media (min-width: 481px){
+.msearchbox{
 
 display: none;
   } 
@@ -246,6 +236,12 @@ display: none;
   .searchpg{
   display: none;
 }
+.msearchbox{
+  display: none;
+}
+.sform{
+display: none;
+}
 
   }
 
@@ -257,7 +253,7 @@ display: none;
   
       <div id="searchpg" class="msearchbox">
         
-        <div class="sform" style="justify-content: center;">
+      
         <form action="/action_page.php"  >
           <img class="mbacks" src="/back.png" onclick="appear2()">
     <input type="text" id="keyword" name="keyword" placeholder="ဘာကိုရှာချင်ပါသလည်း?" style="top: 30.06%;">
@@ -266,7 +262,7 @@ display: none;
   
 </svg>
   </form>
-  </div>
+  
       </div>
       
 </header>
@@ -359,7 +355,7 @@ display: none;
   function appear2() {
     if (isit) {
       searchpg.style.display = "block";
-      alert("Hello! I am an alert box!!");
+     
       isit = false;
     }else{
       searchpg.style.display = "none";
