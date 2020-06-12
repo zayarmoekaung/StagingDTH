@@ -1,14 +1,14 @@
 {{ define "main" }}
 
-{{- partial "slideshow.html" . -}}	
+{{- partial "Menu.html" . -}}	
 
 
-	<section>
+	<section style="position: relative;">
 	{{- partial "option.html" . -}}
 	{{- partial "level.html" . -}}
 	{{- partial "article.html" . -}}
 	</section>
-	<section>
+	<section style="position: relative;">
 	{{- partial "podcast.html" . -}}
 	</section>
 
