@@ -98,6 +98,36 @@ top: 20px;
 }
 
  @media (min-width: 500px){
+  .shbtn{
+    position: absolute;
+    width: 260px;
+    height: 80px;
+   left: 5%;
+   right: 65.67%;
+   top: 89.04%;
+  
+    background-color: #F57000;
+    box-shadow: 0px 3px 3px rgba(117, 117, 117, 0.26);
+border-radius: 6px;
+  }
+  .fbs{
+    position: absolute;
+   
+    z-index: 99;
+    left: 10%;
+    top: 89.04%;
+    bottom: 5.06%;
+    
+  }
+    .tweet{
+    position: absolute;
+    justify-content: center;
+    z-index: 99;
+    left: 45%;
+    top: 89.04%;
+    bottom: 5.06%;
+    
+  }
  .mpod{
   display: none;
 
@@ -419,10 +449,14 @@ color: #2E2E2E;
 }
 .sharebtn{
   position: absolute;
+  width: 260px;
 left: 5%;
 right: 65.67%;
 top: 89.04%;
+z-index: 100;
 bottom: 5.06%;
+background-color: #f2f2f2
+
 }
 
 .mini{
@@ -488,6 +522,7 @@ align-items: flex-end;
 
 color: #FFFFFF;
 }
+
 </style>
 <audio id="audio" ontimeupdate="updateBar()"  >
   <source src="https://otamyanmar.podbean.com/mf/play/n8f29q/11.mp3" type="audio/mpeg">
@@ -531,10 +566,25 @@ color: #FFFFFF;
  <a href="https://web.facebook.com/digitalteahouse2020"><img src="/Logo_fb.png" class="fb"></a>
  <a href=""><img src="/logo_email.png" class="email"></a>
  <label class="share">ကြိုက်တယ်ဆို Share ပေးပါအုံး ဆိုင်အသစ်မို့ပါ !!!!!</label>
-<a href=""><img src="/Share Button.png" class="sharebtn"></a>
+ <div id="sharebtn" class="sharebtn">
+   <img src="/Share Button.png" style="cursor: pointer;"  onclick="appearsh()">
+ </div>
+
+
+
+  
+  
+
+<div class="fb-share-button fbs" id="fbs"  data-href="https://www.digitalteahouse.info/" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.digitalteahouse.info%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore" >Share</a></div>
+<div class="tweet"><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
 </div>
+
+
 </div>
+
+
 </div>
+
 
 
 <script>
@@ -547,7 +597,7 @@ function scrollFunction() {
     
   } else {
     podcast.style.display = "none";
-    
+   
     
   }
 }
@@ -629,6 +679,18 @@ function convertElapsedTime(inputSeconds) {
   var minutes = Math.floor(inputSeconds / 60)
   return minutes + ":" + seconds
 }
+
+  function appearsh() {
+  
+    sharebtn.style.display="none"
+     
+     
+    }
+    function shclose() {
+      sharebtn.style.display="block"
+      
+    }
+  
 </script>
 
 
