@@ -1,26 +1,106 @@
 <style type="text/css">
 @media (max-width:480px){
-.cat1{
-overflow: hidden;	
-left: 0;
+.fbtn1{
+position: absolute;
+left: 10px;
 }
-.catt2{
-overflow: hidden;	
-left: 0;
+.fbtn2{
+position: absolute;
+left: 186px;
 }
-.t1{
-overflow: hidden;	
-left: 0;
-}
-.t2{
-overflow: hidden;	
-left: 0;
+.filterlabel{
+	position: absolute;
+width: 100%;
+height: 41px;
+left: 20px;
+
+
+/* Section Heading */
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 41px;
+display: flex;
+align-items: flex-end;
+
+color: #3C3C3C;
+
 }
 
 .filter{
 	overflow: hidden;
 	width: 300px;
+}
+.filterbar{
+	
+overflow: hidden;	
+position: absolute;
+
+min-width:100%;
+height: 90px;
+left: 0px;
+top: 0px;
+
+
+
+background: #F57000;
+}
+.filterbox{
+display: none;	
+overflow: hidden;
+position: relative;
+min-width: 100%;
+height: 782px;
+
+/* grey */
+z-index: 80;
+background: #F2F2F2;
+}
+.titlefbar{
+position: absolute;
+width: 96px;
+height: 25px;
+left: 131px;
+top: 33px;
+width: 100%;
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 25px;
+/* identical to box height, or 104% */
+
+display: flex;
+align-items: flex-end;
+text-align: center;
+
+color: #FFFFFF;
+
+}
+.logofbar{
+	position: absolute;
+margin-left: 30px;	
+left: 65.83%;
+right: 25.28%;
+top: 30.71%;
+bottom: 92.2%;
+
+/* f57000 */
+
+
 }	
+.clsfilter{
+	position: absolute;
+left: 100%;
+right: -100%;
+top: 0%;
+bottom: 0%;
+
+background: #FFFFFF;
+
+}
 .tbar{
 overflow: hidden;	
 position: absolute;
@@ -151,6 +231,7 @@ width: 85px;
 height: 28px;
 left: 14px;
 top: 80%;
+
 }
 .tlv{
 	position: absolute;
@@ -418,63 +499,74 @@ color: #F57000;
 	</div>
 		<label class="articlecount">ဆောင်းပါး <label>N</label> ကိုပြထားသည်</label>
 		<label class="ftext">(ပြောင်းရန်)</label>
-		<img class="fimg" onclick="appear()" src="/filter.png">
+		<img class="fimg" onclick="appearart()" src="/filter.png">
 		<div>
 			<label class="indc cat">Category( )</label>
 			<label class="indc tlv">Tea level ( )</label>
 			<label class="indc tg">Tag ( )</label>
 
 		</div>
+			
 		
+</div>
+<div id="filterbox" class="filterbox">
+<div id="filterbar" class="filterbar">
+				 <img class="mback" src="/mback.png" onclick="appearart()">
+				 <label class="titlefbar">ပြောင်းရန်</label>
+				 <img class="logofbar"src="/filterw.png">
+	</div>
+	 <label class="filterlabel" style="top: 110px;">Category</label>
+	  <label class="filterlabel" style="top: 343px;">Cup Level</label>
+	  <label class="filterlabel" style="top: 562px;">Tag</label>
+
 			<div id="cate" style="display: none;">
-			<button class="mbtn" class="cat1" style=" top:284px;">
+			<button class="mbtn fbtn2"  style=" top:284px;">
 				E-mail Safety
 			</button>
-			<button class="mbtn" class="cat1" style=" top: 244px;">
+			<button class="mbtn fbtn2"  style=" top: 244px;">
 				Browsing Safety
 			</button>
-			<button class="mbtn" class="cat1" style=" top: 204px;">
-			Application Safet</button>
-			<button class="mbtn" class="cat2" style=" top: 284px;">
+			<button class="mbtn fbtn2"  style=" top: 204px;">
+			Application Safety</button>
+			<button class="mbtn fbtn1"  style=" top: 284px;">
 				Hacking & Scam
 			</button>
-			<button class="mbtn" class="cat2" style= "top: 244px;">
+			<button class="mbtn fbtn1"  style= "top: 244px;">
 				Mobile Devices
 			</button>
-			<button class="mbtn" class="cat2" style= "top: 204px;">
+			<button class="mbtn fbtn1"  style= "top: 204px;">
 			Digital World
 			</button>
 		</div>
 		<div id="teal" style="display: none;">
-			<button class="mbtn" class="t1" style="top: 204px;">
+			<button class="mbtn fbtn1" class="t1" style="top: 406px;">
 				<img src="/tlv1.png">
 			</button>
-			<button class="mbtn" class="t1" style="top: 249px;">
+			<button class="mbtn fbtn2" class="t1" style=" top: 406px;">
 				<img src="/tlv2.png">
 			</button>
-			<button class="mbtn" class="t2" style="top: 204px;">
+			<button class="mbtn fbtn1" class="t2" style="top: 455px;">
 				<img src="/tlv3.png">
 			</button>
-			<button class="mbtn" class="t2" style="top: 249px;">
+			<button class="mbtn fbtn2" class="t2" style="top: 455px;">
 				<img src="/tlv4.png">
 			</button>
 		</div>
-		
-		
-</div>
-
+		</div>
 <script type="text/javascript">
 	mycat = document.getElementById('cate')
 	mytea = document.getElementById('teal')
 	var isit = true
-	function appear() {
+	function appearart() {
 		if (isit) {
 			mycat.style.display = "block";
 			mytea.style.display = "block";
+			filterbox.style.display = "block";
 			isit = false;
 		}else{
 			mycat.style.display = "none";
 			mytea.style.display = "none";
+			filterbox.style.display = "none";
 			isit = true;
 		}
 	}

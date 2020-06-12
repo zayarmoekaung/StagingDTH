@@ -13,10 +13,58 @@ min-height: 90px;
 
 background: #FFFFFF;
   }
+ input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  margin-top: 30%;
+  border: none;
+  border-radius: 0px;
+  justify-content: center;
+
+
+
+} 
+input[type="text"]::placeholder {  
+                  
+                /* Firefox, Chrome, Opera */ 
+                text-align: center; 
+            } 
+
+.sform{
+  left: 0%;
+right: 0%;
+top: 30.06%;
+bottom: 73.28%;
+}
+
+  .msearchbox{
+
+display: none;
+ position: fixed;
+    z-index: 999;
+width: 100%;
+max-width: 480px;
+min-width: 300px;
+top: 90px;
+height: 644px;
+
+
+
+/* grey */
+
+background: #F2F2F2;
+
+background: #FFFFFF;
+  } 
+.wsearchbox{
+  display: none;
+}
   .wnavbar{
     overflow: hidden;
     display: none;
     width: 100%;
+}
 max-width: 480px;
 min-width: 360px;
   }
@@ -65,7 +113,8 @@ transform: matrix(-1, 0, 0, 1, 0, 0);
  } 
  .mitem{
 display: none;
-position: absolute;
+ position: fixed;
+    z-index: 999;
 width: 100%;
 max-width: 480px;
 min-width: 300px;
@@ -112,6 +161,16 @@ color: #FFFFFF;
 left: 5%;
 right: 100%;
 top: 20%;
+bottom: 0%;
+
+
+
+ }
+ .mbacks{
+  position: absolute;
+left: 5%;
+right: 100%;
+top: 5%;
 bottom: 0%;
 
 
@@ -169,6 +228,13 @@ background: #FFFFFF;
 }
 
  @media (min-width: 481px){
+    .msearchbox{
+
+display: none;
+  } 
+.wsearchbox{
+
+}
 .mnavbar{
   display: none;
 
@@ -187,7 +253,22 @@ display: none;
 <header class="mnavbar">
   <a href="/"><img class="mlogo" src="/navlogo.PNG"></a>
   <label class="mmenu" onclick="appear()">menu</label>
-  <img class="msearch" src="/search.png">
+  <img class="msearch" src="/search.png" onclick="appear2()">
+  
+      <div id="searchpg" class="msearchbox">
+        
+        <div class="sform" style="justify-content: center;">
+        <form action="/action_page.php"  >
+          <img class="mbacks" src="/back.png" onclick="appear2()">
+    <input type="text" id="keyword" name="keyword" placeholder="ဘာကိုရှာချင်ပါသလည်း?" style="top: 30.06%;">
+    <svg height="210" width="100%">
+  <line x1="0" y1="0" x2="100%" y2="0" style="stroke:rgb(0,0,0);stroke-width:2" />
+  
+</svg>
+  </form>
+  </div>
+      </div>
+      
 </header>
   
 <div id="menuitem" class="mitem">
@@ -201,7 +282,7 @@ display: none;
       <a href="/materials"><label class="menutxt">သင်ထောက်ကူများစုစည်းမှု</label></a>
     </div>
     <div class="menuitem" style="top: 272px;">
-      <a href="radio"><label class="menutxt">ဒစ်ဂျစ်တယ်ရေဒီယို</label></a>
+      <a href="/radio"><label class="menutxt">ဒစ်ဂျစ်တယ်ရေဒီယို</label></a>
     </div>
     <div class="menuitem" style="top: 363px;">
       <a href="/about"><label class="menutxt">လဖက်ရည်ဆိုင်အကြောင်</label></a>
@@ -250,11 +331,12 @@ display: none;
       
       
     </div>
-      <a href="">
-        <img src="/search.png" style="width: 40px; height: 40px;">
-      </a>
+    
+        <img src="/search.png" style="width: 40px; height: 40px;" onclick="appear2()">
+     
+     
   </nav>
-
+   
 </header>
 
 <script type="text/javascript">
@@ -263,16 +345,13 @@ display: none;
     if (isit) {
        isit = false;
       menuitem.style.display = "block";
-      frame.style.display = "none";
-      abt.style.display="none"
-      alert("Hello! I am an alert box!!");
+  
+     
      
     }else{
       isit = true;
       menuitem.style.display = "none";
-      frame.style.display = "block";
-      abt.style.display="block"
-
+    
 
       
     }
@@ -280,13 +359,11 @@ display: none;
   function appear2() {
     if (isit) {
       searchpg.style.display = "block";
-      frame.style.display = "none";
-      section.style.display = "none";
+      alert("Hello! I am an alert box!!");
       isit = false;
     }else{
       searchpg.style.display = "none";
-      frame.style.display = "block";
-      section.style.display = "block";
+     
       isit = true;
     }
   }
