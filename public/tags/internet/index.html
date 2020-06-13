@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us"><head>
+<html lang="en-us"><head style="overflow: hidden;">
   <meta charset="utf-8">
   <title>Digital Tea House /tags/internet/</title>
 
@@ -29,7 +29,7 @@
 
   
 
-</head><body>
+</head><body style="overflow-x:hidden; position: relative;">
 <!-- preloader start -->
 <div class="preloader">
   <div class="loader">
@@ -46,22 +46,62 @@
 <style type="text/css">
   @media (max-width:480px){
   .mnavbar{
-position: absolute;
+overflow: hidden;    
+position: relative;
 width: 100%;    
-max-width: 480px;
+
 max-height: 90px; 
-min-width: 360px;
+
 min-height: 90px;
 
 
 background: #FFFFFF;
   }
+ input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  margin-top: 30%;
+  border: none;
+  border-radius: 0px;
+  justify-content: center;
+ } 
+input[type="text"]::placeholder {  
+                  
+                  
+                text-align: center; 
+            } 
+
+.sform{
+  left: 0%;
+right: 0%;
+top: 30.06%;
+bottom: 73.28%;
+}
+
+  .msearchbox{
+
+display: none;
+ position: fixed;
+    z-index: 999;
+width: 100%;
+max-width: 480px;
+min-width: 300px;
+top: 90px;
+height: 644px;
+background: #FFFFFF;
+} 
+.wsearchbox{
+  display: none;
+}
   .wnavbar{
+    overflow: hidden;
     display: none;
     width: 100%;
-max-width: 480px;
-min-width: 360px;
+
   }
+
+
   .mlogo{
     position: absolute;
 left: 4.17%;
@@ -72,12 +112,13 @@ width: 114px;
 height: 50px;
   }
   .mmenu{
-    position: absolute;
+    
+position: absolute;
 left: 60.61%;
 right: 30.83%;
 top: 40.51%;
 bottom: 40.98%;
-
+width: 100%;
 font-family: Pyidaungsu;
 font-style: normal;
 font-weight: bold;
@@ -106,7 +147,9 @@ transform: matrix(-1, 0, 0, 1, 0, 0);
  } 
  .mitem{
 display: none;
-position: absolute;
+position:absolute;
+top: 0;
+z-index: 999;
 width: 100%;
 max-width: 480px;
 min-width: 300px;
@@ -118,6 +161,7 @@ height: 444px;
 background: #F2F2F2;
  }
  .mbanr{
+  
   position: absolute;
 width: 100%;
 max-width: 480px;
@@ -157,6 +201,16 @@ bottom: 0%;
 
 
  }
+ .mbacks{
+  position: absolute;
+left: 5%;
+right: 100%;
+top: 5%;
+bottom: 0%;
+
+
+
+ }
  .menuitem{
 position: absolute;
 width: 100%;
@@ -190,12 +244,12 @@ color: #2E2E2E;
  .searchpg{
   display: none;
   position: absolute;
-width: 100%;
-max-width: 480px;
-min-width: 360px;
-height: 640px;
-display: none;
-background: #FFFFFF;
+top: 20%;
+width: 360px;
+height: 240px;
+
+background: #0000;
+z-index: 299;
  }
  .sbox{
   position: absolute;
@@ -208,7 +262,14 @@ background: #FFFFFF;
  }
 }
 
- @media (min-width: 481px){
+@media (min-width: 481px){
+.msearchbox{
+
+display: none;
+  } 
+.wsearchbox{
+
+}
 .mnavbar{
   display: none;
 
@@ -220,14 +281,35 @@ display: none;
   .searchpg{
   display: none;
 }
+.msearchbox{
+  display: none;
+}
+.sform{
+display: none;
+}
 
   }
 
 </style>
 <header class="mnavbar">
-  <img class="mlogo" src="/navlogo.PNG">
+  <a href="/"><img class="mlogo" src="/navlogo.PNG"></a>
   <label class="mmenu" onclick="appear()">menu</label>
-  <img class="msearch" src="/search.png">
+  <img class="msearch" src="/search.png" onclick="appear2()">
+  
+      <div id="searchpg" class="msearchbox">
+        
+      
+        <form action="/action_page.php"  >
+          <img class="mbacks" src="/back.png" onclick="appear2()">
+    <input type="text" id="keyword" name="keyword" placeholder="ဘာကိုရှာချင်ပါသလည်း?" style="top: 30.06%;">
+    <svg height="210" width="100%">
+  <line x1="0" y1="0" x2="100%" y2="0" style="stroke:rgb(0,0,0);stroke-width:2" />
+  
+</svg>
+  </form>
+  
+      </div>
+      
 </header>
   
 <div id="menuitem" class="mitem">
@@ -241,7 +323,7 @@ display: none;
       <a href="/materials"><label class="menutxt">သင်ထောက်ကူများစုစည်းမှု</label></a>
     </div>
     <div class="menuitem" style="top: 272px;">
-      <a href="radio"><label class="menutxt">ဒစ်ဂျစ်တယ်ရေဒီယို</label></a>
+      <a href="/radio"><label class="menutxt">ဒစ်ဂျစ်တယ်ရေဒီယို</label></a>
     </div>
     <div class="menuitem" style="top: 363px;">
       <a href="/about"><label class="menutxt">လဖက်ရည်ဆိုင်အကြောင်</label></a>
@@ -293,29 +375,28 @@ display: none;
       
       
     </div>
-      <a href="">
-        <img src="/search.png" style="width: 40px; height: 40px;">
-      </a>
+    
+        <img src="/search.png" style="width: 40px; height: 40px; cursor: pointer;" onclick="appear2()">
+     
+     
   </nav>
-
+   <div id="searchpg2" class="searchpg"></div>
 </header>
-
+<div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0" nonce="eFwOXAGF"></script>
 <script type="text/javascript">
   var isit = true
   function appear() {
     if (isit) {
        isit = false;
       menuitem.style.display = "block";
-      frame.style.display = "none";
-      abt.style.display="none"
-      alert("Hello! I am an alert box!!");
+  
+     
      
     }else{
       isit = true;
       menuitem.style.display = "none";
-      frame.style.display = "block";
-      abt.style.display="block"
-
+    
 
       
     }
@@ -323,45 +404,133 @@ display: none;
   function appear2() {
     if (isit) {
       searchpg.style.display = "block";
-      frame.style.display = "none";
-      section.style.display = "none";
+      searchpg2.style.display = "block";
       isit = false;
     }else{
       searchpg.style.display = "none";
-      frame.style.display = "block";
-      section.style.display = "block";
+      searchpg2.style.display = "none";
       isit = true;
     }
   }
 </script>
 
 
-<section><style type="text/css">
+<section class="contain"><style type="text/css">
 @media (max-width:480px){
-.cat1{
-left: 0;
+.fbtn1{
+position: absolute;
+left: 10px;
 }
-.catt2{
-left: 0;
+.fbtn2{
+position: absolute;
+left: 186px;
 }
-.t1{
-left: 0;
-}
-.t2{
-left: 0;
+.filterlabel{
+	position: absolute;
+width: 100%;
+height: 41px;
+left: 20px;
+
+
+ 
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 41px;
+display: flex;
+align-items: flex-end;
+
+color: #3C3C3C;
+
 }
 
 .filter{
+	overflow: hidden;
 	width: 300px;
-}	
-.tbar{
+}
+.filterbar{
+	
+overflow: hidden;	
 position: absolute;
+
+width:100%;
+min-width: 360px;
+max-width: 480px;
+height: 90px;
+left: 0px;
+top: 0px;
+
+
+
+background: #F57000;
+}
+.filterbox{
+display: none;	
+overflow: hidden;
+position: absolute;
+top: 0;
+min-width: 100%;
+height: 782px;
+
+ 
+z-index: 80;
+background: #F2F2F2;
+}
+.titlefbar{
+position: absolute;
+width: 96px;
+height: 25px;
+left: 131px;
+top: 33px;
+width: 100%;
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 25px;
+ 
+
+display: flex;
+align-items: flex-end;
+text-align: center;
+
+color: #FFFFFF;
+
+}
+.logofbar{
+	position: absolute;
+margin-left: 30px;	
+left: 65.83%;
+right: 25.28%;
+top: 30.71%;
+bottom: 92.2%;
+z-index: 100;
+
+ 
+
+
+}	
+.clsfilter{
+	position: absolute;
+left: 100%;
+right: -100%;
+top: 0%;
+bottom: 0%;
+
+background: #FFFFFF;
+
+}
+.tbar{
+overflow: hidden;	
+position: relative;
 width: 100%;
 max-width: 480px;
 min-width: 360px;
 height: 206px;
 left: 0px;
-top: 90px;
+
 
 background: #FFFFFF;
  
@@ -370,7 +539,8 @@ border: 1px solid #8E8E8E;
 box-sizing: border-box;
 }
 .tbanner{
-	position: absolute;
+overflow: hidden;	
+position: absolute;
 width: 100%;
 max-width: 480px;
 min-width: 360px;
@@ -429,19 +599,20 @@ text-align: center;
 color: #2E2E2E;
 }
 .fimg{
-	position: absolute;
+position: absolute;
 width: 20px;
 height: 20.29px;
 left: 241px;
 top: 50%;
 cursor: pointer;
+z-index: 100;
 
  
 
 
 }
 .articlecount{
-	position: absolute;
+position: absolute;
 width: 208px;
 height: 25px;
 left: 14px;
@@ -482,6 +653,7 @@ width: 85px;
 height: 28px;
 left: 14px;
 top: 80%;
+
 }
 .tlv{
 	position: absolute;
@@ -555,11 +727,12 @@ left: 395;
 left: 565;
 }	
 .tbar{
-position: absolute;
+overflow: hidden;	
+position: relative;
 width: 1000px;
 height: 224px;
 left: 220px;
-top: 225px;
+
 
 background: #FFFFFF;
  
@@ -568,6 +741,7 @@ border: 1px solid #8E8E8E;
 box-sizing: border-box;
 }
 .tbanner{
+	overflow: hidden;
 	position: absolute;
 width: 1000px;
 height: 101px;
@@ -631,6 +805,7 @@ height: 19px;
 left: 255px;
 top: 134px;
 cursor: pointer;
+z-index: 199;
 
  
 
@@ -734,6 +909,42 @@ color: #F57000;
   transform: translateY(4px);
   color: #FFFFFF;
 }
+.filterbox{
+
+}
+.filterlabel{
+	display: none;
+}
+.cate{
+	display: none;
+	position: absolute;
+left: 15%;
+right: 63.5%;
+top: 10.45%;
+bottom: 8.6%;
+z-index: 99;
+}
+.teal{
+	display: none;
+	position: absolute;
+left: 17%;
+right: 63.5%;
+top: 10.45%;
+bottom: 8.6%;
+z-index: 90;
+}
+.mftitle{
+	display: none;
+}
+.fbtn1{
+top: 204px;
+}
+.fbtn2{
+top: 244px;
+}
+.fbtn3{
+top: 284px;
+}
 
 }	
 
@@ -747,83 +958,155 @@ color: #F57000;
 	</div>
 		<label class="articlecount">ဆောင်းပါး <label>N</label> ကိုပြထားသည်</label>
 		<label class="ftext">(ပြောင်းရန်)</label>
-		<img class="fimg" onclick="appear()" src="/filter.png">
+		<img class="fimg" onclick="appearart()" src="/filter.png">
 		<div>
 			<label class="indc cat">Category( )</label>
 			<label class="indc tlv">Tea level ( )</label>
 			<label class="indc tg">Tag ( )</label>
 
 		</div>
+			
 		
-			<div id="cate" style="display: none;">
-			<button class="mbtn" class="cat1" style=" top:284px;">
+</div>
+<div id="filterbox" class="filterbox">
+<div id="filterbar" class="filterbar">
+				<div class="mftitle">
+				 <img class="mback" src="/mback.png" onclick="appearart()">
+				 <label class="titlefbar">ပြောင်းရန်</label>
+				 <img class="logofbar"src="/filterw.png">
+				 </div>
+	</div>
+	 <label class="filterlabel" style="top: 110px;">Category</label>
+	  <label class="filterlabel" style="top: 343px;">Cup Level</label>
+	  <label class="filterlabel" style="top: 562px;">Tag</label>
+
+			<div id="cate" class="cate" style="display: none;">
+			<button class="mbtn fbtn2"  style=" top:284px;">
 				E-mail Safety
 			</button>
-			<button class="mbtn" class="cat1" style=" top: 244px;">
+			<button class="mbtn fbtn2"  style=" top: 244px;">
 				Browsing Safety
 			</button>
-			<button class="mbtn" class="cat1" style=" top: 204px;">
-			Application Safet</button>
-			<button class="mbtn" class="cat2" style=" top: 284px;">
+			<button class="mbtn fbtn2"  style=" top: 204px;">
+			Application Safety</button>
+			<button class="mbtn fbtn1"  style=" top: 284px;">
 				Hacking & Scam
 			</button>
-			<button class="mbtn" class="cat2" style= "top: 244px;">
+			<button class="mbtn fbtn1"  style= "top: 244px;">
 				Mobile Devices
 			</button>
-			<button class="mbtn" class="cat2" style= "top: 204px;">
+			<button class="mbtn fbtn1"  style= "top: 204px;">
 			Digital World
 			</button>
 		</div>
-		<div id="teal" style="display: none;">
-			<button class="mbtn" class="t1" style="top: 204px;">
+		<div id="teal" class="teal" style="display: none;">
+			<button class="mbtn fbtn1" class="t1" style="top: 406px;">
 				<img src="/tlv1.png">
 			</button>
-			<button class="mbtn" class="t1" style="top: 249px;">
+			<button class="mbtn fbtn2" class="t1" style=" top: 406px;">
 				<img src="/tlv2.png">
 			</button>
-			<button class="mbtn" class="t2" style="top: 204px;">
+			<button class="mbtn fbtn1" class="t2" style="top: 455px;">
 				<img src="/tlv3.png">
 			</button>
-			<button class="mbtn" class="t2" style="top: 249px;">
+			<button class="mbtn fbtn2" class="t2" style="top: 455px;">
 				<img src="/tlv4.png">
 			</button>
 		</div>
-		
-		
-</div>
 
+		<div id="catew" class="cate" style="display: none;">
+			<button class="mbtn fbtn3"  style=" left:  200px;">
+				E-mail Safety
+			</button>
+			<button class="mbtn fbtn2"  style=" left:  200px;">
+				Browsing Safety
+			</button>
+			<button class="mbtn fbtn1"  style=" left:  200px;">
+			Application Safety</button>
+			<button class="mbtn fbtn3"  style=" left: 30px;">
+				Hacking & Scam
+			</button>
+			<button class="mbtn fbtn2"  style= "left: 30px;">
+				Mobile Devices
+			</button>
+			<button class="mbtn fbtn1"  style= "left: 30px;">
+			Digital World
+			</button>
+		</div>
+		<div id="tealw" class="teal" style="display: none;">
+			<button class="mbtn "  style="left: 395px; top: 204px;">
+				<img src="/tlv1.png">
+			</button>
+			<button class="mbtn "  style=" left: 565px; top: 204px;">
+				<img src="/tlv2.png">
+			</button>
+			<button class="mbtn "  style="left: 395px; top: 249px;">
+				<img src="/tlv3.png">
+			</button>
+			<button class="mbtn "  style="left: 565px; top: 249px;">
+				<img src="/tlv4.png">
+			</button>
+		</div>
+
+		</div>
 <script type="text/javascript">
 	mycat = document.getElementById('cate')
 	mytea = document.getElementById('teal')
+	mycatw = document.getElementById('catew')
+	myteaw = document.getElementById('tealw')
 	var isit = true
-	function appear() {
+	function appearart() {
+		if (window.screen.width <= 480 ) {
 		if (isit) {
 			mycat.style.display = "block";
 			mytea.style.display = "block";
+			filterbox.style.display = "block";
 			isit = false;
+			
 		}else{
 			mycat.style.display = "none";
 			mytea.style.display = "none";
+			filterbox.style.display = "none";
 			isit = true;
 		}
 	}
 
+	if (window.screen.width >= 480){
+		if (isit) {
+			mycatw.style.display = "block";
+			myteaw.style.display = "block";
+			filterbox.style.display = "block";
+			isit = false;
+			
+		}else{
+			mycatw.style.display = "none";
+			myteaw.style.display = "none";
+			filterbox.style.display = "none";
+			isit = true;
+
+	}
+	}
+}
+
 </script><style type="text/css">
 @media (max-width:480px){
   .art{
-position: absolute;
+overflow: hidden;    
+position: relative;
 width: 100%;
 max-width: 480px;
 min-width: 360px;
 height: auto;
 left: 5px;
-top: 296px;
+margin-top: 40px;
 
   }
    .artbox{
+overflow: hidden;    
 margin-top: 80px;  
 margin-left: 10px;
-width: 360px;
+min-width: 360px;
+max-width: 480px;
 height: 200px;
 left: 0px;
 top: 387px;
@@ -896,19 +1179,19 @@ left: 235px;
 top: 50%;
 
 }
-.sum{
+.suma{
 position: absolute;
-width: 220px;
+width: 160px;
 height: 70px;
-left: 10px;
-top: 85px;
+left: 5px;
+top: 185px;
 
  
 
 font-family: Pyidaungsu;
 font-style: normal;
 font-weight: normal;
-font-size: 16px;
+font-size: 12px;
 line-height: 28px;
 
 word-wrap: break-word;
@@ -951,11 +1234,12 @@ top: 2773px;
 
 @media (min-width: 500px){
   .art{
-position: absolute;
+position: relative;
 width: 600px;
-height: 1599px;
+height: 100%;
 left: 222px;
-top: 674px;
+margin-top: 40px;
+margin-bottom: 40px;
 	}
 
  .artbox{
@@ -1028,7 +1312,7 @@ right: 2.63%;
 top: 14.91%;
 bottom: 14.91%;
 }
-.sum{
+.suma{
 position: absolute;
 left: 2.63%;
 right: 33.33%;
@@ -1040,7 +1324,7 @@ bottom: 17.54%;
 font-family: Pyidaungsu;
 font-style: normal;
 font-weight: normal;
-font-size: 16px;
+font-size: 12px;
 line-height: 28px;
 
 word-wrap: break-word;
@@ -1101,14 +1385,42 @@ top: 2773px;
             	<img src="/tlevel1.png">
             </div>
             	<a >
-            		<div class="postimg">
-            		<img class="  crop" src="/images/Facebook-security.jpg" alt="/images/Facebook-security.jpg">
-            	</div>
+            		
+            		<img class=" postimg crop" src="/Image%20%281%29.png" alt="/Image (1).png">
+            
             	</a>
             	
              	 
+              <div class="suma">Facebook ကို လူအများအပြားမှ လူမှုရေး စီးပွားရေး နိုင်ငံရေး အစရှိသည့် နယ်ပယ်ပေါင်းစုံတွင်</div>
+            
               
-             <div class="sum"><p ><p>Facebook ကို လူအများအပြားမှ လူမှုရေး စီးပွားရေး နိုင်ငံရေး အစရှိသည့် နယ်ပယ်ပေါင်းစုံတွင် ရည်ရွယ်ချက်အမျိုးမျိုးဖြင့် ကျယ်ပြန့်စွာ</p></p></div>
+             
+              
+            </article>
+         
+          </div>
+          
+
+          <div class="artbox">
+          	
+            <article >
+            	 <h4 class="arttitle"><a class="arttitle" >FFbrowserHistory</a></h4>
+            	
+              <li class="list-inline-item artinfo"><i class="ti-calendar mr-2"></i>Feb 27, 2020</li>
+              <li class="list-inline-item artinfo"><i class="ti-alarm-clock mr-2 "></i><span class="eta"></span> read</li>
+            </ul>
+            <div class="tlevel">
+            	<img src="/tlevel1.png">
+            </div>
+            	<a >
+            		
+            		<img class=" postimg crop" src="/Image%20%284%29.png" alt="/Image (4).png">
+            
+            	</a>
+            	
+             	 
+              <div class="suma">Gmail ဆိုသည်မှာ စာတိုက် စာပို့ စနစ်နှင့် တူသည့် အင်တာ န သုံး စာပို့ခြငတူသည့််း Application တူသည့် အင်တာ နက်သုံး စာပို့ခြင်း Application&hellip;</div>
+            
               
              
               
@@ -1129,14 +1441,14 @@ top: 2773px;
             	<img src="/tlevel1.png">
             </div>
             	<a >
-            		<div class="postimg">
-            		<img class="  crop" src="/images/gmailsec.jpg" alt="/images/gmailsec.jpg">
-            	</div>
+            		
+            		<img class=" postimg crop" src="/Image%20%282%29.png" alt="/Image (2).png">
+            
             	</a>
             	
              	 
-              
-             <div class="sum"><p ><p>Gmail ဆိုသည်မှာ  စာတိုက် စာပို့စနစ်နှင့် တူသည့်အင်တာနက်သုံးစာပို့ခြင်း Application တစ်ခုဖြစ်ပါသည်။ Gmail အား Google မှ အခမဲ့</p></p></div>
+              <div class="suma">Gmail ဆိုသည်မှာ စာတိုက် စာပို့ စနစ်နှင့် တူသည့် အင်တာ န သုံး စာပို့ခြငတူသည့််း Application တူသည့် အင်တာ နက်သုံး စာပို့ခြင်း Application&hellip;</div>
+            
               
              
               
@@ -1157,42 +1469,14 @@ top: 2773px;
             	<img src="/tlevel1.png">
             </div>
             	<a >
-            		<div class="postimg">
-            		<img class="  crop" src="/images/Launch-Chrome-Incognito-Mode-Featured_4d470f76dc99e18ad75087b1b8410ea9.png" alt="/images/Launch-Chrome-Incognito-Mode-Featured_4d470f76dc99e18ad75087b1b8410ea9.png">
-            	</div>
+            		
+            		<img class=" postimg crop" src="/Image%20%283%29.png" alt="/Image (3).png">
+            
             	</a>
             	
              	 
-              
-             <div class="sum"><p ><p>Incognito ဆိုသည်မှာ Chrome တွင်ပါရှိသော private mode တစ်ခုဖြစ်ပါသည်။ Incognito mode အားအသုံးပြုပါက</p></p></div>
-              
-             
-              
-            </article>
-         
-          </div>
-          
-
-          <div class="artbox">
-          	
-            <article >
-            	 <h4 class="arttitle"><a class="arttitle" >Incognito Mode</a></h4>
-            	
-              <li class="list-inline-item artinfo"><i class="ti-calendar mr-2"></i>Feb 27, 2020</li>
-              <li class="list-inline-item artinfo"><i class="ti-alarm-clock mr-2 "></i><span class="eta"></span> read</li>
-            </ul>
-            <div class="tlevel">
-            	<img src="/tlevel1.png">
-            </div>
-            	<a >
-            		<div class="postimg">
-            		<img class="  crop" src="/images/Launch-Chrome-Incognito-Mode-Featured_4d470f76dc99e18ad75087b1b8410ea9.png" alt="/images/Launch-Chrome-Incognito-Mode-Featured_4d470f76dc99e18ad75087b1b8410ea9.png">
-            	</div>
-            	</a>
-            	
-             	 
-              
-             <div class="sum"><p ><p>Incognito ဆိုသည်မှာ Chrome တွင်ပါရှိသော private mode တစ်ခုဖြစ်ပါသည်။ Incognito mode အားအသုံးပြုပါက</p></p></div>
+              <div class="suma">Incognito ဆိုသည်မှာ Chrome တွင်ပါရှိသော private mode တစ်ခုဖြစ်ပါသည်။ Incognito mode အားအသုံးပြုပါက</div>
+            
               
              
               
@@ -1210,14 +1494,12 @@ top: 2773px;
   display: none;
 }
 .mpod{
- 
+overflow: hidden; 
 position: fixed;
-bottom: 50px;
-z-index: 80;
-
+bottom: 0;
+z-index: 999;
 width: 100%;
-max-width: 360px;
-min-width: 360px;
+
 height: 70px;
 
 
@@ -1227,22 +1509,25 @@ background: #F57000;
 box-shadow: 0px 3px 10px rgba(150, 150, 150, 0.26);
 }
 .topodcast{
-  position: absolute;
-width: 70px;
+  
+position: absolute;
+width: 100%;
 height: 21px;
-left: 80%;
+right: 60px;
+
+
 top: 10px;
 
 font-family: Pyidaungsu;
 font-style: normal;
 font-weight: normal;
-font-size: 12px;
+font-size: 10px;
 line-height: 10px;
  
 
 display: flex;
 align-items: flex-end;
-
+text-align: center;
  
 
 color: #FFFFFF;
@@ -1303,6 +1588,36 @@ top: 20px;
 }
 
  @media (min-width: 500px){
+  .shbtn{
+    position: absolute;
+    width: 260px;
+    height: 80px;
+   left: 5%;
+   right: 65.67%;
+   top: 89.04%;
+  
+    background-color: #F57000;
+    box-shadow: 0px 3px 3px rgba(117, 117, 117, 0.26);
+border-radius: 6px;
+  }
+  .fbs{
+    position: absolute;
+   
+    z-index: 99;
+    left: 10%;
+    top: 89.04%;
+    bottom: 5.06%;
+    
+  }
+    .tweet{
+    position: absolute;
+    justify-content: center;
+    z-index: 99;
+    left: 45%;
+    top: 80.04%;
+    bottom: 5.06%;
+    
+  }
  .mpod{
   display: none;
 
@@ -1317,8 +1632,8 @@ top: 20px;
 position:fixed;
 left: 66.94%;
 right: 15.28%;
-top: 20%;
-display: none;
+top: 5%;
+
 }
 
 	.upper{
@@ -1333,15 +1648,15 @@ height: 206px;
 background: #F57000;
 	}
 .pod{
-position: absolute;
+position: relative;
 left: 0%;
 right: 0%;
 top: 0%;
 bottom: 65.26%;	
 }
-.title{
+.wptitle{
 	position: absolute;
-width: 164px;
+width: 100%;
 height: 36px;
 left: 15px;
 top: 30px;
@@ -1624,10 +1939,14 @@ color: #2E2E2E;
 }
 .sharebtn{
   position: absolute;
+  width: 260px;
 left: 5%;
 right: 65.67%;
 top: 89.04%;
+z-index: 100;
 bottom: 5.06%;
+background-color: #FFFFFF
+
 }
 
 .mini{
@@ -1693,16 +2012,17 @@ align-items: flex-end;
 
 color: #FFFFFF;
 }
+
 </style>
 <audio id="audio" ontimeupdate="updateBar()"  >
   <source src="https://otamyanmar.podbean.com/mf/play/n8f29q/11.mp3" type="audio/mpeg">
   </audio>
 
-<div class="mpod">
+<div id="mpod" class="mpod">
 
     <label class="mpodname">Digital Teahouse Podcast</label>
   <img src="/pbt.png" id="audioControl2" onclick="togglePlaying()" class="mpodpbn">
-  <label class="topodcast"> To podcast > </label>
+  <a href="/radio"><label class="topodcast"> ToPodcast> </label></a>
   <label class="mpodep">Episode 001: Welcome to the podcast and about...</label>
   <canvas id="progress" width="200" height="5" class="mpodprobar"></canvas> 
   
@@ -1715,7 +2035,7 @@ color: #FFFFFF;
 <div id="podcast" class="podcast">
   <div class="lower">
 	<div class="upper">
-	<label class="title">ဒီဂျစ်တယ် ရေဒီယို</label>
+	<label class="wptitle">ဒီဂျစ်တယ် ရေဒီယို</label>
 	 <img src="/pbt.png" id="audioControl" onclick="togglePlaying()" class="toogle">
    <label class="episode">Black Clover OST : Against The Gods</label>
       
@@ -1736,23 +2056,37 @@ color: #FFFFFF;
  <a href="https://web.facebook.com/digitalteahouse2020"><img src="/Logo_fb.png" class="fb"></a>
  <a href=""><img src="/logo_email.png" class="email"></a>
  <label class="share">ကြိုက်တယ်ဆို Share ပေးပါအုံး ဆိုင်အသစ်မို့ပါ !!!!!</label>
-<a href=""><img src="/Share Button.png" class="sharebtn"></a>
+ <div id="sharebtn" class="sharebtn " data-href="https://www.digitalteahouse.info/"  >
+   <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.digitalteahouse.info%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore" ><img src="/Share Button.png" style="cursor: pointer;"></a>
+   <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" ><img src="/tweet.png" style="width: 83px; height: 30px;"></a>
 </div>
+ </div>
+
+
+
+  
+  
+
+
 </div>
+
+
 </div>
+
 
 
 <script>
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
+
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 80) {
     podcast.style.display = "block";
      
     
   } else {
     podcast.style.display = "none";
-    
+   
     
   }
 }
@@ -1816,6 +2150,7 @@ function updateBar() {
   
   if (currentTime === duration) {
     audioControl.src="/pbt.png"
+    audioControl2.src="/pbt.png"
   }
   
   document.getElementById("current-time").innerHTML = convertElapsedTime(currentTime)
@@ -1834,34 +2169,397 @@ function convertElapsedTime(inputSeconds) {
   var minutes = Math.floor(inputSeconds / 60)
   return minutes + ":" + seconds
 }
+
+  function appearsh() {
+  
+    sharebtn.style.display="none"
+     
+     
+    }
+    function shclose() {
+      sharebtn.style.display="block"
+      
+    }
+  
 </script>
 
 
 </section>
+<div class="scm"><style type="text/css">
+@media (max-width:480px){
+.sub{
+overflow: hidden;	
+position: relative;
+width: 100%
+min-width: 360px;
+max-width: 480px;
+height: 382px;
+left: 0px;
+margin-top: 80px;
+margin-bottom: 40px;
+background: #FFFFFF;
+}
 
+.title{
+  position: absolute;
+width: 110px;
+height: 36px;
+left: 15px;
+top: 40px;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+line-height: 36px;
+display: flex;
+align-items: flex-end;
+
+ 
+
+color: #535353;
+
+}
+
+.subtxt{
+  position: absolute;
+width: 226px;
+height: 40.86px;
+left: 15px;
+top: 71px;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 20px;
+
+ 
+
+color: #2E2E2E;
+}
+.formsc{
+
+width: 55px;
+height: 35px;
+left: 0px;
+top: 35.23%;
+bottom: 54.83%;
+
+background: #F2F2F2;
+}
+.subbtn{
+  position: absolute;
+width: 100%;
+height: 29.8px;
+left:0px;
+top: 40.8%;
+bottom: 58.83%;
+background: #F57000;
+border: none;
+color: #FFFFFF;
+margin-top: 20px;
+}
+.fb{
+  position: absolute;
+left: 5.86%;
+right: 82.42%;
+top: 60.35%;
+bottom: 40.91%;
+}
+.email{
+  position: absolute;
+left: 24.61%;
+right: 63.67%;
+top: 60.68%;
+bottom: 40.58%;
+}
+.share{
+  position: absolute;
+width: 228px;
+height: 50px;
+left: 15px;
+top: 70%;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 25px;
+ 
+
+display: flex;
+align-items: center;
+
+ 
+
+color: #2E2E2E;
+}
+.sharebtn{
+  position: absolute;
+left: 5.86%;
+right: 61.72%;
+top: 85.39%;
+bottom: 4.87%;
+}
+.sharebtn{
+  position: absolute;
+  width: 100%;
+  height: 80px;
+left: 5%;
+right: 65.67%;
+top: 89.04%;
+z-index: 100;
+bottom: 5.06%;
+background-color: #FFFFFF
+
+}
+.fbs{
+    position: absolute;
+   
+    z-index: 80;
+    left: 5%;
+    top: 89.04%;
+    bottom: 5.06%;
+    
+  }
+    .tweet{
+    position: absolute;
+    justify-content: center;
+    z-index: 80;
+    left: 30%;
+    margin-left: 10px;
+    top: 89.14%;
+    bottom: 5.06%;
+    
+  }
+
+}
+@media (min-width: 500px){
+	.sub{
+	position: absolute;
+	top: 20%;
+width: 256px;
+height: 308px;
+left: 964px;
+top: 722px;
+margin-top: 40px;
+background: #FFFFFF;
+ 
+
+box-shadow: 0px 3px 3px rgba(117, 117, 117, 0.26);
+}
+
+.title{
+  position: absolute;
+width: 110px;
+height: 36px;
+left: 15px;
+top: 20px;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 21px;
+line-height: 36px;
+display: flex;
+align-items: flex-end;
+
+ 
+
+color: #535353;
+
+}
+
+.subtxt{
+  position: absolute;
+width: 226px;
+height: 40.86px;
+left: 15px;
+top: 61px;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 24px;
+
+ 
+
+color: #2E2E2E;
+}
+.formsc{
+  position: absolute;
+width: 137px;
+height: 20.93px;
+left: 29px;
+top: 121.8px;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 21px;
+ 
+
+text-align: center;
+border: none;
+ 
+
+color: #8E8E8E;
+}
+.subbtn{
+  position: absolute;
+width: 63.15px;
+height: 29.8px;
+left: 188.23px;
+top: 117.2px;
+background: #F57000;
+border-radius: 6px;
+color: #FFFFFF;
+}
+.fb{
+  position: absolute;
+left: 5.86%;
+right: 82.42%;
+top: 49.35%;
+bottom: 40.91%;
+}
+.email{
+  position: absolute;
+left: 24.61%;
+right: 63.67%;
+top: 49.68%;
+bottom: 40.58%;
+}
+.share{
+  position: absolute;
+width: 228px;
+height: 50px;
+left: 15px;
+top: 203px;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 25px;
+ 
+
+display: flex;
+align-items: center;
+
+ 
+
+color: #2E2E2E;
+}
+.sharebtn{
+  position: absolute;
+left: 5.86%;
+right: 61.72%;
+top: 85.39%;
+bottom: 4.87%;
+}
+.sharebtn{
+  position: absolute;
+  width: 100%;
+  height: 80px;
+left: 5%;
+right: 65.67%;
+top: 89.04%;
+z-index: 100;
+bottom: 5.06%;
+background-color: #FFFFFF
+
+}
+.fbs{
+    position: absolute;
+   
+    z-index: 80;
+    left: 10%;
+    top: 89.04%;
+    bottom: 5.06%;
+    
+  }
+    .tweet{
+    position: absolute;
+    justify-content: center;
+    z-index: 80;
+    left: 50%;
+    top: 89.04%;
+    bottom: 5.06%;
+    
+  }
+
+	}
+
+
+</style>
+
+<div class="sub" id="sub">
+	<label class="title">အားပေးပါအုံး!</label>
+ <label class="subtxt"> ဖောက်သည်အရင်းချာများ စာရင်းသွင်းရန် ….. Please Suscribe.</label> 
+    
+    <input type="text" id="email" class="formsc" name="email" placeholder="သင့်၏ E-mail လိပ်စာထည့်ပါ">
+  <button class="subbtn" type="submit" value="submit">Submit</button>
+ <a href="https://web.facebook.com/digitalteahouse2020"><img src="/Logo_fb.png" class="fb"></a>
+ <a href=""><img src="/logo_email.png" class="email"></a>
+ <label class="share">ကြိုက်တယ်ဆို Share ပေးပါအုံး ဆိုင်အသစ်မို့ပါ !!!!!</label>
+ 
+ <div class="fb-share-button fbs" id="fbs"  data-href="https://www.digitalteahouse.info/" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.digitalteahouse.info%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore" >Share</a></div>
+<div class="tweet"><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+</div>
+</div>
+
+<script type="text/javascript">
+	window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 80) {
+    sub.style.display = "block";
+     
+    
+  } else {
+    sub.style.display = "none";
+   
+    
+  }
+}
+function appearsh() {
+  
+       sharebtn.style.display="none"
+     
+     
+    }
+    function shclose() {
+      sharebtn.style.display="block"
+      
+    }
+</script>
+</div>
 
 
 <style type="text/css">
 
 @media (max-width:480px){
 .footerright{
-position: absolute;
+overflow: hidden;  
+position: relative;
 width: 100%;
-max-width: 480px;
-min-width: 360px;
-height: 247px;
-
-
-top: 3099px;
+height: 100%;
 background: #F57000;
 padding: 30px;
 } 
 .mbmenu{
   display: block;
  }  
+ .wbmenu{
+  display: none;
+ }
  
  .fmbmenuitem{
-  font-family: Pyidaungsu;
+overflow: hidden;  
+font-family: Pyidaungsu;
 font-style: normal;
 font-weight: normal;
 font-size: 16px;
@@ -1878,23 +2576,24 @@ right: 73.89%;
 cursor: pointer;
  }
 .footerleft{
+overflow: hidden;
+position: relative;  
 padding: 20px;  
-position: absolute;
 width: 100%;
 height: 251px;
 max-width: 480px;
 min-width: 360px;
-
-top: 3346px;
 background: #FFFFFF;
 margin-top: 20px;
-margin-left: 20px;
+
 }
 .foot{
 
-position: absolute;
-
-width: 300px;
+position: relative;
+overflow: hidden;
+width: 100%;
+height: 100%;
+margin-top: 80px;
 
 
   }
@@ -1904,22 +2603,24 @@ width: 300px;
 
  @media (min-width: 500px){
 .foot{
-position: absolute;
+position: relative;
 width: 100%;
 height: 232px;
-left: 220px;
-top: 3443px;
+left: 0;
+margin-top: 40px;
   }
 .footerleft{
 position: absolute;
-left: 0%;
+overflow: hidden;
+left: 0;
 right: 76.62%;
 top: 0%;
 bottom: 0%;
 background: #FFFFFF;
 }
 .footerright{
-  position: absolute;
+position: absolute;
+overflow: hidden;
 left: 23.38%;
 right: 0%;
 top: 0%;
@@ -1928,6 +2629,10 @@ bottom: 0%;
 .mbmenu{
   display: none;
  } 
+ .wbmenu{
+  padding: 20px;
+  margin: 10px;
+ }
 }
 
   
@@ -1936,44 +2641,51 @@ bottom: 0%;
 <footer id="foott" class="bg-secondary foot">
   
       
-      
+       <div class="footerright" >
+          <div class=" fbar">
+           
+           <div class="wbmenu">
+              <a class="fmenu" href="/articles">ဒီဂျစ်တယ်ဖတ်စရာများ</a>
+          <a class="fmenu" href="/materials">သင်ထောက်ကူများစုစည်းမှု</a>
+          <a class="fmenu" href="/radio">ဒီဂျစ်တယ်ရေဒီယို</a>
+          <a class="fmenu" href="/about">လဖက်ရည်ဆိုင်အကြောင်း</a>
+          <div class=" fbar">
+             
+          <a class="fmenu" href="">သိသာစေရန်</a>
+           </div>
+          </div>
+          
+         
+
+          <div class="mbmenu">
+           <a class="fmbmenuitem" href="/articles">ဒီဂျစ်တယ်ဖတ်စရာများစီသို့</a>
+            <a class="fmbmenuitem" href="/materials">သင်ထောက်ကူများစုစည်းမှုစီသို့</a>
+          <a class="fmbmenuitem" href="/radio">ဒီဂျစ်တယ်ရေဒီယိုစီသို့</a>
+          <a class="fmbmenuitem" href="/about">လဖက်ရည်ဆိုင်အကြောင်း</a>
+           <a class="fmbmenuitem" href="">သိသာစေရန်</a>
+        </div>
+
+
+          </div>
+         </div>
+   
+
         <div class="footerleft" >
-          <div class="row">
-            <img  src="/logo.png"> 
+          <div class="row" style=" margin-left:  20px;">
+            <img  src="/logo.png" style="margin-right: 10px;"> 
+
             <img  src="/Logo_MIDO.png">
           </div>
           
             <p style="width: 230px;
-            word-wrap: break-word; font-size: 10pt;">
+            word-wrap: break-word; font-size: 10pt; margin-left:  20px;">
             Digital Tea House is a campaign launched 
             by Mido to promote digital safety
             awareness in MYanmar.
 
         </p>
         </div >
-        <div class="footerright" >
-          <div class=" fbar">
-            <a class="fmenu" href="">ဒီဂျစ်တယ်ဖတ်စရာများ</a>
-          <a class="fmenu" href="">သင်ထောက်ကူများစုစည်းမှု</a>
-          <a class="fmenu" href="">ဒီဂျစ်တယ်ရေဒီယို</a>
-          <a class="fmenu" href="">လဖက်ရည်ဆိုင်အကြောင်း</a>
-          </div>
-          <div class=" fbar">
-             
-          <a class="fmenu" href="">သိသာစေရန်</a>
-          </div>
-         
-        </div>
-      <div class="footerright fbar" >
-        <div class="mbmenu">
-           <a class="fmbmenuitem" href="">ဒီဂျစ်တယ်ဖတ်စရာများ</a>
-            <a class="fmbmenuitem" href="">သင်ထောက်ကူများစုစည်းမှု</a>
-          <a class="fmbmenuitem" href="">ဒီဂျစ်တယ်ရေဒီယို</a>
-          <a class="fmbmenuitem" href="">လဖက်ရည်ဆိုင်အကြောင်း</a>
-           <a class="fmbmenuitem" href="">သိသာစေရန်</a>
-        </div>
-      </div>
-
+        
   
 
 

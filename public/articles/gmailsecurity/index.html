@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us"><head>
+<html lang="en-us"><head style="overflow: hidden;">
   <meta charset="utf-8">
   <title>Digital Tea House /articles/gmailsecurity/</title>
 
@@ -29,7 +29,7 @@
 
   
 
-</head><body>
+</head><body style="overflow-x:hidden; position: relative;">
 <!-- preloader start -->
 <div class="preloader">
   <div class="loader">
@@ -46,22 +46,62 @@
 <style type="text/css">
   @media (max-width:480px){
   .mnavbar{
-position: absolute;
+overflow: hidden;    
+position: relative;
 width: 100%;    
-max-width: 480px;
+
 max-height: 90px; 
-min-width: 360px;
+
 min-height: 90px;
 
 
 background: #FFFFFF;
   }
+ input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  margin-top: 30%;
+  border: none;
+  border-radius: 0px;
+  justify-content: center;
+ } 
+input[type="text"]::placeholder {  
+                  
+                  
+                text-align: center; 
+            } 
+
+.sform{
+  left: 0%;
+right: 0%;
+top: 30.06%;
+bottom: 73.28%;
+}
+
+  .msearchbox{
+
+display: none;
+ position: fixed;
+    z-index: 999;
+width: 100%;
+max-width: 480px;
+min-width: 300px;
+top: 90px;
+height: 644px;
+background: #FFFFFF;
+} 
+.wsearchbox{
+  display: none;
+}
   .wnavbar{
+    overflow: hidden;
     display: none;
     width: 100%;
-max-width: 480px;
-min-width: 360px;
+
   }
+
+
   .mlogo{
     position: absolute;
 left: 4.17%;
@@ -72,12 +112,13 @@ width: 114px;
 height: 50px;
   }
   .mmenu{
-    position: absolute;
+    
+position: absolute;
 left: 60.61%;
 right: 30.83%;
 top: 40.51%;
 bottom: 40.98%;
-
+width: 100%;
 font-family: Pyidaungsu;
 font-style: normal;
 font-weight: bold;
@@ -106,7 +147,9 @@ transform: matrix(-1, 0, 0, 1, 0, 0);
  } 
  .mitem{
 display: none;
-position: absolute;
+position:absolute;
+top: 0;
+z-index: 999;
 width: 100%;
 max-width: 480px;
 min-width: 300px;
@@ -118,6 +161,7 @@ height: 444px;
 background: #F2F2F2;
  }
  .mbanr{
+  
   position: absolute;
 width: 100%;
 max-width: 480px;
@@ -157,6 +201,16 @@ bottom: 0%;
 
 
  }
+ .mbacks{
+  position: absolute;
+left: 5%;
+right: 100%;
+top: 5%;
+bottom: 0%;
+
+
+
+ }
  .menuitem{
 position: absolute;
 width: 100%;
@@ -190,12 +244,12 @@ color: #2E2E2E;
  .searchpg{
   display: none;
   position: absolute;
-width: 100%;
-max-width: 480px;
-min-width: 360px;
-height: 640px;
-display: none;
-background: #FFFFFF;
+top: 20%;
+width: 360px;
+height: 240px;
+
+background: #0000;
+z-index: 299;
  }
  .sbox{
   position: absolute;
@@ -208,7 +262,14 @@ background: #FFFFFF;
  }
 }
 
- @media (min-width: 481px){
+@media (min-width: 481px){
+.msearchbox{
+
+display: none;
+  } 
+.wsearchbox{
+
+}
 .mnavbar{
   display: none;
 
@@ -220,14 +281,35 @@ display: none;
   .searchpg{
   display: none;
 }
+.msearchbox{
+  display: none;
+}
+.sform{
+display: none;
+}
 
   }
 
 </style>
 <header class="mnavbar">
-  <img class="mlogo" src="/navlogo.PNG">
+  <a href="/"><img class="mlogo" src="/navlogo.PNG"></a>
   <label class="mmenu" onclick="appear()">menu</label>
-  <img class="msearch" src="/search.png">
+  <img class="msearch" src="/search.png" onclick="appear2()">
+  
+      <div id="searchpg" class="msearchbox">
+        
+      
+        <form action="/action_page.php"  >
+          <img class="mbacks" src="/back.png" onclick="appear2()">
+    <input type="text" id="keyword" name="keyword" placeholder="ဘာကိုရှာချင်ပါသလည်း?" style="top: 30.06%;">
+    <svg height="210" width="100%">
+  <line x1="0" y1="0" x2="100%" y2="0" style="stroke:rgb(0,0,0);stroke-width:2" />
+  
+</svg>
+  </form>
+  
+      </div>
+      
 </header>
   
 <div id="menuitem" class="mitem">
@@ -241,7 +323,7 @@ display: none;
       <a href="/materials"><label class="menutxt">သင်ထောက်ကူများစုစည်းမှု</label></a>
     </div>
     <div class="menuitem" style="top: 272px;">
-      <a href="radio"><label class="menutxt">ဒစ်ဂျစ်တယ်ရေဒီယို</label></a>
+      <a href="/radio"><label class="menutxt">ဒစ်ဂျစ်တယ်ရေဒီယို</label></a>
     </div>
     <div class="menuitem" style="top: 363px;">
       <a href="/about"><label class="menutxt">လဖက်ရည်ဆိုင်အကြောင်</label></a>
@@ -293,29 +375,28 @@ display: none;
       
       
     </div>
-      <a href="">
-        <img src="/search.png" style="width: 40px; height: 40px;">
-      </a>
+    
+        <img src="/search.png" style="width: 40px; height: 40px; cursor: pointer;" onclick="appear2()">
+     
+     
   </nav>
-
+   <div id="searchpg2" class="searchpg"></div>
 </header>
-
+<div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0" nonce="eFwOXAGF"></script>
 <script type="text/javascript">
   var isit = true
   function appear() {
     if (isit) {
        isit = false;
       menuitem.style.display = "block";
-      frame.style.display = "none";
-      abt.style.display="none"
-      alert("Hello! I am an alert box!!");
+  
+     
      
     }else{
       isit = true;
       menuitem.style.display = "none";
-      frame.style.display = "block";
-      abt.style.display="block"
-
+    
 
       
     }
@@ -323,13 +404,11 @@ display: none;
   function appear2() {
     if (isit) {
       searchpg.style.display = "block";
-      frame.style.display = "none";
-      section.style.display = "none";
+      searchpg2.style.display = "block";
       isit = false;
     }else{
       searchpg.style.display = "none";
-      frame.style.display = "block";
-      section.style.display = "block";
+      searchpg2.style.display = "none";
       isit = true;
     }
   }
@@ -430,11 +509,11 @@ color: #2E2E2E;
           <li class="list-inline-item"><i ></i>5 minute read</li>
         </ul>
         <article class="content">
-          <img src="/images/gmailsec.jpg" alt="post-thumb" class="img-fluid rounded float-left mr-5 mb-4">
+          <img src="/Image%20%282%29.png" alt="post-thumb" class="img-fluid rounded float-left mr-5 mb-4">
           
         
 
-       <p>Gmail ဆိုသည်မှာ  စာတိုက် စာပို့စနစ်နှင့် တူသည့်အင်တာနက်သုံးစာပို့ခြင်း Application တစ်ခုဖြစ်ပါသည်။ Gmail အား Google မှ အခမဲ့</p>
+       <p>Gmail ဆိုသည်မှာ စာတိုက် စာပို့ စနစ်နှင့် တူသည့် အင်တာ န သုံး  စာပို့ခြငတူသည့််း Application တူသည့် အင်တာ နက်သုံး စာပို့ခြင်း Application&hellip;</p>
 <p>အသုံးပြုခွင့်ပေးထားပြီး Google Account နှင့် Login ဝင်အသုံးပြုတာဖြစ်ပါသည်။</p>
 <p>Gmail ကို  Google Play Store မှ Download ဆွဲ အသုံးပြုနိုင်သလို Browser တွေထဲမှလည်း ဝင်ရောက်အသုံးပြုနိုင်ပါသည်။</p>
 <p>Gmailဟာ တစ်ခြားအကောင့်များစွာကို ဖန်တီးအသုံးပြုနိုင်သည့်အတွက် အကောင့် ကို တစ်ဦးတစ်ယောက်က ရယူသွားခဲ့မည်ဆိုလျှင် အလွန် အန္တရာယ်များပါသည်။ အကောင့်ကို လုံခြုံအောင်လုပ်ဖို့ရန်အတွက် Gmail Setting ထဲတွင် “Management your google account”  ဆိုသည့် လုပ်ဆောင်ချက်ပါဝင်ပါသည်။ လုံခြုံရေးဆိုင်ရာများကို Security ထဲတွင် ဝင်ရောက်ပြောင်းလဲနိုင်ပါတယ်။</p>
@@ -698,6 +777,7 @@ color: #2E2E2E;
 
 <img src="/images/GM15.PNG" alt="" class="center"></p>
 
+
             
         </article>
 
@@ -715,23 +795,23 @@ color: #2E2E2E;
 
 @media (max-width:480px){
 .footerright{
-position: absolute;
+overflow: hidden;  
+position: relative;
 width: 100%;
-max-width: 480px;
-min-width: 360px;
-height: 247px;
-
-
-top: 3099px;
+height: 100%;
 background: #F57000;
 padding: 30px;
 } 
 .mbmenu{
   display: block;
  }  
+ .wbmenu{
+  display: none;
+ }
  
  .fmbmenuitem{
-  font-family: Pyidaungsu;
+overflow: hidden;  
+font-family: Pyidaungsu;
 font-style: normal;
 font-weight: normal;
 font-size: 16px;
@@ -748,23 +828,24 @@ right: 73.89%;
 cursor: pointer;
  }
 .footerleft{
+overflow: hidden;
+position: relative;  
 padding: 20px;  
-position: absolute;
 width: 100%;
 height: 251px;
 max-width: 480px;
 min-width: 360px;
-
-top: 3346px;
 background: #FFFFFF;
 margin-top: 20px;
-margin-left: 20px;
+
 }
 .foot{
 
-position: absolute;
-
-width: 300px;
+position: relative;
+overflow: hidden;
+width: 100%;
+height: 100%;
+margin-top: 80px;
 
 
   }
@@ -774,22 +855,24 @@ width: 300px;
 
  @media (min-width: 500px){
 .foot{
-position: absolute;
+position: relative;
 width: 100%;
 height: 232px;
-left: 220px;
-top: 3443px;
+left: 0;
+margin-top: 40px;
   }
 .footerleft{
 position: absolute;
-left: 0%;
+overflow: hidden;
+left: 0;
 right: 76.62%;
 top: 0%;
 bottom: 0%;
 background: #FFFFFF;
 }
 .footerright{
-  position: absolute;
+position: absolute;
+overflow: hidden;
 left: 23.38%;
 right: 0%;
 top: 0%;
@@ -798,6 +881,10 @@ bottom: 0%;
 .mbmenu{
   display: none;
  } 
+ .wbmenu{
+  padding: 20px;
+  margin: 10px;
+ }
 }
 
   
@@ -806,44 +893,51 @@ bottom: 0%;
 <footer id="foott" class="bg-secondary foot">
   
       
-      
+       <div class="footerright" >
+          <div class=" fbar">
+           
+           <div class="wbmenu">
+              <a class="fmenu" href="/articles">ဒီဂျစ်တယ်ဖတ်စရာများ</a>
+          <a class="fmenu" href="/materials">သင်ထောက်ကူများစုစည်းမှု</a>
+          <a class="fmenu" href="/radio">ဒီဂျစ်တယ်ရေဒီယို</a>
+          <a class="fmenu" href="/about">လဖက်ရည်ဆိုင်အကြောင်း</a>
+          <div class=" fbar">
+             
+          <a class="fmenu" href="">သိသာစေရန်</a>
+           </div>
+          </div>
+          
+         
+
+          <div class="mbmenu">
+           <a class="fmbmenuitem" href="/articles">ဒီဂျစ်တယ်ဖတ်စရာများစီသို့</a>
+            <a class="fmbmenuitem" href="/materials">သင်ထောက်ကူများစုစည်းမှုစီသို့</a>
+          <a class="fmbmenuitem" href="/radio">ဒီဂျစ်တယ်ရေဒီယိုစီသို့</a>
+          <a class="fmbmenuitem" href="/about">လဖက်ရည်ဆိုင်အကြောင်း</a>
+           <a class="fmbmenuitem" href="">သိသာစေရန်</a>
+        </div>
+
+
+          </div>
+         </div>
+   
+
         <div class="footerleft" >
-          <div class="row">
-            <img  src="/logo.png"> 
+          <div class="row" style=" margin-left:  20px;">
+            <img  src="/logo.png" style="margin-right: 10px;"> 
+
             <img  src="/Logo_MIDO.png">
           </div>
           
             <p style="width: 230px;
-            word-wrap: break-word; font-size: 10pt;">
+            word-wrap: break-word; font-size: 10pt; margin-left:  20px;">
             Digital Tea House is a campaign launched 
             by Mido to promote digital safety
             awareness in MYanmar.
 
         </p>
         </div >
-        <div class="footerright" >
-          <div class=" fbar">
-            <a class="fmenu" href="">ဒီဂျစ်တယ်ဖတ်စရာများ</a>
-          <a class="fmenu" href="">သင်ထောက်ကူများစုစည်းမှု</a>
-          <a class="fmenu" href="">ဒီဂျစ်တယ်ရေဒီယို</a>
-          <a class="fmenu" href="">လဖက်ရည်ဆိုင်အကြောင်း</a>
-          </div>
-          <div class=" fbar">
-             
-          <a class="fmenu" href="">သိသာစေရန်</a>
-          </div>
-         
-        </div>
-      <div class="footerright fbar" >
-        <div class="mbmenu">
-           <a class="fmbmenuitem" href="">ဒီဂျစ်တယ်ဖတ်စရာများ</a>
-            <a class="fmbmenuitem" href="">သင်ထောက်ကူများစုစည်းမှု</a>
-          <a class="fmbmenuitem" href="">ဒီဂျစ်တယ်ရေဒီယို</a>
-          <a class="fmbmenuitem" href="">လဖက်ရည်ဆိုင်အကြောင်း</a>
-           <a class="fmbmenuitem" href="">သိသာစေရန်</a>
-        </div>
-      </div>
-
+        
   
 
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us"><head>
+<html lang="en-us"><head style="overflow: hidden;">
   <meta charset="utf-8">
   <title>Digital Tea House /radio/</title>
 
@@ -29,7 +29,7 @@
 
   
 
-</head><body>
+</head><body style="overflow-x:hidden; position: relative;">
 <!-- preloader start -->
 <div class="preloader">
   <div class="loader">
@@ -46,22 +46,62 @@
 <style type="text/css">
   @media (max-width:480px){
   .mnavbar{
-position: absolute;
+overflow: hidden;    
+position: relative;
 width: 100%;    
-max-width: 480px;
+
 max-height: 90px; 
-min-width: 360px;
+
 min-height: 90px;
 
 
 background: #FFFFFF;
   }
+ input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  margin-top: 30%;
+  border: none;
+  border-radius: 0px;
+  justify-content: center;
+ } 
+input[type="text"]::placeholder {  
+                  
+                  
+                text-align: center; 
+            } 
+
+.sform{
+  left: 0%;
+right: 0%;
+top: 30.06%;
+bottom: 73.28%;
+}
+
+  .msearchbox{
+
+display: none;
+ position: fixed;
+    z-index: 999;
+width: 100%;
+max-width: 480px;
+min-width: 300px;
+top: 90px;
+height: 644px;
+background: #FFFFFF;
+} 
+.wsearchbox{
+  display: none;
+}
   .wnavbar{
+    overflow: hidden;
     display: none;
     width: 100%;
-max-width: 480px;
-min-width: 360px;
+
   }
+
+
   .mlogo{
     position: absolute;
 left: 4.17%;
@@ -72,12 +112,13 @@ width: 114px;
 height: 50px;
   }
   .mmenu{
-    position: absolute;
+    
+position: absolute;
 left: 60.61%;
 right: 30.83%;
 top: 40.51%;
 bottom: 40.98%;
-
+width: 100%;
 font-family: Pyidaungsu;
 font-style: normal;
 font-weight: bold;
@@ -106,7 +147,9 @@ transform: matrix(-1, 0, 0, 1, 0, 0);
  } 
  .mitem{
 display: none;
-position: absolute;
+position:absolute;
+top: 0;
+z-index: 999;
 width: 100%;
 max-width: 480px;
 min-width: 300px;
@@ -118,6 +161,7 @@ height: 444px;
 background: #F2F2F2;
  }
  .mbanr{
+  
   position: absolute;
 width: 100%;
 max-width: 480px;
@@ -157,6 +201,16 @@ bottom: 0%;
 
 
  }
+ .mbacks{
+  position: absolute;
+left: 5%;
+right: 100%;
+top: 5%;
+bottom: 0%;
+
+
+
+ }
  .menuitem{
 position: absolute;
 width: 100%;
@@ -190,12 +244,12 @@ color: #2E2E2E;
  .searchpg{
   display: none;
   position: absolute;
-width: 100%;
-max-width: 480px;
-min-width: 360px;
-height: 640px;
-display: none;
-background: #FFFFFF;
+top: 20%;
+width: 360px;
+height: 240px;
+
+background: #0000;
+z-index: 299;
  }
  .sbox{
   position: absolute;
@@ -208,7 +262,14 @@ background: #FFFFFF;
  }
 }
 
- @media (min-width: 481px){
+@media (min-width: 481px){
+.msearchbox{
+
+display: none;
+  } 
+.wsearchbox{
+
+}
 .mnavbar{
   display: none;
 
@@ -220,14 +281,35 @@ display: none;
   .searchpg{
   display: none;
 }
+.msearchbox{
+  display: none;
+}
+.sform{
+display: none;
+}
 
   }
 
 </style>
 <header class="mnavbar">
-  <img class="mlogo" src="/navlogo.PNG">
+  <a href="/"><img class="mlogo" src="/navlogo.PNG"></a>
   <label class="mmenu" onclick="appear()">menu</label>
-  <img class="msearch" src="/search.png">
+  <img class="msearch" src="/search.png" onclick="appear2()">
+  
+      <div id="searchpg" class="msearchbox">
+        
+      
+        <form action="/action_page.php"  >
+          <img class="mbacks" src="/back.png" onclick="appear2()">
+    <input type="text" id="keyword" name="keyword" placeholder="ဘာကိုရှာချင်ပါသလည်း?" style="top: 30.06%;">
+    <svg height="210" width="100%">
+  <line x1="0" y1="0" x2="100%" y2="0" style="stroke:rgb(0,0,0);stroke-width:2" />
+  
+</svg>
+  </form>
+  
+      </div>
+      
 </header>
   
 <div id="menuitem" class="mitem">
@@ -241,7 +323,7 @@ display: none;
       <a href="/materials"><label class="menutxt">သင်ထောက်ကူများစုစည်းမှု</label></a>
     </div>
     <div class="menuitem" style="top: 272px;">
-      <a href="radio"><label class="menutxt">ဒစ်ဂျစ်တယ်ရေဒီယို</label></a>
+      <a href="/radio"><label class="menutxt">ဒစ်ဂျစ်တယ်ရေဒီယို</label></a>
     </div>
     <div class="menuitem" style="top: 363px;">
       <a href="/about"><label class="menutxt">လဖက်ရည်ဆိုင်အကြောင်</label></a>
@@ -293,29 +375,28 @@ display: none;
       
       
     </div>
-      <a href="">
-        <img src="/search.png" style="width: 40px; height: 40px;">
-      </a>
+    
+        <img src="/search.png" style="width: 40px; height: 40px; cursor: pointer;" onclick="appear2()">
+     
+     
   </nav>
-
+   <div id="searchpg2" class="searchpg"></div>
 </header>
-
+<div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0" nonce="eFwOXAGF"></script>
 <script type="text/javascript">
   var isit = true
   function appear() {
     if (isit) {
        isit = false;
       menuitem.style.display = "block";
-      frame.style.display = "none";
-      abt.style.display="none"
-      alert("Hello! I am an alert box!!");
+  
+     
      
     }else{
       isit = true;
       menuitem.style.display = "none";
-      frame.style.display = "block";
-      abt.style.display="block"
-
+    
 
       
     }
@@ -323,13 +404,11 @@ display: none;
   function appear2() {
     if (isit) {
       searchpg.style.display = "block";
-      frame.style.display = "none";
-      section.style.display = "none";
+      searchpg2.style.display = "block";
       isit = false;
     }else{
       searchpg.style.display = "none";
-      frame.style.display = "block";
-      section.style.display = "block";
+      searchpg2.style.display = "none";
       isit = true;
     }
   }
@@ -340,13 +419,14 @@ display: none;
   display: none;
 }
 .mban{
-  position: absolute;
+  overflow: hidden;
+  position: relative;
 width: 100%;
 max-width: 480px;
 min-width: 360px;
 height: 102px;
 left: 0px;
-top: 90px;
+margin-top: 90px;
 background: #F57000;
 }
 .mrtit{
@@ -371,23 +451,27 @@ align-items: center;
 color: #FFFFFF;
 }
 .mrbanimg{
-position: absolute;
+position: relative;
 width: 172px;
 height: 72px;
 left: 50%;
 top: 40%;
+z-index: 99;
  opacity: 0.5;
 background: #C4C4C4;
 }
 .mrtbar{
-  position: absolute;
+  overflow: hidden;
+  position: relative;
+ width: 100%; 
 width: 360px;
 height: 191px;
 left: 0px;
-top: 191px;
+margin-top: 40px;
 background: #FFFFFF;
 }
 .comein{
+  overflow: hidden;
   position: absolute;
 width: 100%;
 height: 31px;
@@ -407,11 +491,12 @@ align-items: center;
 color: #000000;
 }
 .everyfriday{
-  position: absolute;
+  overflow: hidden;
+  position: relative;
 width: 317px;
 height: 100px;
 left: 20px;
-top: 47px;
+margin-top: 47px;
 
  
 
@@ -426,19 +511,20 @@ line-height: 25px;
 color: #000000;
 }
 .listeningapp{
-  position: absolute;
+  overflow: hidden;
+  position: relative;
 width: 360px;
 height: 144px;
 left: 0px;
-top: 382px;
+margin-top: 10px;
 background: #FFFFFF;
 }
 .appdis{
-  position: absolute;
+  position: relative;
 width: 314px;
 height: 75px;
 left: 20px;
-top: 12px;
+
 
  
 
@@ -461,11 +547,14 @@ height: 32px;
 top: 89px;
 }
 .podbox{
- position: absolute;
-width: 340px;
+ position: relative;
+ margin-top: 20px;
+width: 100%; 
+max-width: 480px;
+min-width: 340px;
 height: 415px;
 left: 10px;
-top: 0px;
+
 
 background: #FFFFFF;
 }
@@ -658,13 +747,14 @@ bottom: 12.83%;
 }
 
 .castlist{
-  position: absolute;
+  overflow: hidden;
+  position: relative;
 width: 100%;
-max-width: 480px;
-min-width: 360px;
+
 height: 100%;
+margin-top: 40px;
 left: 0px;
-top: 566px;
+
 
  
 background: #F2F2F2;
@@ -694,13 +784,13 @@ text-align: center;
 color: #2E2E2E;
 }
 .seemore{
-  position: absolute;
-width: 100%  
+  position: relative;
+ 
 max-width: 480px;
 min-width: 360px;
 height: 50px;
 left: 0px;
-top: 80%;
+margin-top: 40px;
 
 font-family: Pyidaungsu;
 font-style: normal;
@@ -718,6 +808,10 @@ color: #2E2E2E;
 
  
 @media (min-width: 500px){
+.webbanner{
+  position: relative;
+  margin-top: 80px;
+}  
 .seemore{
   display: none;
 }
@@ -735,11 +829,12 @@ cursor: pointer;
 }
 
 .podbox{
-  position: absolute;
+   position: relative;
+ margin-top: 20px;
 width: 570px;
 height: 271px;
 left: 10px;
-top: 83px;
+
 background: #FFFFFF;
 }
 .date{
@@ -924,11 +1019,11 @@ bottom: 12.83%;
 }
 
 .castlist{
-  position: absolute;
+  position: relative;
 width: 600px;
-height: 1576px;
+height: 100%;
 left: 220px;
-top: 682px; 
+margin-top: 40px;
 background: #F2F2F2;
 }
 .casttitle{
@@ -959,11 +1054,11 @@ color: #2E2E2E;
   }
 
 .bgr{
-	position: absolute;
+	position: relative;
 width: 1001px;
 height: 357px;
 left: 220px;
-top: 225px; 
+margin-top: 20px; 
 background: #FFFFFF;
  
 
@@ -1002,8 +1097,8 @@ top: 20px;
 	position: absolute;
 width: 392px;
 height: 262px;
-left: 554px;
-top: 67px;
+left: 30%;
+bottom: 10%
 }
 .dis{
 position: absolute;
@@ -1037,6 +1132,7 @@ color: #2E2E2E;
 
 <div class="banner">
 	<label class="txt rtitle">ဒီဂျစ်တယ်ရေဒီယို</label>
+  <img class="himg" src="/pod.png">
 </div>	
 <div class="dis">
 <h6>ဝင်ထိုင်ပါဦး</h6>
@@ -1048,7 +1144,7 @@ color: #2E2E2E;
 <img class="pod" src="/apple.png" style="left: 180px;">
 <img class="pod" src="/bean.png" style="left: 310px;">
 </div>
-<img class="himg" src="/pod.png">
+
 </div>
 
 <div class="mbanner">
@@ -1089,36 +1185,218 @@ color: #2E2E2E;
   <img src="/speaker2.png" class="speaker">
   <input type="range" min="1" max="100" value="50" class="volume" id="vol-control" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)" > 	
 	</div>
+
+  <div class="podbox">
+  <label class="date">June 16, 2020</label>
+  <label class="eptitle">Episode 035 - ခေါင်းစဥ်</label>  
+  <p class="epdis">ကျွန်ုပ်တို့၏ဝက်ဘ်ဆိုက်သို့လာရောက်လည်ပတ်သူးကိုမိတ်ဆက်ပေးပါသည်။ ကျွန်ုပ်တ ို့ဘာ တွေလဲဆိ ကိုရှင်းပြပြီးအရေးကြီးတဲ့အကြောင်း ကိုဆွေးနွေးတယ်။ ကျနော် တို့ ဆွေးနွေးမှုကိုနောက်ဖြစ်ပျက်သွားမယ့်အရာနဲ့အဆုံးသတ်ထားသည်။</p>
+  <div class="player">
+  <img class="pimg" src="/album.png"> 
+  <label class="pname">Digital Teahouse Podcast</label>
+  <label class="pdis">Episode 035 - ခေါင်းစဥ်</label>
+   <img src="/pbt2.png" id="audioControl" onclick="togglePlaying()" class="play">
+   <audio id="audio" ontimeupdate="updateBar()"  >
+  <source src="https://otamyanmar.podbean.com/mf/play/n8f29q/11.mp3" type="audio/mpeg">
+  
+  </div>
+  <span style="color: #ffff" id="current-time" class="current time"></span>
+  <span style="color: #ffff" id="duration" class="dur time"></span>
+  <canvas id="progress" width="60" height="5" class="progress"></canvas> 
+  <img src="/speaker2.png" class="speaker">
+  <input type="range" min="1" max="100" value="50" class="volume" id="vol-control" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)" >   
+  </div>
+
+  <div class="podbox">
+  <label class="date">June 16, 2020</label>
+  <label class="eptitle">Episode 035 - ခေါင်းစဥ်</label>  
+  <p class="epdis">ကျွန်ုပ်တို့၏ဝက်ဘ်ဆိုက်သို့လာရောက်လည်ပတ်သူးကိုမိတ်ဆက်ပေးပါသည်။ ကျွန်ုပ်တ ို့ဘာ တွေလဲဆိ ကိုရှင်းပြပြီးအရေးကြီးတဲ့အကြောင်း ကိုဆွေးနွေးတယ်။ ကျနော် တို့ ဆွေးနွေးမှုကိုနောက်ဖြစ်ပျက်သွားမယ့်အရာနဲ့အဆုံးသတ်ထားသည်။</p>
+  <div class="player">
+  <img class="pimg" src="/album.png"> 
+  <label class="pname">Digital Teahouse Podcast</label>
+  <label class="pdis">Episode 035 - ခေါင်းစဥ်</label>
+   <img src="/pbt2.png" id="audioControl" onclick="togglePlaying()" class="play">
+   <audio id="audio" ontimeupdate="updateBar()"  >
+  <source src="https://otamyanmar.podbean.com/mf/play/n8f29q/11.mp3" type="audio/mpeg">
+  
+  </div>
+  <span style="color: #ffff" id="current-time" class="current time"></span>
+  <span style="color: #ffff" id="duration" class="dur time"></span>
+  <canvas id="progress" width="60" height="5" class="progress"></canvas> 
+  <img src="/speaker2.png" class="speaker">
+  <input type="range" min="1" max="100" value="50" class="volume" id="vol-control" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)" >   
+  </div>
+
+
   <button class="seemore">ပိုမိုဆက်ကြည့်ရန်</button>
 	</div>
 	
 </div><style type="text/css">
 @media (max-width:480px){
 .sub{
-position: absolute;
-width: 360px;
-height: 352px;
+overflow: hidden;	
+position: relative;
+width: 100%
+min-width: 360px;
+max-width: 480px;
+height: 382px;
 left: 0px;
-top: 2318px;
+margin-top: 80px;
+margin-bottom: 40px;
 background: #FFFFFF;
 }
+
+.title{
+  position: absolute;
+width: 110px;
+height: 36px;
+left: 15px;
+top: 40px;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+line-height: 36px;
+display: flex;
+align-items: flex-end;
+
+ 
+
+color: #535353;
+
+}
+
+.subtxt{
+  position: absolute;
+width: 226px;
+height: 40.86px;
+left: 15px;
+top: 71px;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 20px;
+
+ 
+
+color: #2E2E2E;
+}
+.formsc{
+
+width: 55px;
+height: 35px;
+left: 0px;
+top: 35.23%;
+bottom: 54.83%;
+
+background: #F2F2F2;
+}
+.subbtn{
+  position: absolute;
+width: 100%;
+height: 29.8px;
+left:0px;
+top: 40.8%;
+bottom: 58.83%;
+background: #F57000;
+border: none;
+color: #FFFFFF;
+margin-top: 20px;
+}
+.fb{
+  position: absolute;
+left: 5.86%;
+right: 82.42%;
+top: 60.35%;
+bottom: 40.91%;
+}
+.email{
+  position: absolute;
+left: 24.61%;
+right: 63.67%;
+top: 60.68%;
+bottom: 40.58%;
+}
+.share{
+  position: absolute;
+width: 228px;
+height: 50px;
+left: 15px;
+top: 70%;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 25px;
+ 
+
+display: flex;
+align-items: center;
+
+ 
+
+color: #2E2E2E;
+}
+.sharebtn{
+  position: absolute;
+left: 5.86%;
+right: 61.72%;
+top: 85.39%;
+bottom: 4.87%;
+}
+.sharebtn{
+  position: absolute;
+  width: 100%;
+  height: 80px;
+left: 5%;
+right: 65.67%;
+top: 89.04%;
+z-index: 100;
+bottom: 5.06%;
+background-color: #FFFFFF
+
+}
+.fbs{
+    position: absolute;
+   
+    z-index: 80;
+    left: 5%;
+    top: 89.04%;
+    bottom: 5.06%;
+    
+  }
+    .tweet{
+    position: absolute;
+    justify-content: center;
+    z-index: 80;
+    left: 30%;
+    margin-left: 10px;
+    top: 89.14%;
+    bottom: 5.06%;
+    
+  }
+
 }
 @media (min-width: 500px){
 	.sub{
 	position: absolute;
+	top: 20%;
 width: 256px;
 height: 308px;
 left: 964px;
-top: 709px;
+top: 722px;
+margin-top: 40px;
 background: #FFFFFF;
  
 
 box-shadow: 0px 3px 3px rgba(117, 117, 117, 0.26);
 }
-	}
 
 .title{
-	position: absolute;
+  position: absolute;
 width: 110px;
 height: 36px;
 left: 15px;
@@ -1139,7 +1417,7 @@ color: #535353;
 }
 
 .subtxt{
-	position: absolute;
+  position: absolute;
 width: 226px;
 height: 40.86px;
 left: 15px;
@@ -1155,8 +1433,8 @@ line-height: 24px;
 
 color: #2E2E2E;
 }
-.form{
-	position: absolute;
+.formsc{
+  position: absolute;
 width: 137px;
 height: 20.93px;
 left: 29px;
@@ -1170,13 +1448,13 @@ line-height: 21px;
  
 
 text-align: center;
-
+border: none;
  
 
 color: #8E8E8E;
 }
 .subbtn{
-	position: absolute;
+  position: absolute;
 width: 63.15px;
 height: 29.8px;
 left: 188.23px;
@@ -1186,21 +1464,21 @@ border-radius: 6px;
 color: #FFFFFF;
 }
 .fb{
-	position: absolute;
+  position: absolute;
 left: 5.86%;
 right: 82.42%;
 top: 49.35%;
 bottom: 40.91%;
 }
 .email{
-	position: absolute;
+  position: absolute;
 left: 24.61%;
 right: 63.67%;
 top: 49.68%;
 bottom: 40.58%;
 }
 .share{
-	position: absolute;
+  position: absolute;
 width: 228px;
 height: 50px;
 left: 15px;
@@ -1221,29 +1499,88 @@ align-items: center;
 color: #2E2E2E;
 }
 .sharebtn{
-	position: absolute;
+  position: absolute;
 left: 5.86%;
 right: 61.72%;
 top: 85.39%;
 bottom: 4.87%;
 }
+.sharebtn{
+  position: absolute;
+  width: 100%;
+  height: 80px;
+left: 5%;
+right: 65.67%;
+top: 89.04%;
+z-index: 100;
+bottom: 5.06%;
+background-color: #FFFFFF
+
+}
+.fbs{
+    position: absolute;
+   
+    z-index: 80;
+    left: 10%;
+    top: 89.04%;
+    bottom: 5.06%;
+    
+  }
+    .tweet{
+    position: absolute;
+    justify-content: center;
+    z-index: 80;
+    left: 50%;
+    top: 89.04%;
+    bottom: 5.06%;
+    
+  }
+
+	}
 
 
 </style>
 
-<div class="sub">
+<div class="sub" id="sub">
 	<label class="title">အားပေးပါအုံး!</label>
  <label class="subtxt"> ဖောက်သည်အရင်းချာများ စာရင်းသွင်းရန် ….. Please Suscribe.</label> 
- 
-    <input type="text" id="email" class="form" name="email"><br><br>
+    
+    <input type="text" id="email" class="formsc" name="email" placeholder="သင့်၏ E-mail လိပ်စာထည့်ပါ">
   <button class="subbtn" type="submit" value="submit">Submit</button>
  <a href="https://web.facebook.com/digitalteahouse2020"><img src="/Logo_fb.png" class="fb"></a>
  <a href=""><img src="/logo_email.png" class="email"></a>
  <label class="share">ကြိုက်တယ်ဆို Share ပေးပါအုံး ဆိုင်အသစ်မို့ပါ !!!!!</label>
-<a href=""><img src="/Share Button.png" class="sharebtn"></a>
+ 
+ <div class="fb-share-button fbs" id="fbs"  data-href="https://www.digitalteahouse.info/" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.digitalteahouse.info%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore" >Share</a></div>
+<div class="tweet"><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+</div>
 </div>
 
+<script type="text/javascript">
+	window.onscroll = function() {scrollFunction()};
 
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 80) {
+    sub.style.display = "block";
+     
+    
+  } else {
+    sub.style.display = "none";
+   
+    
+  }
+}
+function appearsh() {
+  
+       sharebtn.style.display="none"
+     
+     
+    }
+    function shclose() {
+      sharebtn.style.display="block"
+      
+    }
+</script>
 <script>
 
 window.SetVolume = function(val)
@@ -1327,23 +1664,23 @@ function convertElapsedTime(inputSeconds) {
 
 @media (max-width:480px){
 .footerright{
-position: absolute;
+overflow: hidden;  
+position: relative;
 width: 100%;
-max-width: 480px;
-min-width: 360px;
-height: 247px;
-
-
-top: 3099px;
+height: 100%;
 background: #F57000;
 padding: 30px;
 } 
 .mbmenu{
   display: block;
  }  
+ .wbmenu{
+  display: none;
+ }
  
  .fmbmenuitem{
-  font-family: Pyidaungsu;
+overflow: hidden;  
+font-family: Pyidaungsu;
 font-style: normal;
 font-weight: normal;
 font-size: 16px;
@@ -1360,23 +1697,24 @@ right: 73.89%;
 cursor: pointer;
  }
 .footerleft{
+overflow: hidden;
+position: relative;  
 padding: 20px;  
-position: absolute;
 width: 100%;
 height: 251px;
 max-width: 480px;
 min-width: 360px;
-
-top: 3346px;
 background: #FFFFFF;
 margin-top: 20px;
-margin-left: 20px;
+
 }
 .foot{
 
-position: absolute;
-
-width: 300px;
+position: relative;
+overflow: hidden;
+width: 100%;
+height: 100%;
+margin-top: 80px;
 
 
   }
@@ -1386,22 +1724,24 @@ width: 300px;
 
  @media (min-width: 500px){
 .foot{
-position: absolute;
+position: relative;
 width: 100%;
 height: 232px;
-left: 220px;
-top: 3443px;
+left: 0;
+margin-top: 40px;
   }
 .footerleft{
 position: absolute;
-left: 0%;
+overflow: hidden;
+left: 0;
 right: 76.62%;
 top: 0%;
 bottom: 0%;
 background: #FFFFFF;
 }
 .footerright{
-  position: absolute;
+position: absolute;
+overflow: hidden;
 left: 23.38%;
 right: 0%;
 top: 0%;
@@ -1410,6 +1750,10 @@ bottom: 0%;
 .mbmenu{
   display: none;
  } 
+ .wbmenu{
+  padding: 20px;
+  margin: 10px;
+ }
 }
 
   
@@ -1418,44 +1762,51 @@ bottom: 0%;
 <footer id="foott" class="bg-secondary foot">
   
       
-      
+       <div class="footerright" >
+          <div class=" fbar">
+           
+           <div class="wbmenu">
+              <a class="fmenu" href="/articles">ဒီဂျစ်တယ်ဖတ်စရာများ</a>
+          <a class="fmenu" href="/materials">သင်ထောက်ကူများစုစည်းမှု</a>
+          <a class="fmenu" href="/radio">ဒီဂျစ်တယ်ရေဒီယို</a>
+          <a class="fmenu" href="/about">လဖက်ရည်ဆိုင်အကြောင်း</a>
+          <div class=" fbar">
+             
+          <a class="fmenu" href="">သိသာစေရန်</a>
+           </div>
+          </div>
+          
+         
+
+          <div class="mbmenu">
+           <a class="fmbmenuitem" href="/articles">ဒီဂျစ်တယ်ဖတ်စရာများစီသို့</a>
+            <a class="fmbmenuitem" href="/materials">သင်ထောက်ကူများစုစည်းမှုစီသို့</a>
+          <a class="fmbmenuitem" href="/radio">ဒီဂျစ်တယ်ရေဒီယိုစီသို့</a>
+          <a class="fmbmenuitem" href="/about">လဖက်ရည်ဆိုင်အကြောင်း</a>
+           <a class="fmbmenuitem" href="">သိသာစေရန်</a>
+        </div>
+
+
+          </div>
+         </div>
+   
+
         <div class="footerleft" >
-          <div class="row">
-            <img  src="/logo.png"> 
+          <div class="row" style=" margin-left:  20px;">
+            <img  src="/logo.png" style="margin-right: 10px;"> 
+
             <img  src="/Logo_MIDO.png">
           </div>
           
             <p style="width: 230px;
-            word-wrap: break-word; font-size: 10pt;">
+            word-wrap: break-word; font-size: 10pt; margin-left:  20px;">
             Digital Tea House is a campaign launched 
             by Mido to promote digital safety
             awareness in MYanmar.
 
         </p>
         </div >
-        <div class="footerright" >
-          <div class=" fbar">
-            <a class="fmenu" href="">ဒီဂျစ်တယ်ဖတ်စရာများ</a>
-          <a class="fmenu" href="">သင်ထောက်ကူများစုစည်းမှု</a>
-          <a class="fmenu" href="">ဒီဂျစ်တယ်ရေဒီယို</a>
-          <a class="fmenu" href="">လဖက်ရည်ဆိုင်အကြောင်း</a>
-          </div>
-          <div class=" fbar">
-             
-          <a class="fmenu" href="">သိသာစေရန်</a>
-          </div>
-         
-        </div>
-      <div class="footerright fbar" >
-        <div class="mbmenu">
-           <a class="fmbmenuitem" href="">ဒီဂျစ်တယ်ဖတ်စရာများ</a>
-            <a class="fmbmenuitem" href="">သင်ထောက်ကူများစုစည်းမှု</a>
-          <a class="fmbmenuitem" href="">ဒီဂျစ်တယ်ရေဒီယို</a>
-          <a class="fmbmenuitem" href="">လဖက်ရည်ဆိုင်အကြောင်း</a>
-           <a class="fmbmenuitem" href="">သိသာစေရန်</a>
-        </div>
-      </div>
-
+        
   
 
 

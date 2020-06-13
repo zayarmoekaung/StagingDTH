@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/mmenu/</loc>
+    <lastmod>2020-06-08T12:58:52+06:30</lastmod>
+  </url>
+  
+  <url>
     <loc>/materials/</loc>
     <lastmod>2020-05-31T16:51:48+06:30</lastmod>
   </url>
@@ -58,17 +63,17 @@
   </url>
   
   <url>
+    <loc>/articles/firefoxbrowserhistory/</loc>
+    <lastmod>2020-02-27T01:07:23+06:30</lastmod>
+  </url>
+  
+  <url>
     <loc>/articles/gmailsecurity/</loc>
     <lastmod>2020-02-27T01:06:44+06:30</lastmod>
   </url>
   
   <url>
     <loc>/articles/incognito/</loc>
-    <lastmod>2020-02-27T01:06:33+06:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>/incognito/</loc>
     <lastmod>2020-02-27T01:06:33+06:30</lastmod>
   </url>
   
