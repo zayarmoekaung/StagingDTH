@@ -3,41 +3,27 @@
 .sub{
 overflow: hidden;	
 position: relative;
-width: 360px;
-height: 352px;
+width: 100%
+min-width: 360px;
+max-width: 480px;
+height: 382px;
 left: 0px;
-margin-top: 40px;
+margin-top: 80px;
 margin-bottom: 40px;
 background: #FFFFFF;
 }
-}
-@media (min-width: 500px){
-	.sub{
-	position: relative;
-	top: 20%;
-width: 256px;
-height: 308px;
-left: 964px;
-
-margin-top: 40px;
-background: #FFFFFF;
-/* Shadow */
-
-box-shadow: 0px 3px 3px rgba(117, 117, 117, 0.26);
-}
-	}
 
 .title{
-	position: absolute;
+  position: absolute;
 width: 110px;
 height: 36px;
 left: 15px;
-top: 20px;
+top: 40px;
 
 font-family: Pyidaungsu;
 font-style: normal;
 font-weight: bold;
-font-size: 21px;
+font-size: 20px;
 line-height: 36px;
 display: flex;
 align-items: flex-end;
@@ -49,72 +35,64 @@ color: #535353;
 }
 
 .subtxt{
-	position: absolute;
+  position: absolute;
 width: 226px;
 height: 40.86px;
 left: 15px;
-top: 61px;
-
-font-family: Pyidaungsu;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 24px;
-
-/* Text Black */
-
-color: #2E2E2E;
-}
-.form{
-	position: absolute;
-width: 137px;
-height: 20.93px;
-left: 29px;
-top: 121.8px;
+top: 71px;
 
 font-family: Pyidaungsu;
 font-style: normal;
 font-weight: normal;
 font-size: 12px;
-line-height: 21px;
-/* identical to box height */
+line-height: 20px;
 
-text-align: center;
+/* Text Black */
 
-/* text grey */
+color: #2E2E2E;
+}
+.formsc{
 
-color: #8E8E8E;
+width: 55px;
+height: 35px;
+left: 0px;
+top: 35.23%;
+bottom: 54.83%;
+
+background: #F2F2F2;
 }
 .subbtn{
-	position: absolute;
-width: 63.15px;
+  position: absolute;
+width: 100%;
 height: 29.8px;
-left: 188.23px;
-top: 117.2px;
+left:0px;
+top: 40.8%;
+bottom: 58.83%;
 background: #F57000;
-border-radius: 6px;
+border: none;
 color: #FFFFFF;
+margin-top: 20px;
 }
 .fb{
-	position: absolute;
+  position: absolute;
 left: 5.86%;
 right: 82.42%;
-top: 49.35%;
+top: 60.35%;
 bottom: 40.91%;
 }
 .email{
-	position: absolute;
+  position: absolute;
 left: 24.61%;
 right: 63.67%;
-top: 49.68%;
+top: 60.68%;
 bottom: 40.58%;
 }
 .share{
-	position: absolute;
+  position: absolute;
 width: 228px;
 height: 50px;
 left: 15px;
-top: 203px;
+top: 70%;
 
 font-family: Pyidaungsu;
 font-style: normal;
@@ -131,7 +109,7 @@ align-items: center;
 color: #2E2E2E;
 }
 .sharebtn{
-	position: absolute;
+  position: absolute;
 left: 5.86%;
 right: 61.72%;
 top: 85.39%;
@@ -167,13 +145,174 @@ background-color: #FFFFFF
     bottom: 5.06%;
     
   }
+
+}
+@media (min-width: 500px){
+	.sub{
+	position: absolute;
+	top: 20%;
+width: 256px;
+height: 308px;
+left: 964px;
+top: 722px;
+margin-top: 40px;
+background: #FFFFFF;
+/* Shadow */
+
+box-shadow: 0px 3px 3px rgba(117, 117, 117, 0.26);
+}
+
+.title{
+  position: absolute;
+width: 110px;
+height: 36px;
+left: 15px;
+top: 20px;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 21px;
+line-height: 36px;
+display: flex;
+align-items: flex-end;
+
+/* [old] Text Black */
+
+color: #535353;
+
+}
+
+.subtxt{
+  position: absolute;
+width: 226px;
+height: 40.86px;
+left: 15px;
+top: 61px;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 24px;
+
+/* Text Black */
+
+color: #2E2E2E;
+}
+.formsc{
+  position: absolute;
+width: 137px;
+height: 20.93px;
+left: 29px;
+top: 121.8px;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 21px;
+/* identical to box height */
+
+text-align: center;
+border: none;
+/* text grey */
+
+color: #8E8E8E;
+}
+.subbtn{
+  position: absolute;
+width: 63.15px;
+height: 29.8px;
+left: 188.23px;
+top: 117.2px;
+background: #F57000;
+border-radius: 6px;
+color: #FFFFFF;
+}
+.fb{
+  position: absolute;
+left: 5.86%;
+right: 82.42%;
+top: 49.35%;
+bottom: 40.91%;
+}
+.email{
+  position: absolute;
+left: 24.61%;
+right: 63.67%;
+top: 49.68%;
+bottom: 40.58%;
+}
+.share{
+  position: absolute;
+width: 228px;
+height: 50px;
+left: 15px;
+top: 203px;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 25px;
+/* or 179% */
+
+display: flex;
+align-items: center;
+
+/* Text Black */
+
+color: #2E2E2E;
+}
+.sharebtn{
+  position: absolute;
+left: 5.86%;
+right: 61.72%;
+top: 85.39%;
+bottom: 4.87%;
+}
+.sharebtn{
+  position: absolute;
+  width: 100%;
+  height: 80px;
+left: 5%;
+right: 65.67%;
+top: 89.04%;
+z-index: 100;
+bottom: 5.06%;
+background-color: #FFFFFF
+
+}
+.fbs{
+    position: absolute;
+   
+    z-index: 80;
+    left: 10%;
+    top: 89.04%;
+    bottom: 5.06%;
+    
+  }
+    .tweet{
+    position: absolute;
+    justify-content: center;
+    z-index: 80;
+    left: 50%;
+    top: 89.04%;
+    bottom: 5.06%;
+    
+  }
+
+	}
+
+
 </style>
 
 <div class="sub" id="sub">
 	<label class="title">အားပေးပါအုံး!</label>
  <label class="subtxt"> ဖောက်သည်အရင်းချာများ စာရင်းသွင်းရန် ….. Please Suscribe.</label> 
- 
-    <input type="text" id="email" class="form" name="email"><br><br>
+    
+    <input type="text" id="email" class="formsc" name="email" placeholder="သင့်၏ E-mail လိပ်စာထည့်ပါ">
   <button class="subbtn" type="submit" value="submit">Submit</button>
  <a href="https://web.facebook.com/digitalteahouse2020"><img src="/Logo_fb.png" class="fb"></a>
  <a href=""><img src="/logo_email.png" class="email"></a>

@@ -7,12 +7,12 @@ categories:
 tags:
   - "Internet"
   - "Security"
-image: "/images/gmailsec.jpg"
+image: "/Image (2).png"
 ---
 
 
 
-Gmail ဆိုသည်မှာ  စာတိုက် စာပို့စနစ်နှင့် တူသည့်အင်တာနက်သုံးစာပို့ခြင်း Application တစ်ခုဖြစ်ပါသည်။ Gmail အား Google မှ အခမဲ့ 
+Gmail ဆိုသည်မှာ စာတိုက် စာပို့ စနစ်နှင့် တူသည့် အင်တာ န သုံး  စာပို့ခြငတူသည့််း Application တူသည့် အင်တာ နက်သုံး စာပို့ခြင်း Application...
 <!--more-->
 အသုံးပြုခွင့်ပေးထားပြီး Google Account နှင့် Login ဝင်အသုံးပြုတာဖြစ်ပါသည်။ 
 

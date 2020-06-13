@@ -3,6 +3,9 @@
 
 <style type="text/css">
 @media (max-width:480px){
+.bgrd{
+  display: none;
+}  
 .abbg{
   display: none;
   width: 100%;
@@ -11,8 +14,8 @@ max-width: 480px;
 min-width: 360px;
 }
 .mabbg{
-  position: absolute;
-  
+  position: relative;
+  overflow: hidden;
 width: 100%;
 
 max-width: 480px;
@@ -21,20 +24,20 @@ height: 189px;
 object-fit: cover;
 height: auto;
 left: 0px;
-top: 80px;
+margin-top:  80px;
 }
 .mbg{
   display: block;
 }
 .mab{
-  position: absolute;
+position: relative;
 width: 100%;
-
+overflow: hidden;
 max-width: 480px;
 min-width: 360px;
 height: 176px;
 left: 0px;
-top: 220px;
+
 
 /* orange */
 
@@ -79,9 +82,10 @@ line-height: 25px;
 color: #FFFFFF;
 }
 .abbox{
-  position: relative;
+position: relative;
+overflow: hidden;
 width: 340px;
-height: 229px;
+height: 100%;
 left: 10px;
 margin-top: 20px;
 
@@ -109,16 +113,14 @@ left: 0;
 bottom:  10px;
 }
 .abso{
-  margin-top: 40px;
 
-  position: relative;
+position: relative;
 width: 100%;
 max-width: 480px;
 min-width: 360px;
 height: 99px;
 left: 0px;
-top: 1452px;
-
+margin-top: 80px;
 background: #F57000;
 }
 .sot{
@@ -139,7 +141,7 @@ color: #FFFFFF;
 .writer{
   position: relative;
 
- margin-top: 20px;
+ margin-top: 80px;
 width: 300px;
 height: 214px;
 left: 31px;
@@ -190,7 +192,7 @@ line-height: 25px;
 color: #000000;
 }
 .wdis{
-margin-top: 40px;
+margin-top: 20px;
 margin-left: 30px;  
 position: absolute;
 left: 0%;
@@ -358,7 +360,7 @@ left: 136px;
   margin-top: 20px;
 width: 100%  
 min-width: 360px;
-height: 867px;
+height: 100%;
 left: 1px;
 }
 .abso{
@@ -514,7 +516,7 @@ left: 136px;
    
  </div>
 </section>
-<section>
+<section style="position: relative;">
 <div id="abt" class="mbg">
   <img class="mabbg" src="/Background.png">
   <div class="bgrd">
@@ -526,20 +528,12 @@ left: 136px;
  <label class="mabtit">လက်ဘက်ရည်ဆိုင်အကြောင်း</label> 
  <p class="mabdis">ကျုပ်တို့ဆိုင်ဤအကြောင်းအတိုကောက်လေးဒီမှာရေးပါ ကျုပ်တို့ဆိုင် ဤအကြောင်းအ တိုကောက်လေး ဒီမှာ ရေးပါ</p>
 </div> 
-  {{- partial "subscribe.html" . -}}
+  
   <div class="abbox">
     <h5>ကျုပ်တို့ ရဲ့လက်ဘက်ရည်ဆိုင် က ပုံမှန်လက်ဘက်ရည်ဆိုင် မဟုတ်ဘူးဗျ။</h5>
     <p> ဒစ်ဂျစ်တယ်လက်ဘက်ရည်ဆိုင် ။ ဒီ အခေါ်အတွေဝေါ်က နည်းနည်းတော့ထူးဆန်းနေလိမ့်မယ်။ ဘာ့ကြောင့်ဆိုတာ ရှင်းပြမယ်။ ကျုပ်တို့ရဲ့ နေ့စဉ်ဘဝမှာ ဒစ်ဂျစ်တယ်ပစ္စည်းတွေ ( အပျော့ထည်ရော၊ အမာထည်ရော) နဲ့ မနက်မိုးလင်းကတည်းက စပြီးတော့ ထိတွေ့သုံးစွဲနေရတယ်။ ကိုယ့်ဘဝထဲမှာ ဒစ်ဂျစ်တယ်ပစ္စည်းတွေက တစ်စိတ်တစ်ပိုင်း နေရာယူလာတယ်ပေါ့ဗျာ။ သို့သော်လည်း ကိုယ့်ရဲ့ဒစ်ဂျစ်တယ်ဘဝမှာ အများနဲ့ သဟဇာတဖြစ်အောင်၊ လုံခြုံအောင်၊ ဘယ်လိုနေထိုင် ကျင့်ကြံမလဲဆိုတဲ့ (Digital Citizenship) နည်းလမ်းတွေကိုဖြင့် ကိုယ့်လူတို့က သိပ်ဂရုစိုက်လေ့မရှိကြဘူး။ ဒစ်ဂျစ်တယ် ဘဝကြီးက ဈေးရုံကြီးတစ်ခု ဆိုရင်၊ ကိုယ့်လူတို့ရဲ့ ဆိုင် က ဈေးထိပ်က လဘက်ရည်ဆိုင်လို၊ နားနေဖို့၊ ဆွေးနွေးဖို့၊ ချွေးသိပ်ဖို့နေရာတစ်ခုပေါ့ဗျာ။ ဒါကြောင့် ကျုပ်တို့ရဲ့ ဒီ “ဒစ်ဂျစ်တယ် လက်ဘက်ရည်ဆိုင်က” ကိုယ့်လူတို့ရဲ့ ဒစ်ဂျစ်တယ်ဘဝတွေမှာ ဘယ်လိုပြုမူနေထိုင်ရင် ပိုပြီး နေသာထိုင်သာရှိမယ်ဆိုတဲ့ သိကောင်းစရာ စာတိုပေစ၊ နည်းတိုလမ်းစ တွေကို ဆွေးနွေးမျှဝေသွားဖို့အတွက် ရည်ရွယ်တဲ့ ဝဘ်ဆိုဒ် တစ်ခု ဖြစ်တယ်။ ဒီပရိုဂရမ်ကိုတော့ “ ဖွံ့ဖြိုးမှုအတွက် မြန် အိုင်စီတီ ” ဘိုလို “ Myanmar ICT for Development Organization (MIDO)” ကနေပြီးတော့ တာဝန်ယူ စီမံခန့်ခွဲနေတာ ဖြစ်ပါတယ်။</p>
   </div>
-   
-</section>
-
- 
-
-
-
-
-<div class="abso">
+   <div class="abso">
   
   <label class="sot">ဆိုင်ရှင်တို့</label>
   <img class="owimg" src="/owner.png">
@@ -573,7 +567,15 @@ left: 136px;
 
 </div>
 </div>
+</section>
 
+ 
+
+
+
+
+
+{{- partial "subscribe.html" . -}}
   
     
 

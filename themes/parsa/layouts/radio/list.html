@@ -5,13 +5,14 @@
   display: none;
 }
 .mban{
-  position: absolute;
+  overflow: hidden;
+  position: relative;
 width: 100%;
 max-width: 480px;
 min-width: 360px;
 height: 102px;
 left: 0px;
-top: 90px;
+margin-top: 90px;
 background: #F57000;
 }
 .mrtit{
@@ -36,23 +37,27 @@ align-items: center;
 color: #FFFFFF;
 }
 .mrbanimg{
-position: absolute;
+position: relative;
 width: 172px;
 height: 72px;
 left: 50%;
 top: 40%;
+z-index: 99;
  opacity: 0.5;
 background: #C4C4C4;
 }
 .mrtbar{
-  position: absolute;
+  overflow: hidden;
+  position: relative;
+ width: 100%; 
 width: 360px;
 height: 191px;
 left: 0px;
-top: 191px;
+margin-top: 40px;
 background: #FFFFFF;
 }
 .comein{
+  overflow: hidden;
   position: absolute;
 width: 100%;
 height: 31px;
@@ -72,11 +77,12 @@ align-items: center;
 color: #000000;
 }
 .everyfriday{
-  position: absolute;
+  overflow: hidden;
+  position: relative;
 width: 317px;
 height: 100px;
 left: 20px;
-top: 47px;
+margin-top: 47px;
 
 /* Body */
 
@@ -91,19 +97,20 @@ line-height: 25px;
 color: #000000;
 }
 .listeningapp{
-  position: absolute;
+  overflow: hidden;
+  position: relative;
 width: 360px;
 height: 144px;
 left: 0px;
-top: 382px;
+margin-top: 10px;
 background: #FFFFFF;
 }
 .appdis{
-  position: absolute;
+  position: relative;
 width: 314px;
 height: 75px;
 left: 20px;
-top: 12px;
+
 
 /* Body */
 
@@ -126,11 +133,14 @@ height: 32px;
 top: 89px;
 }
 .podbox{
- position: absolute;
-width: 340px;
+ position: relative;
+ margin-top: 20px;
+width: 100%; 
+max-width: 480px;
+min-width: 340px;
 height: 415px;
 left: 10px;
-top: 0px;
+
 
 background: #FFFFFF;
 }
@@ -323,10 +333,10 @@ bottom: 12.83%;
 }
 
 .castlist{
+  overflow: hidden;
   position: relative;
 width: 100%;
-max-width: 480px;
-min-width: 360px;
+
 height: 100%;
 margin-top: 40px;
 left: 0px;
@@ -360,13 +370,13 @@ text-align: center;
 color: #2E2E2E;
 }
 .seemore{
-  position: absolute;
-width: 100%  
+  position: relative;
+ 
 max-width: 480px;
 min-width: 360px;
 height: 50px;
 left: 0px;
-top: 80%;
+margin-top: 40px;
 
 font-family: Pyidaungsu;
 font-style: normal;
@@ -405,11 +415,12 @@ cursor: pointer;
 }
 
 .podbox{
-  position: absolute;
+   position: relative;
+ margin-top: 20px;
 width: 570px;
 height: 271px;
 left: 10px;
-top: 83px;
+
 background: #FFFFFF;
 }
 .date{
@@ -760,6 +771,48 @@ color: #2E2E2E;
   <img src="/speaker2.png" class="speaker">
   <input type="range" min="1" max="100" value="50" class="volume" id="vol-control" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)" > 	
 	</div>
+
+  <div class="podbox">
+  <label class="date">June 16, 2020</label>
+  <label class="eptitle">Episode 035 - ခေါင်းစဥ်</label>  
+  <p class="epdis">ကျွန်ုပ်တို့၏ဝက်ဘ်ဆိုက်သို့လာရောက်လည်ပတ်သူးကိုမိတ်ဆက်ပေးပါသည်။ ကျွန်ုပ်တ ို့ဘာ တွေလဲဆိ ကိုရှင်းပြပြီးအရေးကြီးတဲ့အကြောင်း ကိုဆွေးနွေးတယ်။ ကျနော် တို့ ဆွေးနွေးမှုကိုနောက်ဖြစ်ပျက်သွားမယ့်အရာနဲ့အဆုံးသတ်ထားသည်။</p>
+  <div class="player">
+  <img class="pimg" src="/album.png"> 
+  <label class="pname">Digital Teahouse Podcast</label>
+  <label class="pdis">Episode 035 - ခေါင်းစဥ်</label>
+   <img src="/pbt2.png" id="audioControl" onclick="togglePlaying()" class="play">
+   <audio id="audio" ontimeupdate="updateBar()"  >
+  <source src="https://otamyanmar.podbean.com/mf/play/n8f29q/11.mp3" type="audio/mpeg">
+  
+  </div>
+  <span style="color: #ffff" id="current-time" class="current time"></span>
+  <span style="color: #ffff" id="duration" class="dur time"></span>
+  <canvas id="progress" width="60" height="5" class="progress"></canvas> 
+  <img src="/speaker2.png" class="speaker">
+  <input type="range" min="1" max="100" value="50" class="volume" id="vol-control" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)" >   
+  </div>
+
+  <div class="podbox">
+  <label class="date">June 16, 2020</label>
+  <label class="eptitle">Episode 035 - ခေါင်းစဥ်</label>  
+  <p class="epdis">ကျွန်ုပ်တို့၏ဝက်ဘ်ဆိုက်သို့လာရောက်လည်ပတ်သူးကိုမိတ်ဆက်ပေးပါသည်။ ကျွန်ုပ်တ ို့ဘာ တွေလဲဆိ ကိုရှင်းပြပြီးအရေးကြီးတဲ့အကြောင်း ကိုဆွေးနွေးတယ်။ ကျနော် တို့ ဆွေးနွေးမှုကိုနောက်ဖြစ်ပျက်သွားမယ့်အရာနဲ့အဆုံးသတ်ထားသည်။</p>
+  <div class="player">
+  <img class="pimg" src="/album.png"> 
+  <label class="pname">Digital Teahouse Podcast</label>
+  <label class="pdis">Episode 035 - ခေါင်းစဥ်</label>
+   <img src="/pbt2.png" id="audioControl" onclick="togglePlaying()" class="play">
+   <audio id="audio" ontimeupdate="updateBar()"  >
+  <source src="https://otamyanmar.podbean.com/mf/play/n8f29q/11.mp3" type="audio/mpeg">
+  
+  </div>
+  <span style="color: #ffff" id="current-time" class="current time"></span>
+  <span style="color: #ffff" id="duration" class="dur time"></span>
+  <canvas id="progress" width="60" height="5" class="progress"></canvas> 
+  <img src="/speaker2.png" class="speaker">
+  <input type="range" min="1" max="100" value="50" class="volume" id="vol-control" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)" >   
+  </div>
+
+
   <button class="seemore">ပိုမိုဆက်ကြည့်ရန်</button>
 	</div>
 	

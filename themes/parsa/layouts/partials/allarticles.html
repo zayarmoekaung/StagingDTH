@@ -15,7 +15,8 @@ margin-top: 40px;
 overflow: hidden;    
 margin-top: 80px;  
 margin-left: 10px;
-width: 360px;
+min-width: 360px;
+max-width: 480px;
 height: 200px;
 left: 0px;
 top: 387px;
@@ -88,19 +89,19 @@ left: 235px;
 top: 50%;
 
 }
-.sum{
+.suma{
 position: absolute;
-width: 220px;
+width: 160px;
 height: 70px;
-left: 10px;
-top: 85px;
+left: 5px;
+top: 185px;
 
 /* text/body */
 
 font-family: Pyidaungsu;
 font-style: normal;
 font-weight: normal;
-font-size: 16px;
+font-size: 12px;
 line-height: 28px;
 
 word-wrap: break-word;
@@ -221,7 +222,7 @@ right: 2.63%;
 top: 14.91%;
 bottom: 14.91%;
 }
-.sum{
+.suma{
 position: absolute;
 left: 2.63%;
 right: 33.33%;
@@ -233,7 +234,7 @@ bottom: 17.54%;
 font-family: Pyidaungsu;
 font-style: normal;
 font-weight: normal;
-font-size: 16px;
+font-size: 12px;
 line-height: 28px;
 
 word-wrap: break-word;
@@ -294,14 +295,16 @@ top: 2773px;
             	<img src="/tlevel1.png">
             </div>
             	<a >
-            		<div class="postimg">
-            		<img class="  crop" src="{{.Params.Image | absURL }}" alt="{{.Params.Image}}">
-            	</div>
+            		
+            		<img class=" postimg crop" src="{{.Params.Image | absURL }}" alt="{{.Params.Image}}">
+            
             	</a>
             	
              	 
-              
-             <div class="sum"><p >{{ .Summary }}</p></div>
+              <div class="suma">
+                <p >{{ .Summary }}</p>
+              </div>
+            
               
              
               

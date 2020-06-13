@@ -1,6 +1,12 @@
 ---
 title: "FFbrowserHistory"
 date: 2020-02-27T01:07:23+06:30
-draft: true
+type: "post"
+categories: 
+  - "Launch"
+tags:
+  - "Internet"
+  - "Security"
+image: "/Image (4).png"
 ---
-
+Gmail ဆိုသည်မှာ စာတိုက် စာပို့ စနစ်နှင့် တူသည့် အင်တာ န သုံး  စာပို့ခြငတူသည့််း Application တူသည့် အင်တာ နက်သုံး စာပို့ခြင်း Application...
