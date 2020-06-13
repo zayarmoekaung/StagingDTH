@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 {{- partial "Menu.html" . -}}	
-
+  
 
 	<section style="position: relative;">
 	{{- partial "option.html" . -}}
@@ -11,5 +11,11 @@
 	<section style="position: relative;">
 	{{- partial "podcast.html" . -}}
 	</section>
+	<div class="scm">
+	{{- partial "subscribe.html" . -}}
+	
+</div>
+
+
 
 {{ end }}

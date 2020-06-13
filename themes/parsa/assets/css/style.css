@@ -10,7 +10,16 @@ VERSION:	0.1.1
 .contain{
   overflow: hidden;
 }
-
+@media (max-width:480px){
+    .scm{
+      display: block;
+    }
+  }
+   @media (min-width: 500px){
+    .scm{
+      display: none;
+    }
+   }
 .bgg {
   background-color: #f2f2f2 ;
   
