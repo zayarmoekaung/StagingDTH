@@ -199,12 +199,12 @@ color: #2E2E2E;
  .searchpg{
   display: none;
   position: absolute;
-width: 100%;
-max-width: 480px;
-min-width: 360px;
-height: 640px;
-display: none;
-background: #FFFFFF;
+top: 20%;
+width: 360px;
+height: 240px;
+
+background: #0000;
+z-index: 299;
  }
  .sbox{
   position: absolute;
@@ -328,11 +328,11 @@ display: none;
       
     </div>
     
-        <img src="/search.png" style="width: 40px; height: 40px;" onclick="appear2()">
+        <img src="/search.png" style="width: 40px; height: 40px; cursor: pointer;" onclick="appear2()">
      
      
   </nav>
-   
+   <div id="searchpg2" class="searchpg"></div>
 </header>
 <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0" nonce="eFwOXAGF"></script>
@@ -356,11 +356,11 @@ display: none;
   function appear2() {
     if (isit) {
       searchpg.style.display = "block";
-     
+      searchpg2.style.display = "block";
       isit = false;
     }else{
       searchpg.style.display = "none";
-     
+      searchpg2.style.display = "none";
       isit = true;
     }
   }
