@@ -10,8 +10,7 @@ position: fixed;
 bottom: 50px;
 z-index: 999;
 width: 100%;
-max-width: 480px;
-min-width: 360px;
+
 height: 70px;
 
 
@@ -22,22 +21,24 @@ box-shadow: 0px 3px 10px rgba(150, 150, 150, 0.26);
 }
 .topodcast{
   
-  position: absolute;
-width: 70px;
+position: absolute;
+width: 100%;
 height: 21px;
-left: 80%;
+right: 60px;
+
+
 top: 10px;
 
 font-family: Pyidaungsu;
 font-style: normal;
 font-weight: normal;
-font-size: 12px;
+font-size: 10px;
 line-height: 10px;
 /* identical to box height */
 
 display: flex;
 align-items: flex-end;
-
+text-align: center;
 /* f57000 */
 
 color: #FFFFFF;
@@ -528,11 +529,11 @@ color: #FFFFFF;
   <source src="https://otamyanmar.podbean.com/mf/play/n8f29q/11.mp3" type="audio/mpeg">
   </audio>
 
-<div class="mpod">
+<div id="mpod" class="mpod">
 
     <label class="mpodname">Digital Teahouse Podcast</label>
   <img src="/pbt.png" id="audioControl2" onclick="togglePlaying()" class="mpodpbn">
-  <label class="topodcast"> To podcast > </label>
+  <a href="/radio"><label class="topodcast"> ToPodcast> </label></a>
   <label class="mpodep">Episode 001: Welcome to the podcast and about...</label>
   <canvas id="progress" width="200" height="5" class="mpodprobar"></canvas> 
   
@@ -593,6 +594,7 @@ color: #FFFFFF;
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
+
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 80) {
     podcast.style.display = "block";
      
@@ -663,6 +665,7 @@ function updateBar() {
   
   if (currentTime === duration) {
     audioControl.src="/pbt.png"
+    audioControl2.src="/pbt.png"
   }
   
   document.getElementById("current-time").innerHTML = convertElapsedTime(currentTime)

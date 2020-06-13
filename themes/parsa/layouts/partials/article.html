@@ -1,23 +1,24 @@
 <style type="text/css">
 @media (max-width:480px){
   .art{
-    position: relative;
+position: relative;
+overflow: hidden;    
 width: 100%;
 max-width: 480px;
 min-width: 300px;
 height: 100%;
-left: 20px;
+
 margin-top: 40px;
 background: #F2F2F2;
   }
   .artbox{
-  
+ margin-left: 15px; 
 width: 100%;
 max-width: 380px;
 min-width: 300px;
 height: 300px;
-left: 10px;
-top: 1821px;
+
+
 margin-bottom: 40px;
 
 background: #FFFFFF;
@@ -32,7 +33,7 @@ background: #FFFFFF;
 font-family: Pyidaungsu;
 font-style: normal;
 font-weight: bold;
-font-size: 28px;
+font-size: 18px;
 line-height: 48px;
 
 /* text black */
@@ -41,14 +42,14 @@ color: #2E2E2E;
 } 
 
 .arttitle{
-left: 2.63%;
+left: 5.63%;
 right: 65.26%;
 
 
   font-family: Pyidaungsu;
 font-style: normal;
 font-weight: bold;
-font-size: 21px;
+font-size: 16px;
 line-height: 36px;
 
 /* Text Black */
@@ -61,7 +62,7 @@ color: #2E2E2E;
   font-family: Pyidaungsu;
 font-style: normal;
 font-weight: normal;
-font-size: 14px;
+font-size: 12px;
 line-height: 22px;
 /* identical to box height, or 157% */
 
@@ -301,7 +302,7 @@ top: 2773px;
             	
              	 
               
-             <div class="sum"><p class="sumtxt">{{ .Summary }}</p></div>
+             <div class="sum">{{ .Summary }}</div>
               
              
               
