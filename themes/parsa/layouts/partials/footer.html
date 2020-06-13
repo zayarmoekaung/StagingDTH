@@ -3,20 +3,18 @@
 @media (max-width:480px){
 .footerright{
 overflow: hidden;  
-position: absolute;
+position: relative;
 width: 100%;
-width: 480px;
-width: 360px;
-height: 247px;
-
-
-top: 3099px;
+height: 100%;
 background: #F57000;
 padding: 30px;
 } 
 .mbmenu{
   display: block;
  }  
+ .wbmenu{
+  display: none;
+ }
  
  .fmbmenuitem{
 overflow: hidden;  
@@ -38,23 +36,23 @@ cursor: pointer;
  }
 .footerleft{
 overflow: hidden;
-position: absolute;  
+position: relative;  
 padding: 20px;  
 width: 100%;
 height: 251px;
 max-width: 480px;
 min-width: 360px;
-
-top: 3346px;
 background: #FFFFFF;
 margin-top: 20px;
-margin-left: 20px;
+
 }
 .foot{
 
-position: absolute;
-
-width: 300px;
+position: relative;
+overflow: hidden;
+width: 100%;
+height: 100%;
+margin-top: 80px;
 
 
   }
@@ -67,7 +65,7 @@ width: 300px;
 position: relative;
 width: 100%;
 height: 232px;
-left: 220px;
+left: 0;
 margin-top: 40px;
   }
 .footerleft{
@@ -98,44 +96,51 @@ bottom: 0%;
 <footer id="foott" class="bg-secondary foot">
   
       
-      
-        <div class="footerleft" >
-          <div class="row">
-            <img  src="/logo.png"> 
-            <img  src="/Logo_MIDO.png">
-          </div>
-          
-            <p style="width: 230px;
-            word-wrap: break-word; font-size: 10pt;">
-            Digital Tea House is a campaign launched 
-            by Mido to promote digital safety
-            awareness in MYanmar.
-
-        </p>
-        </div >
-        <div class="footerright" >
+       <div class="footerright" >
           <div class=" fbar">
-            <a class="fmenu" href="">ဒီဂျစ်တယ်ဖတ်စရာများ</a>
+           
+           <div class="wbmenu">
+              <a class="fmenu" href="">ဒီဂျစ်တယ်ဖတ်စရာများ</a>
           <a class="fmenu" href="">သင်ထောက်ကူများစုစည်းမှု</a>
           <a class="fmenu" href="">ဒီဂျစ်တယ်ရေဒီယို</a>
           <a class="fmenu" href="">လဖက်ရည်ဆိုင်အကြောင်း</a>
-          </div>
           <div class=" fbar">
              
           <a class="fmenu" href="">သိသာစေရန်</a>
+           </div>
           </div>
+          
          
-        </div>
-      <div class="footerright fbar" >
-        <div class="mbmenu">
+
+          <div class="mbmenu">
            <a class="fmbmenuitem" href="">ဒီဂျစ်တယ်ဖတ်စရာများ</a>
             <a class="fmbmenuitem" href="">သင်ထောက်ကူများစုစည်းမှု</a>
           <a class="fmbmenuitem" href="">ဒီဂျစ်တယ်ရေဒီယို</a>
           <a class="fmbmenuitem" href="">လဖက်ရည်ဆိုင်အကြောင်း</a>
            <a class="fmbmenuitem" href="">သိသာစေရန်</a>
         </div>
-      </div>
 
+
+          </div>
+         </div>
+   
+
+        <div class="footerleft" >
+          <div class="row" style=" margin-left:  20px;">
+            <img  src="/logo.png" style="margin-right: 10px;"> 
+
+            <img  src="/Logo_MIDO.png">
+          </div>
+          
+            <p style="width: 230px;
+            word-wrap: break-word; font-size: 10pt; margin-left:  20px;">
+            Digital Tea House is a campaign launched 
+            by Mido to promote digital safety
+            awareness in MYanmar.
+
+        </p>
+        </div >
+        
   
 
 
