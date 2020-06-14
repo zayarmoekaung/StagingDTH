@@ -67,6 +67,7 @@ width: 100%;
 height: 232px;
 left: 0;
 margin-top: 40px;
+z-index: 70;
   }
 .footerleft{
 position: absolute;
@@ -92,8 +93,33 @@ bottom: 0%;
   padding: 20px;
   margin: 10px;
  }
+ .fmenu{
+  cursor: pointer;
+ }
 }
+.disclaimer{
+  display: none;
+  position:fixed;
+  text-align: center;
+  justify-content: center;
+  bottom: 30%;
+  width: 100%;
+  height: 350px;
+  border: none;
+  background: #FFFFFF;
+box-shadow: 0px 3px 5px rgba(145, 145, 145, 0.25), 0px -1px 5px rgba(144, 144, 144, 0.25);
+border-radius: 6px;
+  z-index: 999;
+ }
 
+.thitabtn{
+  width: 100px;
+  height: 40px;
+  background-color: #F57000;
+  box-shadow: 0px 3px 5px rgba(145, 145, 145, 0.25), 0px -1px 5px rgba(144, 144, 144, 0.25);
+  border: none;
+  color: #FFFFFF
+}
   
 </style>
 
@@ -108,10 +134,8 @@ bottom: 0%;
           <a class="fmenu" href="/materials">သင်ထောက်ကူများစုစည်းမှု</a>
           <a class="fmenu" href="/radio">ဒီဂျစ်တယ်ရေဒီယို</a>
           <a class="fmenu" href="/about">လဖက်ရည်ဆိုင်အကြောင်း</a>
-          <div class=" fbar">
-             
-          <a class="fmenu" href="">သိသာစေရန်</a>
-           </div>
+        
+           <label class="fmenu" onclick="disclaimer()">သိသာစေရန်</label>
           </div>
           
          
@@ -121,7 +145,7 @@ bottom: 0%;
             <a class="fmbmenuitem" href="/materials">သင်ထောက်ကူများစုစည်းမှုစီသို့</a>
           <a class="fmbmenuitem" href="/radio">ဒီဂျစ်တယ်ရေဒီယိုစီသို့</a>
           <a class="fmbmenuitem" href="/about">လဖက်ရည်ဆိုင်အကြောင်း</a>
-           <a class="fmbmenuitem" href="">သိသာစေရန်</a>
+           <label class="fmbmenuitem" onclick="disclaimer()">သိသာစေရန်</label>
         </div>
 
 
@@ -145,13 +169,41 @@ bottom: 0%;
         </p>
         </div >
         
-  
+          
+       
+
 
 
 </footer>
+  <div id="thita" class="disclaimer">
+          <h4>သိသာစေရန်</h4>
+          <div class="text-center pb-3">
+    <p style="font-size: 16px">
+      ကျွန်ုပ်တို့ ဒီဂျစ်တယ်လ္ဘက်ရည်ဆိုင် website တွင်ထားရှိသော အကြောင်းအရာများ၊ စာစုများ၊ လမ်းညွှန်များ နှင့် နည်းပညာများ သည် Creative Commons Attribution-NonCommercial-ShareAlike License အောက်တွင် ရေးသားဖန်တီးထားခြင်း ဖြစ်ပါသည်။ ဤ website တွင်မည်သည့်ပုံစံနှင့်ဖြစ်စေ ဖော်ပြထားသော နည်းပညာ နှင့် tools apps နှင့် အခြား မည်သည့်ဖော်ပြချက်ကိုမဆို (as-is) သည်အတိုင်း (သို့) သည်မျှသာဟု မှတ်ယူရမည်ဖြစ်ပြီး၊ မည်သည့်အာမခံချက် မှမပါဝင်ကြောင်း နှင့် တစ်စုံတစ်ရာ ပျက်စီးခြင်း၊ ပျက်သုဉ်း ခြင်းဖြစ်ပေါ်လာပါက ကျွန်ုပ်တို့ ဒီဂျစ်တယ်လ္ဘက်ရည်ဆိုင်မှတာဝန်ယူမည် မဟုတ်ကြောင်း အသိပေးအပ်ပါသည်။ 
+    </p>
+    <button class="thitabtn" onclick="disclaimer()">Close</button>
+  </div>
+         </div>
 
 
+<script type="text/javascript">
+  var isit = true
+  function disclaimer() {
+    if (isit) {
+      
+       isit = false;
+      thita.style.display = "block";
+  }else{
+      isit = true;
+      thita.style.display = "none";
+    
+
+      
+    }
+  }
 </script>
+
+
 {{ if .Site.Params.search.enable }}
 <script>
   var indexURL = {{ "index.json" | absURL }}
@@ -180,4 +232,5 @@ bottom: 0%;
   ga('create', '{{ . }}', 'auto');
   ga('send', 'pageview');
 </script>
+
 {{ end }}

@@ -133,17 +133,16 @@ border-radius: 6px;
   display: none;
 
  }
- .wpod{
-  display: block;
- }
+
  }
 
 
-.podcast{
+.wpodcast{
 position:fixed;
 left: 66.94%;
 right: 15.28%;
 top: 5%;
+z-index: 60;
 
 }
 
@@ -542,8 +541,8 @@ color: #FFFFFF;
 
 
 
-<div class="wpod">
-<div id="podcast" class="podcast">
+<div  class="wpod">
+<div id="wpodcast" class="wpodcast">
   <div class="wplower">
 	<div class="upper">
 	<label class="wptitle">ဒီဂျစ်တယ် ရေဒီယို</label>
@@ -591,16 +590,18 @@ color: #FFFFFF;
 
 
 <script>
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function() {scrollFunction()
+alert("scroll");
+}
 
 function scrollFunction() {
-
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 80) {
-    podcast.style.display = "block";
-     
+alert("inscroll");
+  if (document.body.scrollTop > 20 ) {
+    wpodcast.style.display = "block";
+     alert("inif");
     
   } else {
-    podcast.style.display = "none";
+    wpodcast.style.display = "none";
    
     
   }
