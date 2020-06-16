@@ -1,0 +1,36 @@
+<style type="text/css">
+ @media (min-width: 500px){
+ .popular{
+    position: absolute;
+width: 256px;
+height: 264px;
+left: 966px;
+top: 309px;
+  }
+
+  }
+ @media (max-width:480px){
+.popular{
+  display: none;
+ }
+}
+</style>
+
+
+<div class="popular"  style="justify-content: center;">
+    <h6 class="mb-4">Popular ဆောင်းပါးများ</h6>
+    <h7 class="mb-4">Anime</h7>
+    {{ range first 3 ( where .Site.Pages "Type" "post") }}
+    <div class="media mb-4" >
+     
+      <div class="media-body">
+        <h6><a class="text-dark" href="{{ .Permalink }}">{{.Title}}</a></h6>
+      </div>
+       <div class="post-thumb-sm mr-3" >
+        <a href="{{ .Permalink }}"><img class="mr-3 post-thumb-sm"
+         src="{{ .Params.Image | absURL }}"></a>
+      </div>
+    </div>
+    {{ end }}
+   
+  </div>

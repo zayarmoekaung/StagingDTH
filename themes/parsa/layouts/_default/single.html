@@ -5,15 +5,17 @@
 left: 180px;
 
 top: 180px;
-
+padding: 10px;
 cursor: pointer;
 /* orange */
 
 
 
   }
+
+
   .atitle{
-   
+ padding: 10px;  
 width: 282px;
 height: 48px;
 left: 250px;
@@ -79,7 +81,7 @@ color: #2E2E2E;
 </style>
 <!-- page-title -->
 <section >
-        <img class="back" src="/back.png">
+        <img class="back" onclick="goBack()" src="/back.png">
         <label class="atitle">{{ .Title }}  </label>
       
 </section>
@@ -91,27 +93,74 @@ color: #2E2E2E;
     <div class="row">
       <div class="col-lg-8">
         <ul class="list-inline d-flex justify-content-between py-3">
-          <li class="list-inline-item"><i class="ti-calendar mr-2"></i>{{ .PublishDate.Format "Jan 02, 2006" }}</li>
-          <li class="list-inline-item"><i ></i>5 minute read</li>
+          <li class="list-inline-item"><i class=" mr-2"></i>{{ .PublishDate.Format "Jan 02, 2006" }}</li>
+          
         </ul>
         <article class="content">
-          <img src="{{.Params.Image | absURL }}" alt="post-thumb" class="img-fluid rounded float-left mr-5 mb-4">
+          <img src="{{.Params.Image | absURL }}" alt="post-thumb" class="img-fluid rounded float-left mr-5 mb-4 postcvcrop">
           
         <!--converter-->
 
        {{.Content}}
 
-        <!--converter-->    
+        <!--converter-->  
+        {{- partial "popular.html" . -}} 
+        {{- partial "subscribe.html" . -}}  
         </article>
 
       
     </div>
+
   </div>
-<div class="share">
-  <label class="sharetxxt">ဤဆောင်းပါးကိုမျှဝေရန်</label>
+
+</section>
+<div class="art">
+  <label class="artheader">Related Articles</label>
+
+       
+       
+        <div class="row masonry-container">
+          {{ range first 4 ( where .Site.Pages "Type" "post") }}
+
+          <div class="artbox">
+            
+            <article >
+               <h4 class="arttitle"><a class="arttitle" >{{.Title}}</a></h4>
+              
+              <li class="list-inline-item artinfo"><i class=" mr-2"></i>{{ .PublishDate.Format "Jan 02, 2006" }}</li>
+              
+            </ul>
+            <div class="tlevel">
+              <img src="/tlevel1.png">
+            </div>
+              <a href="{{.Permalink}}" >
+                
+                <img class=" postimg crop" src="{{.Params.Image | absURL }}" alt="{{.Params.Image}}">
+            
+              </a>
+              
+               
+              <div class="suma">{{ .Summary }}</div>
+            
+              
+             
+              
+            </article>
+           
+          </div>
+          {{ end }}
+         
+        
+
+</div>
+<a href="/articles"><button class="longbtn">ဆောင်းပါးတွေဆီသို့</button></a> 
+<!-- /blog single -->
+</div>
 </div>
 </section>
-
-<!-- /blog single -->
-
+<script type="text/javascript">
+  function goBack() {
+  window.history.back();
+}
+</script>
 {{ end }}

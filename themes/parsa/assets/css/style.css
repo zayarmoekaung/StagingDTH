@@ -7,6 +7,373 @@ VERSION:	0.1.1
 /*------------------------------------------------------------------
 [TABLE OF CONTENTS]
 -------------------------------------------------------------------*/
+.postcvcrop{
+  object-fit: fill;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.longbtn{
+position: relative;
+width: 100%;
+height: 40px;
+left: 0px;
+margin-top: 10px;
+background: #FFFFFF;
+}
+@media (max-width:480px){
+  .art{
+overflow: hidden;    
+position: relative;
+width: 100%;
+max-width: 480px;
+min-width: 360px;
+height: auto;
+left: 5px;
+margin-top: 40px;
+background: #F2F2F2;
+
+  }
+   .artbox{
+overflow: hidden;    
+margin-top: 80px;  
+margin-left: 10px;
+min-width: 360px;
+max-width: 480px;
+height: 200px;
+left: 0px;
+top: 387px;
+margin-bottom: 40px;
+
+background: #FFFFFF;
+} 
+.artheader{
+  
+width: 300px;
+height: 41px;
+left: 15px;
+top: 321px;
+
+/* text/heading */
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+line-height: 48px;
+
+/* text black */
+
+color: #2E2E2E;
+} 
+
+.arttitle{
+width: 300px;
+height: 26px;
+left: 20px;
+top: 10px;
+
+
+  font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 36px;
+
+/* Text Black */
+
+color: #2E2E2E;
+}
+.artinfo{
+
+
+  font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 22px;
+/* identical to box height, or 157% */
+
+
+color: #9C9C9C;
+}
+.tlevel{
+  position: absolute;
+width: 15.56px;
+height: 12px;
+left: 10px;
+top: 62px;
+}
+.postimg{
+  position: absolute;
+width: 115px;
+height: 115px;
+left: 235px;
+top: 50%;
+
+}
+.suma{
+position: absolute;
+width: 160px;
+height: 70px;
+left: 5px;
+top: 185px;
+
+/* text/body */
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 28px;
+
+word-wrap: break-word;
+/* or 175% */
+
+letter-spacing: 0.01em;
+
+/* Text Black */
+
+color: #2E2E2E;
+}
+
+}
+
+@media (min-width: 500px){
+  .art{
+position: relative;
+width: 600px;
+height: 100%;
+left: 222px;
+margin-top: 40px;
+margin-bottom: 40px;
+background: #F2F2F2;
+
+  }
+
+ .artbox{
+  
+margin-left: 15px;
+margin-right: 15px;
+width: 570px;
+height: 228px;
+left: 235px;
+top: 1821px;
+margin-bottom: 40px;
+
+background: #FFFFFF;
+}
+.artheader{
+  
+
+
+/* text/heading */
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 28px;
+line-height: 48px;
+
+/* text black */
+
+color: #2E2E2E;
+} 
+
+.arttitle{
+left: 2.63%;
+right: 65.26%;
+
+
+  font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 21px;
+line-height: 36px;
+
+/* Text Black */
+
+color: #2E2E2E;
+}
+.artinfo{
+max-width: 360px; 
+
+  font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 22px;
+/* identical to box height, or 157% */
+
+
+color: #9C9C9C;
+}
+.tlevel{
+  position: absolute;
+width: 62.91px;
+height: 16px;
+left: 15px;
+top: 78px;
+}
+.postimg{
+  position: absolute;
+left: 69.3%;
+right: 2.63%;
+top: 14.91%;
+bottom: 14.91%;
+}
+.suma{
+position: absolute;
+left: 2.63%;
+right: 33.33%;
+top: 45.61%;
+bottom: 17.54%;
+
+/* text/body */
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 28px;
+
+word-wrap: break-word;
+/* or 175% */
+
+letter-spacing: 0.01em;
+
+/* Text Black */
+
+color: #2E2E2E;
+}
+
+}
+
+@media (max-width:480px){
+.footerright{
+overflow: hidden;  
+position: relative;
+width: 100%;
+height: 100%;
+background: #F57000;
+padding: 30px;
+} 
+.mbmenu{
+  display: block;
+ }  
+ .wbmenu{
+  display: none;
+ }
+ 
+ .fmbmenuitem{
+overflow: hidden;  
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 28px;
+/* identical to box height */
+
+display: flex;
+align-items: flex-end;
+
+color: #FFFFFF;
+left: 4.17%;
+right: 73.89%;
+
+cursor: pointer;
+ }
+.footerleft{
+overflow: hidden;
+position: relative;  
+padding: 20px;  
+width: 100%;
+height: 251px;
+max-width: 480px;
+min-width: 360px;
+background: #FFFFFF;
+margin-top: 20px;
+
+}
+.foot{
+
+position: relative;
+overflow: hidden;
+width: 100%;
+height: 100%;
+margin-top: 80px;
+
+
+  }
+}
+
+
+
+ @media (min-width: 500px){
+.foot{
+position: relative;
+width: 100%;
+height: 232px;
+left: 0;
+margin-top: 40px;
+z-index: 70;
+  }
+.footerleft{
+position: absolute;
+overflow: hidden;
+left: 0;
+right: 76.62%;
+top: 0%;
+bottom: 0%;
+background: #FFFFFF;
+}
+.footerright{
+position: absolute;
+overflow: hidden;
+left: 23.38%;
+right: 0%;
+top: 0%;
+bottom: 0%;
+}
+.mbmenu{
+  display: none;
+ } 
+ .wbmenu{
+  padding: 20px;
+  margin: 10px;
+ }
+ .fmenu{
+  cursor: pointer;
+ }
+}
+.disclaimer{
+  display: none;
+  position:fixed;
+  text-align: center;
+  justify-content: center;
+  bottom: 30%;
+  width: 100%;
+  height: 350px;
+  border: none;
+  background: #FFFFFF;
+box-shadow: 0px 3px 5px rgba(145, 145, 145, 0.25), 0px -1px 5px rgba(144, 144, 144, 0.25);
+border-radius: 6px;
+  z-index: 999;
+  
+ }
+
+.thitabtn{
+  width: 100px;
+  height: 40px;
+  background-color: #F57000;
+  box-shadow: 0px 3px 5px rgba(145, 145, 145, 0.25), 0px -1px 5px rgba(144, 144, 144, 0.25);
+  border: none;
+  color: #FFFFFF
+}
+
 .contain{
   overflow: hidden;
 }
