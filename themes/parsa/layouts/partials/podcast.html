@@ -99,6 +99,11 @@ top: 20px;
 }
 
  @media (min-width: 500px){
+  .wpod{
+    position: relative;
+    top: 10%;
+   
+  }
   .shbtn{
     position: absolute;
     width: 260px;
@@ -138,16 +143,17 @@ border-radius: 6px;
 
 
 .wpodcast{
-position:fixed;
+position:absolute;
 left: 66.94%;
 right: 15.28%;
-top: 5%;
+top: 10%;
 z-index: 60;
+
 
 }
 
 	.upper{
-position: absolute;
+position:relative;
 width: 300px;
 height: 206px;
 /*left: 0px;*/
@@ -313,12 +319,12 @@ border-radius: 7px;
 }
 
 .wplower{
-  position: absolute;
+  position: relative;
 width: 300px;
 height: 600px;
 /*left: 0px;*/
 /*top: 206px;*/
-
+box-shadow: 0px 3px 3px rgba(117, 117, 117, 0.26);
 background: #FFFFFF;
 }
 
@@ -367,7 +373,7 @@ left: 15px;
 top: 348px;
 
 background: #F2F2F2;
-border-radius: 6px;
+border: none;
 }
 .wpsbtn{
  position: absolute;
@@ -559,16 +565,16 @@ color: #FFFFFF;
 </div>
 
  <label class="wplowertitle">အားပေးပါအုံး!</label>
- <label class="wpsubmittext"> ဖောက်သည်အရင်းချာများ စာရင်းသွင်းရန် ….. Please Suscribe.</label> 
+ <label class="wpsubmittext"> ဖောက်သည်အရင်းချာများ subscribe လုပ်ရန်</label> 
  
-    <input type="text" id="email" class="wpbox" name="email"><br><br>
+    <input type="text" placeholder="Email" id="email" class="wpbox" name="email"><br><br>
   <button class="wpsbtn" type="submit" value="submit">Submit</button>
  <a href="https://web.facebook.com/digitalteahouse2020"><img src="/Logo_fb.png" class="wpfb"></a>
  <a href=""><img src="/logo_email.png" class="wpemail"></a>
- <label class="wpshare">ကြိုက်တယ်ဆို Share ပေးပါအုံး ဆိုင်အသစ်မို့ပါ !!!!!</label>
+ <label class="wpshare">ကြိုက်တယ်ဆို Share ပေးပါအုံး </label>
  <div id="sharebtn" class="wpsharebtn " data-href="https://www.digitalteahouse.info/"  >
-   <div class="fb-share-button " id="fbs"  data-href="https://www.digitalteahouse.info/" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.digitalteahouse.info%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore" >Share</a></div>
-   <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" ><img src="/tweet.png" style="width: 83px; height: 30px;"></a>
+   <div  id="fbs"  data-href="https://www.digitalteahouse.info/" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.digitalteahouse.info%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore" ><img src="/Share Button.png"></a></div>
+   
 </div>
  </div>
 
@@ -590,22 +596,7 @@ color: #FFFFFF;
 
 
 <script>
-window.onscroll = function() {scrollFunction()
-alert("scroll");
-}
 
-function scrollFunction() {
-alert("inscroll");
-  if (document.body.scrollTop > 20 ) {
-    wpodcast.style.display = "block";
-     alert("inif");
-    
-  } else {
-    wpodcast.style.display = "none";
-   
-    
-  }
-}
 
 
 window.SetVolume = function(val)
