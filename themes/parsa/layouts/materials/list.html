@@ -418,7 +418,43 @@ top: 8.38%;
 bottom: 2.23%;
 
 }
+.type{
+	position: absolute;
+width: 100%;
+height: 28px;
 
+top: 180px;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 28px;
+/* identical to box height */
+z-index: 199;
+
+
+/* Text Black */
+
+
+cursor: pointer;
+}
+.tlbl1{
+	left: 30px;
+	color: #2E2E2E;
+}
+.tlbl2{
+	left: 239px;
+	color: #2E2E2E;
+}
+.tlbl3{
+	left: 439px;
+	color: #F57000;
+}
+.tlbl4{
+	left: 639px;
+	color: #2E2E2E;
+}
 }	
 	
 </style>
@@ -428,21 +464,26 @@ bottom: 2.23%;
 	<label class="mtitle">သင်ထောက်ကူများစုစည်းမှု</label>
 </div>	
 <p class="mdis">ဒီစာအုပ်ဆိုင်အကြောင်းရှင်းပြဖို့စာသားဖြစ်,ဒီစာအုပ်ဆိုင်အကြောင်းရှင်းပြဖို့စာသားဖြစ်ပါတယဒီစာအုပ်ဆိုင်အ ကြောင်းရှင်းပြဖို့စာသားဖြစ်ပါတယ်</p>	
+<label id="tlbl1" class="type tlbl1"onclick="notshowfb1(this)">သင်တန်းဆရာလက်စွဲ</label>
+<label id="tlbl2" class="type tlbl2"onclick="notshowfb2(this)">ထပ်လောင်းဖတ်စရာမျာ</label>
+<label id="tlbl3" class="type tlbl3" onclick="showfb(this)">Facebook Posts</label>
+<label id="tlbl4" class="type tlbl4"onclick="notshowfb3(this)">ဗွီဒီယိုဖိုင်များ</label>
 <div class="list">
 	
 </div>
+
 </div>
 
 
 <div class="mart">
-	<label class="marttitle">ဆောင်းပါးများ</label>
+	<label id="title" class="marttitle">FaceBookPost</label>
 	<label class="martdate">June 2020</label>
-	<div class="fbbox">
+	<div id="fbbox" class="fbbox">
 		<div class="mbox">
 			<label class="mboxt">အပိုင်း1-ဒီမှာခေါင်းစဉ် ထည့်ပါ</label>
 			<p class="mboxdis">ဒီလူ ဟာ အပြင်မှာလည်း ရုပ်ချော သဘောကောင်း ကူညီတတ် တဲ့ လူကြီးလူကောင်း ဖြစ်သလို</p>
 			<label class="mboxdate">Jun 29, 2020</label>
-			<img class="mboximg" src="/dlu.png">
+			<a href="/facebook/p001"><img class="mboximg" src="/dlu.png"></a>
 		</div>
 		<div class="mbox" >
 			<label class="mboxt">အပိုင်း1-ဒီမှာခေါင်းစဉ် ထည့်ပါ</label>
@@ -485,4 +526,42 @@ bottom: 2.23%;
 	
 </div>
 {{- partial "subscribe.html" . -}}
+<script type="text/javascript">
+	function showfb(n){
+		n.style.color="#F57000";
+		tlbl1.style.color="#2E2E2E";
+		tlbl2.style.color="#2E2E2E";
+		tlbl4.style.color="#2E2E2E";
+		fbbox.style.display="block"
+		document.getElementById('title').innerHTML = 'FaceBook Posts';
+
+	}
+		function notshowfb1(n){
+		n.style.color="#F57000";
+		tlbl2.style.color="#2E2E2E";
+		tlbl3.style.color="#2E2E2E";
+		tlbl4.style.color="#2E2E2E";
+		fbbox.style.display="none"
+		document.getElementById('title').innerHTML = 'ComingSoon';
+
+	}
+	function notshowfb2(n){
+		n.style.color="#F57000";
+		tlbl1.style.color="#2E2E2E";
+		tlbl3.style.color="#2E2E2E";
+		tlbl4.style.color="#2E2E2E";
+		fbbox.style.display="none"
+		document.getElementById('title').innerHTML = 'ComingSoon';
+
+	}
+	function notshowfb3(n){
+		n.style.color="#F57000";
+		tlbl1.style.color="#2E2E2E";
+		tlbl2.style.color="#2E2E2E";
+		tlbl3.style.color="#2E2E2E";
+		fbbox.style.display="none"
+		document.getElementById('title').innerHTML = 'ComingSoon';
+
+	}
+</script>
 {{end}}
