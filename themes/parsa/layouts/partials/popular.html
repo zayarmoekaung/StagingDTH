@@ -3,11 +3,45 @@
  .popular{
     position: absolute;
 width: 256px;
-height: 264px;
+height: 294px;
 left: 966px;
 top: 309px;
-  }
+background: #F2F2F2;
+padding-top: 20px;
+padding-bottom: 20px;
+/* Shadow */
 
+box-shadow: 0px 3px 3px rgba(117, 117, 117, 0.26);
+  }
+.popularblock{
+  position: relative;
+width: 229px;
+height: 63px;
+left: 10px;
+margin-top: 10px;
+}
+.popularimg{
+  position: absolute;
+left: 71.62%;
+right: 2.18%;
+top: 7.94%;
+bottom: 20.63%;
+
+}
+.popularthumb{
+  object-fit: cover;
+  width: 60px;
+  height: 45px;
+}
+.popularbody{
+  position: absolute;
+width: 229px;
+height: 63px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+}
   }
  @media (max-width:480px){
 .popular{
@@ -17,16 +51,15 @@ top: 309px;
 </style>
 
 
-<div class="popular"  style="justify-content: center;">
+<div class="popular"  >
     <h6 class="mb-4">Popular ဆောင်းပါးများ</h6>
-    <h7 class="mb-4">Anime</h7>
     {{ range first 3 ( where .Site.Pages "Type" "post") }}
-    <div class="media mb-4" >
+    <div class="popularblock " >
      
-      <div class="media-body">
+      <div class="popularbody">
         <h6><a class="text-dark" href="{{ .Permalink }}">{{.Title}}</a></h6>
       </div>
-       <div class="post-thumb-sm mr-3" >
+       <div class="popularthumb popularimg" >
         <a href="{{ .Permalink }}"><img class="mr-3 post-thumb-sm"
          src="{{ .Params.Image | absURL }}"></a>
       </div>
