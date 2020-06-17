@@ -2,11 +2,40 @@
 <style type="text/css">
 
 @media (max-width:480px){
+.mtlbl{
+display: none;
+position: absolute;
+width: 100%;
+height: 28px;
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 28px;
+z-index: 199;
+cursor: pointer;
+}	
+.tlbl1{
+	display: none;
+	left: 30px;
+	color: #2E2E2E;
+}
+.tlbl2{	
+	left: 239px;
+	color: #2E2E2E;
+}
+.tlbl3{
+	left: 439px;
+	color: #F57000;
+}
+.tlbl4{
+	left: 639px;
+	color: #2E2E2E;
+}
 .tban{
 position: relative;
 width: 100%;
-max-width: 480px;
-min-width: 360px;
+
 height: 228px;
 left: 0px;
 margin-top: 40px;
@@ -17,10 +46,9 @@ border: 1px solid #8E8E8E;
 box-sizing: border-box;
 	}
 .banner{
-	position: relative;
+position: relative;
 width: 100%;
-max-width: 480px;
-min-width: 360px;
+
 height: 75px;
 left: 0px;
 
@@ -33,7 +61,8 @@ background: #F57000;
 	position: absolute;
 width: 100%;
 height: 41px;
-left: 50px;
+margin-right: 10%;
+margin-left: 10%;
 top: 10px;
 
 /* Section Heading */
@@ -52,7 +81,7 @@ text-align: center;
 color: #FFFFFF
 }
 .mdis{
-	position: absolute;
+position: absolute;
 width: 300px;
 height: auto;
 left: 5px;
@@ -75,10 +104,9 @@ align-items: flex-end;
 color: #2E2E2E;
 }
 .mart{
-	position: relative;
+position: relative;
 width: 100%;
-max-width: 480px;
-min-width: 360px;
+
 height: 100%;
 left: 0px;
 margin-top: 20px;
@@ -131,8 +159,7 @@ color: #000000
 .fbbox{
 position: relative;
 width: 100%;
-max-width: 480px;
-min-width: 360px;
+
 height: 100%;
 left: 5px;
 margin-top: 40px;
@@ -142,8 +169,7 @@ margin-top: 40px;
 position: relative;
 margin-top: 40px;
 width: 100%;
-max-width: 480px;
-min-width: 360px;
+
 height: 179px;
 left: 5px;
 
@@ -418,13 +444,11 @@ top: 8.38%;
 bottom: 2.23%;
 
 }
-.type{
-	position: absolute;
+.mtlbl{
+position: absolute;
 width: 100%;
 height: 28px;
-
 top: 180px;
-
 font-family: Pyidaungsu;
 font-style: normal;
 font-weight: bold;
@@ -464,10 +488,10 @@ cursor: pointer;
 	<label class="mtitle">သင်ထောက်ကူများစုစည်းမှု</label>
 </div>	
 <p class="mdis">ဒီစာအုပ်ဆိုင်အကြောင်းရှင်းပြဖို့စာသားဖြစ်,ဒီစာအုပ်ဆိုင်အကြောင်းရှင်းပြဖို့စာသားဖြစ်ပါတယဒီစာအုပ်ဆိုင်အ ကြောင်းရှင်းပြဖို့စာသားဖြစ်ပါတယ်</p>	
-<label id="tlbl1" class="type tlbl1"onclick="notshowfb1(this)">သင်တန်းဆရာလက်စွဲ</label>
-<label id="tlbl2" class="type tlbl2"onclick="notshowfb2(this)">ထပ်လောင်းဖတ်စရာမျာ</label>
-<label id="tlbl3" class="type tlbl3" onclick="showfb(this)">Facebook Posts</label>
-<label id="tlbl4" class="type tlbl4"onclick="notshowfb3(this)">ဗွီဒီယိုဖိုင်များ</label>
+<label id="tlbl1" class="mtlbl tlbl1"onclick="notshowfb1(this)">သင်တန်းဆရာလက်စွဲ</label>
+<label id="tlbl2" class="mtlbl tlbl2"onclick="notshowfb2(this)">ထပ်လောင်းဖတ်စရာမျာ</label>
+<label id="tlbl3" class="mtlbl tlbl3" onclick="showfb(this)">Facebook Posts</label>
+<label id="tlbl4" class="mtlbl tlbl4"onclick="notshowfb3(this)">ဗွီဒီယိုဖိုင်များ</label>
 <div class="list">
 	
 </div>
