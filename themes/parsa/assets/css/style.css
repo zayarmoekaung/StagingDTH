@@ -12,8 +12,8 @@ VERSION:	0.1.1
   width: 100%;
   height: auto;
   padding: 20px;
-  margin-left: 15%;
-  margin-right: 15%;
+  left: 0;
+
 }
 
 .longbtn{
