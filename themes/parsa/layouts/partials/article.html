@@ -165,7 +165,7 @@ background: #FFFFFF;
 
 
 /* text/heading */
-padding: 10px;
+padding: 30px;
 font-family: Pyidaungsu;
 font-style: normal;
 font-weight: bold;
@@ -181,7 +181,7 @@ color: #2E2E2E;
 left: 2.63%;
 right: 65.26%;
 
-padding: 5px;
+padding-top: 15px;
   font-family: Pyidaungsu;
 font-style: normal;
 font-weight: bold;
@@ -285,8 +285,8 @@ top: 2773px;
           {{ range $paginator.Pages }}
 
           <div class="artbox">
-          	
-            <article >
+          	<a href="{{.Permalink}}">
+            <article>
             	 <h4 class="arttitle"><a href="{{.Permalink}}" class="arttitle" >{{.Title}}</a></h4>
             	
               <li class="list-inline-item artinfo"><i class=" mr-2"></i>{{ .PublishDate.Format "Jan 02, 2006" }}</li>
@@ -303,15 +303,14 @@ top: 2773px;
             	
              	 
               
-             <div class="sum">{{ .Summary }}</div>
-              
-             
-              
-            </article>
-         
+             <div class="sum"><a style="color: #2E2E2E" href="{{.Permalink}}" >{{ .Summary }}</a></div>
+              </article>
+            </a>
           </div>
           {{ end }}
       	  
    			
 
+</div>
+<a href="/articles"><button class="longbtn">ဆောင်းပါးတွေဆီသို့</button></a> 
 </div>

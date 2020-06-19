@@ -66,5 +66,10 @@ name = "လဖက်ရည်ဆိုင်အကြောင်း"
 weight = 4
 URL = "about"
 
+[[menu.main]]
+name = "Home Page"
+weight = 5
+URL = "/"
+
 [params.preloader]
 enable = true
