@@ -53,11 +53,11 @@ weight = 1
 URL = "articles"
 
 [[menu.main]]
-name = "သင်ထောက်ကူများစုစည်းမှု"
+name = "စာအုပ်စင်"
 weight = 2
 URL = "materials"
 [[menu.main]]
-name = "ဒစ်ဂျစ်တယ်ရေဒီယို"
+name = "podcast"
 weight = 3
 URL = "radio"
 
@@ -66,10 +66,7 @@ name = "လဖက်ရည်ဆိုင်အကြောင်း"
 weight = 4
 URL = "about"
 
-[[menu.main]]
-name = "Home Page"
-weight = 5
-URL = "/"
+
 
 [params.preloader]
 enable = true
