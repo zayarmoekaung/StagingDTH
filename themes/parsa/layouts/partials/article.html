@@ -8,19 +8,15 @@ max-width: 480px;
 min-width: 300px;
 height: 100%;
 
-margin-top: 40px;
+margin-top: 20px;
 background: #F2F2F2;
   }
   .artbox{
- margin-left: 15px; 
+
 width: 100%;
 max-width: 380px;
 min-width: 300px;
-height: 300px;
-
-
-margin-bottom: 40px;
-
+height: 200px;
 background: #FFFFFF;
 } 
 
@@ -42,11 +38,11 @@ color: #2E2E2E;
 } 
 
 .arttitle{
-left: 5.63%;
+
 right: 65.26%;
+margin-left: 15px;
 
-
-  font-family: Pyidaungsu;
+font-family: Pyidaungsu;
 font-style: normal;
 font-weight: bold;
 font-size: 16px;
@@ -58,7 +54,7 @@ color: #2E2E2E;
 }
 .artinfo{
 
-
+margin-left: 15px;
   font-family: Pyidaungsu;
 font-style: normal;
 font-weight: normal;
@@ -73,15 +69,19 @@ color: #9C9C9C;
   position: absolute;
 width: 62.91px;
 height: 16px;
-left: 15px;
-top: 78px;
+margin-left: 15px;
+top: 60px;
 }
 .postimg{
 position: absolute;
-left: 60.3%;
-right: 5.63%;
-top: 50.91%;
+left: 69.3%;
+right: 2.63%;
+top: 14.91%;
 bottom: 14.91%;
+object-fit: cover;
+width: 115px;
+height: 115px;
+margin-right: 15px;
 }
 .sum{
 position: absolute;
@@ -89,17 +89,17 @@ left: 2.63%;
 right: 33.33%;
 top: 45.61%;
 bottom: 17.54%;
-width: 165px;
+width: 220px;
 /* text/body */
-
+overflow: scroll;
 
 }
 .sumtxt{
   font-family: Pyidaungsu;
 font-style: normal;
 font-weight: normal;
-font-size: 10px;
-line-height: 28px;
+font-size: 14px;
+line-height: 22px;
 
 word-wrap: break-word;
 /* or 175% */
@@ -141,7 +141,7 @@ top: 2773px;
   @media (min-width: 500px){
 	.art{
 		position: relative;
-width: 600px;
+width: 699px;
 height: 100%;
 left: 220px;
 margin-top: 80px;
@@ -151,7 +151,7 @@ background: #F2F2F2;
   
 margin-left: 20px;
 margin-right: 10px;
-width: 570px;
+width: 670px;
 height: 228px;
 left: 235px;
 top: 1821px;
@@ -165,7 +165,7 @@ background: #FFFFFF;
 
 
 /* text/heading */
-padding: 30px;
+margin:  30px;
 font-family: Pyidaungsu;
 font-style: normal;
 font-weight: bold;
@@ -181,7 +181,8 @@ color: #2E2E2E;
 left: 2.63%;
 right: 65.26%;
 
-padding-top: 15px;
+margin-top: 15px;
+margin-left: 15px;
   font-family: Pyidaungsu;
 font-style: normal;
 font-weight: bold;
@@ -194,7 +195,7 @@ color: #2E2E2E;
 }
 .artinfo{
 
-
+margin-left: 15px;
   font-family: Pyidaungsu;
 font-style: normal;
 font-weight: normal;
@@ -209,7 +210,7 @@ color: #9C9C9C;
   position: absolute;
 width: 62.91px;
 height: 16px;
-left: 15px;
+margin-left: 15px;
 top: 78px;
 }
 .postimg{
@@ -218,6 +219,10 @@ left: 69.3%;
 right: 2.63%;
 top: 14.91%;
 bottom: 14.91%;
+object-fit: cover;
+width: 190px;
+height: 168px;
+margin-right: 15px;
 }
 .sum{
 position: absolute;
@@ -226,15 +231,16 @@ right: 33.33%;
 top: 45.61%;
 bottom: 17.54%;
 width: 365px;
+margin-left: 15px;
 /* text/body */
-
+overflow: scroll;
 
 }
 .sumtxt{
   font-family: Pyidaungsu;
 font-style: normal;
 font-weight: normal;
-font-size: 12px;
+font-size: 16px;
 line-height: 28px;
 
 word-wrap: break-word;
@@ -289,7 +295,7 @@ top: 2773px;
             <article>
             	 <h4 class="arttitle"><a href="{{.Permalink}}" class="arttitle" >{{.Title}}</a></h4>
             	
-              <li class="list-inline-item artinfo"><i class=" mr-2"></i>{{ .PublishDate.Format "Jan 02, 2006" }}</li>
+              <li class=" artinfo">{{ .PublishDate.Format "Jan 02, 2006" }}</li>
              
             </ul>
             <div class="tlevel">
@@ -297,13 +303,13 @@ top: 2773px;
             </div>
             	<a href="{{.Permalink}}" >
             	
-            		<img class=" postimg  crop" src="{{.Params.Image | absURL }}" alt="{{.Params.Image}}">
+            		<img class=" postimg  " src="{{.Params.Image | absURL }}" alt="{{.Params.Image}}">
             	
             	</a>
             	
              	 
               
-             <div class="sum"><a style="color: #2E2E2E" href="{{.Permalink}}" >{{ .Summary }}</a></div>
+             <div class="sum sumtxt"><a style="color: #2E2E2E" href="{{.Permalink}}" >{{ .Summary }}</a></div>
               </article>
             </a>
           </div>
