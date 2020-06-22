@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Digital Tea House</title>
+    <link>/</link>
+    <description>Recent content on Digital Tea House</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 16 Jun 2020 11:34:39 +0630</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>P001</title>
+      <link>/facebook/p001/</link>
+      <pubDate>Tue, 16 Jun 2020 11:34:39 +0630</pubDate>
+      
+      <guid>/facebook/p001/</guid>
+      <description>မဂ်လာပါပြိတ်သတ်ကြီးရေ....Work From Home ကာလဟာ ဘယ်အချိန်ထိ ကြာမြင့်နိုင်မလဲ မသိကြသေးသလို လာမယ့် နှစ်ကာလများမှာလည်း.</description>
+    </item>
+    
+    <item>
+      <title>Facebook Security  </title>
+      <link>/articles/facebooksecurity/</link>
+      <pubDate>Thu, 27 Feb 2020 01:07:40 +0630</pubDate>
+      
+      <guid>/articles/facebooksecurity/</guid>
+      <description>&lt;p&gt;Facebook ကို လူအများအပြားမှ လူမှုရေး စီးပွားရေး နိုင်ငံရေး အစရှိသည့် နယ်ပယ်ပေါင်းစုံတွင်&lt;/p&gt;
+&lt;p&gt;ရည်ရွယ်ချက်အမျိုးမျိုးဖြင့် ကျယ်ပြန့်စွာ အသုံးပြုလာကြရာ အမြတ်ထုတ်မှုများ ၊ မသမာမှုများနှင့် ငွေကြေးခြိမ်းခြောက်လိုမှုများကြောင့်   လုံခြုံရေးဆိုင်ရာပြဿနာတွေကို ကြုံတွေ့လာရပါသည်။&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>FFbrowserHistory</title>
+      <link>/articles/firefoxbrowserhistory/</link>
+      <pubDate>Thu, 27 Feb 2020 01:07:23 +0630</pubDate>
+      
+      <guid>/articles/firefoxbrowserhistory/</guid>
+      <description>Gmail ဆိုသည်မှာ စာတိုက် စာပို့ စနစ်နှင့် တူသည့် အင်တာ န သုံး စာပို့ခြငတူသည့််း Application တူသည့် အင်တာ နက်သုံး စာပို့ခြင်း Application&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Gmail Security</title>
+      <link>/articles/gmailsecurity/</link>
+      <pubDate>Thu, 27 Feb 2020 01:06:44 +0630</pubDate>
+      
+      <guid>/articles/gmailsecurity/</guid>
+      <description>Gmail ဆိုသည်မှာ စာတိုက် စာပို့ စနစ်နှင့် တူသည့် အင်တာ န သုံး စာပို့ခြငတူသည့််း Application တူသည့် အင်တာ နက်သုံး စာပို့ခြင်း Application&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Incognito Mode</title>
+      <link>/articles/incognito/</link>
+      <pubDate>Thu, 27 Feb 2020 01:06:33 +0630</pubDate>
+      
+      <guid>/articles/incognito/</guid>
+      <description>Incognito ဆိုသည်မှာ Chrome တွင်ပါရှိသော private mode တစ်ခုဖြစ်ပါသည်။ Incognito mode အားအသုံးပြုပါက</description>
+    </item>
+    
+  </channel>
+</rss>

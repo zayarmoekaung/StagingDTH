@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Digital Tea House</title>
+    <link>/categories/</link>
+    <description>Recent content in Categories on Digital Tea House</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 27 Feb 2020 01:07:40 +0630</lastBuildDate>
+    
+	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Launch</title>
+      <link>/categories/launch/</link>
+      <pubDate>Thu, 27 Feb 2020 01:07:40 +0630</pubDate>
+      
+      <guid>/categories/launch/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
