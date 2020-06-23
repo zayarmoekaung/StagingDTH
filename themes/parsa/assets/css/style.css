@@ -918,6 +918,19 @@ textarea.form-control {
 }
 
 .navbar .nav-item .nav-link {
+  font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 140%;
+/* identical to box height, or 20px */
+
+display: flex;
+align-items: flex-end;
+
+/* Text Black */
+
+color: #2E2E2E;
   padding: 20px 15px;
 }
 

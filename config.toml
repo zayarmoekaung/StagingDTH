@@ -46,24 +46,28 @@ description = "Digital Tea House : ကျုပ်တို့  ရဲ့ လက
 home = "Home"
 layout = "1"
 
+[[menu.main]]
+name = "ပင်မစာမျက်နှာ"
+weight = 1
+URL = "/"
 
 [[menu.main]]
 name = "ဒစ်ဂျစ်တယ်ဖတ်စရာများ"
-weight = 1 
+weight = 2 
 URL = "articles"
 
 [[menu.main]]
 name = "စာအုပ်စင်"
-weight = 2
+weight = 3
 URL = "materials"
 [[menu.main]]
-name = "podcast"
-weight = 3
+name = "ဒစ်ဂျစ်တယ်ရေဒီယို"
+weight = 4
 URL = "radio"
 
 [[menu.main]]
 name = "လဖက်ရည်ဆိုင်အကြောင်း"
-weight = 4
+weight = 5
 URL = "about"
 
 
