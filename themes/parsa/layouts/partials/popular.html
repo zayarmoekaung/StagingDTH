@@ -35,7 +35,7 @@ bottom: 20.63%;
 }
 .popularbody{
   position: absolute;
-width: 1x29px;
+width: 229px;
 height: 63px;
 left: 0px;
 top: 0px;
@@ -45,9 +45,11 @@ background: #FFFFFF;
   }
  @media (max-width:480px){
 .popular{
-  display: none;
+  
   position: relative;
-  width: 100%;
+  display: flex;
+width: 300%;
+overflow: scroll;
   height: 80px;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -57,9 +59,9 @@ background: #FFFFFF;
 position: relative;    
 
 width: 229px;
-height: 63px;
-padding-left: 40px;
-margin-left: 40px;
+height: 50px;
+margin-left: 10px;
+
 }
 .popularimg{
   position: absolute;
@@ -84,7 +86,7 @@ margin-right: 40px;
 background: #FFFFFF;
 }
 .popu{
-  display: none;
+  overflow: scroll;
   width: 100%;
   height: 90px;
   background-color: #FFFFFF
@@ -93,12 +95,11 @@ background: #FFFFFF;
 }
 }
 </style>
-
+<h6 class="mb-4">Popular ဆောင်းပါးများ</h6>
 <div class="popu">
-  <h6 class="mb-4">Popular ဆောင်းပါးများ</h6>
-<div class="popular"  >
+ <div class="popular"  >
     
-    {{ range first 3 ( where .Site.Pages "Type" "post") }}
+    {{ range first 4 ( where .Site.Pages "Type" "post") }}
     <div class="popularblock " >
      
       <div class="popularbody">
