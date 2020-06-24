@@ -7,7 +7,7 @@ categories:
 tags:
   - "Internet"
   - "Security"
-image: "/Image (2).png"
+image: "/images/Communication Security-01.jpg"
 ---
 
 

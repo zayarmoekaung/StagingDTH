@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Digital Tea House : ကျုပ်တို့  ရဲ့ လက်ဘက်ရည်ဆိုင် &#39;Digital Tea House&#39;  က ပုံမှန်လက်ဘက်ရည်ဆိုင်မဟုတ်ဘူးဗျ။ ဒစ်ဂျစ်တယ်လက်ဘက်ရည်ဆိုင် ။">
   
-  <meta name="generator" content="Hugo 0.64.1" />
+  <meta name="generator" content="Hugo 0.73.0" />
 
   <!-- plugins -->
   
@@ -49,12 +49,8 @@
 overflow: hidden;    
 position: relative;
 width: 100%;    
-
 max-height: 90px; 
-
 min-height: 90px;
-
-
 background: #FFFFFF;
   }
  input[type=text], select {
@@ -82,8 +78,8 @@ bottom: 73.28%;
   .msearchbox{
 
 display: none;
- position: fixed;
-    z-index: 999;
+position: fixed;
+z-index: 999;
 width: 100%;
 max-width: 480px;
 min-width: 300px;
@@ -103,7 +99,7 @@ background: #FFFFFF;
 
 
   .mlogo{
-    position: absolute;
+position: absolute;
 left: 4.17%;
 right: 64.17%;
 top: 23.33%;
@@ -125,11 +121,9 @@ font-weight: bold;
 font-size: 16px;
 line-height: 25px;
  
-
 display: flex;
 align-items: center;
 text-align: center;
-
 color: #2E2E2E;
 
   }
@@ -141,11 +135,6 @@ top: 26.67%;
 bottom: 51.11%;
 width: 24px;
 height: 24px;
-
-
- 
-
-
 transform: matrix(-1, 0, 0, 1, 0, 0);
  } 
  .mitem{
@@ -165,7 +154,7 @@ background: #F2F2F2;
  }
  .mbanr{
   
-  position: absolute;
+position:relative;
 width: 100%;
 max-width: 480px;
 min-width: 300px;
@@ -179,7 +168,8 @@ background: #F57000;
 width: 56px;
 height: 25px;
 left: 151px;
-top: 33px;
+top: 15px;
+margin-top: 10px;
 
 font-family: Pyidaungsu;
 font-style: normal;
@@ -195,12 +185,11 @@ text-align: center;
 color: #FFFFFF;
  }
  .mback{
-  position: absolute;
+  position:relative;
 left: 5%;
 right: 100%;
-top: 20%;
-bottom: 0%;
-
+margin-bottom: 20px;
+margin-top: 20px;
 
 
  }
@@ -215,15 +204,18 @@ bottom: 0%;
 
  }
  .menuitem{
-position: absolute;
+position: relative;
 width: 100%;
 max-width: 480px;
 min-width: 300px;
 height: 81px;
 left: -1px;
+text-align: center;
 justify-content: center;
 background: #FFFFFF;
+margin-bottom: 5px;
  }
+ 
  .menutxt{
 position: absolute;
 left: 20%;
@@ -347,17 +339,20 @@ display: none;
   <div class="mbanr">
     <label class="mbantit">menu</label>
     <img class="mback" src="/mback.png" onclick="appear()">
-    <div class="menuitem" style="top: 90px;">
+    <div class="menuitem">
+      <a href="/"><label class="menutxt">ပင်မစာမျက်နှာ</label></a>
+    </div>
+    <div class="menuitem">
       <a href="/articles"><label class="menutxt">ဒစ်ဂျစ်တယ်ဖတ်စရာများ</label></a>
     </div>
-    <div class="menuitem" style="top: 181px;">
+    <div class="menuitem" >
       <a href="/materials"><label class="menutxt">စာအုပ်စင်</label></a>
     </div>
-    <div class="menuitem" style="top: 272px;">
-      <a href="/radio"><label class="menutxt">podcast</label></a>
+    <div class="menuitem" >
+      <a href="/radio"><label class="menutxt">ဒစ်ဂျစ်တယ်ရေဒီယို</label></a>
     </div>
-    <div class="menuitem" style="top: 363px;">
-      <a href="/about"><label class="menutxt">တီးေဟာက်စ်အကြောင်း</label></a>
+    <div class="menuitem" >
+      <a href="/about"><label class="menutxt">တီးဟောက်စ်အကြောင်း</label></a>
     </div>
     
   </div>
@@ -656,14 +651,61 @@ background: #FFFFFF;
   }
  @media (max-width:480px){
 .popular{
-  display: none;
- }
+  
+  position: relative;
+
+  display: flex;
+width: 300%;
+overflow: scroll;
+  height: 80px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  
+  }
+  .popularblock{
+position: relative;    
+
+width: 229px;
+height: 50px;
+margin-left: 10px;
+
+}
+.popularimg{
+  position: absolute;
+left: 71.62%;
+right: 2.18%;
+top: 7.94%;
+bottom: 20.63%;
+
+}
+.popularthumb{
+  object-fit: cover;
+  width: 60px;
+  height: 45px;
+}
+.popularbody{
+  position: absolute;
+width: 229px;
+height: 63px;
+left: 0px;
+top: 0px;
+margin-right: 40px;
+background: #FFFFFF;
+}
+.popu{
+  overflow: scroll;
+  width: 100%;
+  height: 90px;
+  background-color: #FFFFFF
+  box-shadow: 0px 3px 10px rgba(150, 150, 150, 0.26);
+  
+}
 }
 </style>
-
-
-<div class="popular"  >
-    <h6 class="mb-4">Popular ဆောင်းပါးများ</h6>
+<h6 class="mb-4">Popular ဆောင်းပါးများ</h6>
+<div class="popu">
+ <div class="popular"  >
+    
     
     <div class="popularblock " >
      
@@ -698,7 +740,19 @@ background: #FFFFFF;
       </div>
     </div>
     
+    <div class="popularblock " >
+     
+      <div class="popularbody">
+        <h6><a class="text-dark" href="/articles/incognito/">Incognito Mode</a></h6>
+      </div>
+       <div class="popularthumb popularimg" >
+        <a href="/articles/incognito/"><img class="mr-3 post-thumb-sm"
+         src="/Image%20%283%29.png"></a>
+      </div>
+    </div>
+    
    
+  </div>
   </div><style type="text/css">
 @media (max-width:480px){
 .sub{
@@ -759,7 +813,8 @@ height: 35px;
 left: 0px;
 top: 35.23%;
 bottom: 54.83%;
-
+border-radius: 6px;
+border-width: 2px;
 background: #F2F2F2;
 }
 .subbtn{
@@ -1021,7 +1076,7 @@ background-color: #FFFFFF
  <a href=""><img src="/logo_email.png" class="email"></a>
  <label class="share">ကြိုက်တယ်ဆို Share ပေးပါဦး </label>
  
- <div  class="fbs"  data-href="https://www.digitalteahouse.info/" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.digitalteahouse.info%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore" ><img src="fbshare.png"></a></div>
+ <div  class="fbs"  data-href="https://www.digitalteahouse.info/" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.digitalteahouse.info%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore" ><img src="/fbshare.png"></a></div>
    
 </div>
 
@@ -1241,8 +1296,9 @@ bottom: 0%;
   position:fixed;
   text-align: center;
   justify-content: bottom ;
+  margin: 15%;
   bottom: 10%;
-  width: 100%;
+  width: 80%;
   height: auto;
   border: none;
   background: #FFFFFF;
