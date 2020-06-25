@@ -10,3 +10,5 @@ tags:
 image: "/images/Browser History-01.jpg"
 ---
 Gmail ဆိုသည်မှာ စာတိုက် စာပို့ စနစ်နှင့် တူသည့် အင်တာ န သုံး  စာပို့ခြငတူသည့််း Application တူသည့် အင်တာ နက်သုံး စာပို့ခြင်း Application...
+
+{{< popu >}}
