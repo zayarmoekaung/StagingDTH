@@ -40,6 +40,7 @@ Gmail > Setting > Management your google account > Password >  2 step verificati
 
 {{< title title="အဆင့်(၂)">}}
 
+{{< popu >}}
 2 steps verification
 ထပ်ဆင့်အတည်ပြုခြင်း
 
