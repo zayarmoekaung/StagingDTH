@@ -1,5 +1,16 @@
 <style type="text/css">
 @media (max-width:480px){
+.fsubmit{
+position: absolute;	
+width: 100%;
+height: 29.8px;
+background: #F57000;
+border-radius: 6px;
+border-color: #0000;
+color: #FFFFFF;
+margin-top: 20px;
+bottom: 10px;
+}	
 .fbtn1{
 position: absolute;
 left: 10px;
@@ -295,7 +306,42 @@ color: #F57000;
 
 }
 
+.mbtn2{
+position: absolute;	
+background: #FFFFFF;
+width: 165px;height: 35px;
+/* Shadow */
 
+box-shadow: 0px 3px 3px rgba(117, 117, 117, 0.26);
+border-radius: 6px;
+border-width: 2px;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 25px;
+/* or 179% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+/* orange */
+
+color: #F57000;
+}
+.mbtn2:hover {border-color: #F57000;
+	color: #FFFFFF;
+}
+
+.mbtn2:active {
+  border-color: #F57000;
+  box-shadow: 0 5px #F57000;
+  transform: translateY(4px);
+  color: #FFFFFF;
+
+}
 }
 
 @media (min-width: 500px){
@@ -494,6 +540,41 @@ color: #F57000;
   transform: translateY(4px);
   color: #FFFFFF;
 }
+.mbtn2{
+position: absolute;	
+background: #FFFFFF;
+width: 165px;height: 35px;
+/* Shadow */
+
+box-shadow: 0px 3px 3px rgba(117, 117, 117, 0.26);
+border-radius: 6px;
+border-width: 2px;
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 25px;
+/* or 179% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+/* orange */
+
+color: #F57000;
+}
+.mbtn2:hover {border-color: #F57000;
+	color: #FFFFFF;
+}
+
+.mbtn2:active {
+  border-color: #F57000;
+  box-shadow: 0 5px #F57000;
+  transform: translateY(4px);
+  color: #FFFFFF;
+
+}
 .filterbox{
 
 }
@@ -530,7 +611,9 @@ top: 244px;
 .fbtn3{
 top: 284px;
 }
-
+.fsubmit{
+	display: none;
+}
 }	
 
 .artmenuimg{
@@ -587,17 +670,17 @@ top: 284px;
 			</button>
 		</div>
 		<div id="teal" class="teal" style="display: none;">
-			<button class="mbtn fbtn1" class="t1" style="top: 406px;">
-				<img class="artmenuimg" src="/tlv1.png">
+			<button class="mbtn2  fbtn1" class="t1" style="top: 406px;">
+				<img  src="/tlv1.png">
 			</button>
-			<button class="mbtn fbtn2" class="t1" style=" top: 406px;">
-				<img class="artmenuimg" src="/tlv2.png">
+			<button class="mbtn2  fbtn2" class="t1" style=" top: 406px;">
+				<img  src="/tlv2.png">
 			</button>
-			<button class="mbtn fbtn1" class="t2" style="top: 455px;">
-				<img class="artmenuimg" src="/tlv3.png">
+			<button class="mbtn2 fbtn1" class="t2" style="top: 455px;">
+				<img  src="/tlv3.png">
 			</button>
-			<button class="mbtn fbtn2" class="t2" style="top: 455px;">
-				<img class="artmenuimg" src="/tlv4.png">
+			<button class="mbtn2  fbtn2" class="t2" style="top: 455px;">
+				<img  src="/tlv4.png">
 			</button>
 		</div>
 
@@ -621,20 +704,20 @@ top: 284px;
 			</button>
 		</div>
 		<div id="tealw" class="teal" style="display: none;">
-			<button class="mbtn "  style="left: 395px; top: 204px;">
+			<button class="mbtn2 "  style="left: 395px; top: 204px;">
 				<img src="/tlv1.png">
 			</button>
-			<button class="mbtn "  style=" left: 565px; top: 204px;">
+			<button class="mbtn2 "  style=" left: 565px; top: 204px;">
 				<img src="/tlv2.png">
 			</button>
-			<button class="mbtn "  style="left: 395px; top: 249px;">
+			<button class="mbtn2 "  style="left: 395px; top: 249px;">
 				<img src="/tlv3.png">
 			</button>
-			<button class="mbtn "  style="left: 565px; top: 249px;">
+			<button class="mbtn2 "  style="left: 565px; top: 249px;">
 				<img src="/tlv4.png">
 			</button>
 		</div>
-
+		<button type="submit" class="fsubmit">Submit</button>
 		</div>
 <script type="text/javascript">
 	mycat = document.getElementById('cate')
