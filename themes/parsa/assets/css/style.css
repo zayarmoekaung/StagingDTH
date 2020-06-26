@@ -11,9 +11,9 @@ VERSION:	0.1.1
 
 .longbtn{
 position: relative;
-width: 100%;
+width: 90%;
 height: 40px;
-left: 0px;
+margin-left: 20px;
 margin-top: 10px;
 background: #FFFFFF;
 box-shadow: 0px 3px 3px rgba(117, 117, 117, 0.26);

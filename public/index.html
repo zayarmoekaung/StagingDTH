@@ -374,31 +374,31 @@ display: none;
         
         
         <li class="nav-item">
-          <a class="nav-link text-uppercase text-dark" href="/"> ပင်မစာမျက်နှာ </a>
+          <a class="nav-link teext" href="/"> ပင်မစာမျက်နှာ </a>
         </li>
         
         
         
         <li class="nav-item">
-          <a class="nav-link text-uppercase text-dark" href="/articles"> ဒစ်ဂျစ်တယ်ဖတ်စရာများ </a>
+          <a class="nav-link teext" href="/articles"> ဒစ်ဂျစ်တယ်ဖတ်စရာများ </a>
         </li>
         
         
         
         <li class="nav-item">
-          <a class="nav-link text-uppercase text-dark" href="/materials"> စာအုပ်စင် </a>
+          <a class="nav-link teext" href="/materials"> စာအုပ်စင် </a>
         </li>
         
         
         
         <li class="nav-item">
-          <a class="nav-link text-uppercase text-dark" href="/radio"> ဒစ်ဂျစ်တယ်ရေဒီယို </a>
+          <a class="nav-link teext" href="/radio"> ဒစ်ဂျစ်တယ်ရေဒီယို </a>
         </li>
         
         
         
         <li class="nav-item">
-          <a class="nav-link text-uppercase text-dark" href="/about"> လဖက်ရည်ဆိုင်အကြောင်း </a>
+          <a class="nav-link teext" href="/about"> လဖက်ရည်ဆိုင်အကြောင်း </a>
         </li>
         
         
@@ -529,30 +529,28 @@ body {font-family: Verdana, sans-serif; margin:0}
 
 }  
 .stxt { 
+position: relative;  
 font-style: normal;
 font-weight: normal;
 width: 169px;
 height: 115px;
-
+left: 0;
 text-align: center;
-
 font-size: 12px;
 line-height: 160%;
- 
-
-margin-top: 80px;
 letter-spacing: 0.02em;
 
 color: #FFFFFF;}
 
 .stitle{
   text-align: center;
-position: absolute;
+position: relative;
 width: 100%;
 height: 62px;
-left: 5px;
-top: 19px;
-margin-bottom: 40px;
+left: 0;
+margin-top: 50px;
+margin-bottom: 20px;
+
  
 
 
@@ -592,6 +590,7 @@ z-index: 80;
 
 }   
 .stxt { 
+ position: relative; 
 font-style: normal;
 font-weight: normal;
 min-width: 360px;
@@ -600,19 +599,16 @@ height: 119px;
 font-size: 20px;
 line-height: 140%;
  
-
-margin-top: 80px;
+margin-left: 50px;
 letter-spacing: 0.02em;
 
 color: #FFFFFF;}
 
 .stitle{
   text-align: center;
-position: absolute;
+position: relative;
 width: 100%;
-height: 62px;
-left: 50px;
-top: 19px;
+margin: 50px;
 
  
 
@@ -1086,6 +1082,7 @@ height: 35px;
 left: 15px;
 top: 348px;
 background: #F2F2F2;
+border:none;
 border-radius: 6px;
 
 }
@@ -1245,7 +1242,7 @@ color: #FFFFFF;
 }
 
 </style>
-<audio id="audio" ontimeupdate="updateBar()"  >
+<audio id="audio"  ontimeupdate="updateBar()"  >
   <source src="https://otamyanmar.podbean.com/mf/play/n8f29q/11.mp3" type="audio/mpeg">
   </audio>
 
@@ -1317,6 +1314,64 @@ window.SetVolume = function(val)
     player.volume = val / 100;
     console.log('After: ' + player.volume);
 }
+
+ 
+function setCookie(c_name,value,exdays)
+{
+    var exdate=new Date();
+    exdate.setDate(exdate.getDate() + exdays);
+    var c_value=escape(value) + 
+    ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+    document.cookie=c_name + "=" + c_value;
+}
+
+function getCookie(c_name)
+{
+    var i,x,y,ARRcookies=document.cookie.split(";");
+    for (i=0;i<ARRcookies.length;i++)
+    {
+      x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+      y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+      x=x.replace(/^\s+|\s+$/g,"");
+      if (x==c_name)
+        {
+        return unescape(y);
+        }
+      }
+}
+
+var song = document.getElementsByTagName('audio')[0];
+var played = false;
+var tillPlayed = getCookie('timePlayed');
+function update()
+{
+    if(!played){
+        if(tillPlayed){
+        song.currentTime = tillPlayed;
+        song.play();
+        played = true;
+        audioControl.src="/pause.png"
+        audioControl2.src="/pause.png"
+        }
+        else {
+                song.play();
+                played = true;
+                   audioControl.src="/pbt.png"
+                    audioControl2.src="/pbt.png"
+        }
+    }
+
+    else {
+    setCookie('timePlayed', song.currentTime);
+    }
+    }
+setInterval(update,1000); 
+     
+
+
+
+
+
 
 
 var canvasWidth = 200
@@ -1688,6 +1743,11 @@ color: #2E2E2E;
 	font-style: normal;
 
 }
+.lvbtn{
+	width: auto;
+	background-color: #0000;
+	
+}
 </style>
 
 <div class=" level" style="padding: 20px;">
@@ -1698,15 +1758,15 @@ color: #2E2E2E;
 		<label id="lab1c" class="labl lab1c">တစ်ခွက်သောက်မယ်</label>
 	</div>
 	<div class="row">
-		<button class="btt" onmouseover="lablshow(lab2c)" onmouseout="lablhide(lab2c)"><img class="ig" src="/tea2.png"></button>
+		<button class="btt lvbtn" onmouseover="lablshow(lab2c)" onmouseout="lablhide(lab2c)"><img class="ig" src="/tea2.png"></button>
 			<label id="lab2c" class="labl lab1c">နှစ်ခွက် ဆွဲမယ်</label>
 	</div>
 	<div class="row">
-		<button class="btt" onmouseover="lablshow(lab3c)" onmouseout="lablhide(lab3c)"><img class="ig" src="/tea3.png"></button>
+		<button class="btt lvbtn" onmouseover="lablshow(lab3c)" onmouseout="lablhide(lab3c)"><img class="ig" src="/tea3.png"></button>
 			<label id="lab3c" class="labl lab1c">သုံးခွက် မော့မယ် </label>
 	</div>
 	<div class="row">
-		<button class="btt" onmouseover="lablshow(lab4c)" onmouseout="lablhide(lab4c)"><img class="ig" src="/teaa4.png"></button>
+		<button class="btt lvbtn" onmouseover="lablshow(lab4c)" onmouseout="lablhide(lab4c)"><img class="ig" src="/teaa4.png"></button>
 			<label id="lab4c" class="labl lab1c">အခါးရည် ပဲသောက်တော့မယ်</label>
 	</div>
 </div>
@@ -1725,20 +1785,18 @@ function lablhide(x) {
 position: relative;
 overflow: hidden;    
 width: 100%;
-max-width: 480px;
-min-width: 300px;
 height: 100%;
-
 margin-top: 20px;
 background: #F2F2F2;
   }
   .artbox{
 
 width: 100%;
-max-width: 380px;
-min-width: 300px;
 height: 200px;
 background: #FFFFFF;
+left: 0;
+margin-left: 15px;
+margin-right: 15px;
 } 
 
 .artheader{
@@ -1759,14 +1817,14 @@ color: #2E2E2E;
 } 
 
 .arttitle{
-
-right: 65.26%;
-margin-left: 15px;
-
+position: absolute;
+left: 15px;
+top: 15px;
+width: 100%;
 font-family: Pyidaungsu;
 font-style: normal;
 font-weight: bold;
-font-size: 16px;
+font-size: 14px;
 line-height: 36px;
 
  
@@ -1774,9 +1832,11 @@ line-height: 36px;
 color: #2E2E2E;
 }
 .artinfo{
-
-margin-left: 15px;
-  font-family: Pyidaungsu;
+position: absolute;
+position: absolute;  
+top: 41px;
+left: 15px;
+font-family: Pyidaungsu;
 font-style: normal;
 font-weight: normal;
 font-size: 12px;
@@ -1813,8 +1873,8 @@ right: 33.33%;
 top: 45.61%;
 bottom: 17.54%;
 width: 220px;
- 
-overflow: scroll;
+height: 100%;
+
 
 }
 .sumtxt{
@@ -1871,14 +1931,12 @@ margin-top: 80px;
 background: #F2F2F2;
 	}
   .artbox{
-  
+position: relative;  
 margin-left: 20px;
 margin-right: 10px;
 width: 670px;
 height: 228px;
-left: 235px;
-top: 1821px;
-margin-bottom: 40px;
+margin-bottom: 10px;
 
 background: #FFFFFF;
 }
@@ -1901,12 +1959,11 @@ color: #2E2E2E;
 } 
 
 .arttitle{
-left: 2.63%;
-right: 65.26%;
+position: absolute;  
+left: 15px;
+top: 15px;
 
-margin-top: 15px;
-margin-left: 15px;
-  font-family: Pyidaungsu;
+font-family: Pyidaungsu;
 font-style: normal;
 font-weight: bold;
 font-size: 21px;
@@ -1917,9 +1974,10 @@ line-height: 36px;
 color: #2E2E2E;
 }
 .artinfo{
-
-margin-left: 15px;
-  font-family: Pyidaungsu;
+position: absolute;  
+top: 61px;
+left: 15px;
+font-family: Pyidaungsu;
 font-style: normal;
 font-weight: normal;
 font-size: 12px;
@@ -1930,18 +1988,18 @@ line-height: 22px;
 color: #9C9C9C;
 }
 .tlevel{
-  position: absolute;
+position: absolute;
 width: 62.91px;
 height: 16px;
-margin-left: 15px;
+left: 15px;
 top: 78px;
 }
 .postimg{
   position: absolute;
-left: 69.3%;
-right: 2.63%;
+left: 68.3%;
 top: 14.91%;
 bottom: 14.91%;
+margin-right: 30px;
 object-fit: cover;
 width: 190px;
 height: 168px;
@@ -1955,14 +2013,12 @@ top: 45.61%;
 bottom: 17.54%;
 width: 365px;
 margin-left: 15px;
- 
-overflow: scroll;
--ms-overflow-style: none;
+height: 100%;
+
+
 
 }
-.sum::-webkit-scrollbar {
-  display: none;
-}
+
 .sumtxt{
   font-family: Pyidaungsu;
 font-style: normal;
@@ -2006,7 +2062,12 @@ top: 2773px;
 }
 
 }
-
+a.fill-div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
 
 </style>
 <div class="art">
@@ -2017,12 +2078,12 @@ top: 2773px;
         <div class="row masonry-container">
           
 
-          <div class="artbox">
-          	<a href="/articles/facebooksecurity/">
+          <div class="artbox" onclick="location.href='\/articles\/facebooksecurity\/';" style="cursor: pointer;">
+          	
             <article>
-            	 <h4 class="arttitle"><a href="/articles/facebooksecurity/" class="arttitle" >Facebook Security  </a></h4>
-            	
-              <li class=" artinfo">Feb 27, 2020</li>
+              
+            	 <div class="arttitle">Facebook Security  </div>
+            	 <div class=" artinfo">Feb 27, 2020</div>
              
             </ul>
             <div class="tlevel">
@@ -2036,19 +2097,18 @@ top: 2773px;
             	
              	 
               
-             <div class="sum sumtxt"><a style="color: #2E2E2E" href="/articles/facebooksecurity/" ><p>Facebook ကို လူအများအပြားမှ လူမှုရေး စီးပွားရေး နိုင်ငံရေး အစရှိသည့် နယ်ပယ်ပေါင်းစုံတွင်</p>
-<p>ရည်ရွယ်ချက်အမျိုးမျိုးဖြင့် ကျယ်ပြန့်စွာ အသုံးပြုလာကြရာ အမြတ်ထုတ်မှုများ ၊ မသမာမှုများနှင့် ငွေကြေးခြိမ်းခြောက်လိုမှုများကြောင့်   လုံခြုံရေးဆိုင်ရာပြဿနာတွေကို ကြုံတွေ့လာရပါသည်။</p></a></div>
+             <div class="sum sumtxt"><a style="color: #2E2E2E" href="/articles/facebooksecurity/" >Facebook ကို လူအများအပြားမှ လူမှုရေး စီးပွားရေး နိုင်ငံရေး အစရှိသည့် နယ်ပယ်ပေါင်းစုံတွင် ရည်ရွယ်ချက်အမျိုးမျိုးဖြင့်</a></div>
               </article>
-            </a>
+
           </div>
           
 
-          <div class="artbox">
-          	<a href="/articles/firefoxbrowserhistory/">
+          <div class="artbox" onclick="location.href='\/articles\/firefoxbrowserhistory\/';" style="cursor: pointer;">
+          	
             <article>
-            	 <h4 class="arttitle"><a href="/articles/firefoxbrowserhistory/" class="arttitle" >FFbrowserHistory</a></h4>
-            	
-              <li class=" artinfo">Feb 27, 2020</li>
+              
+            	 <div class="arttitle">FFbrowserHistory</div>
+            	 <div class=" artinfo">Feb 27, 2020</div>
              
             </ul>
             <div class="tlevel">
@@ -2064,16 +2124,16 @@ top: 2773px;
               
              <div class="sum sumtxt"><a style="color: #2E2E2E" href="/articles/firefoxbrowserhistory/" >Gmail ဆိုသည်မှာ စာတိုက် စာပို့ စနစ်နှင့် တူသည့် အင်တာ န သုံး စာပို့ခြငတူသည့််း Application တူသည့် အင်တာ နက်သုံး စာပို့ခြင်း Application&hellip;</a></div>
               </article>
-            </a>
+
           </div>
           
 
-          <div class="artbox">
-          	<a href="/articles/gmailsecurity/">
+          <div class="artbox" onclick="location.href='\/articles\/gmailsecurity\/';" style="cursor: pointer;">
+          	
             <article>
-            	 <h4 class="arttitle"><a href="/articles/gmailsecurity/" class="arttitle" >Gmail Security</a></h4>
-            	
-              <li class=" artinfo">Feb 27, 2020</li>
+              
+            	 <div class="arttitle">Gmail Security</div>
+            	 <div class=" artinfo">Feb 27, 2020</div>
              
             </ul>
             <div class="tlevel">
@@ -2089,16 +2149,16 @@ top: 2773px;
               
              <div class="sum sumtxt"><a style="color: #2E2E2E" href="/articles/gmailsecurity/" >Gmail ဆိုသည်မှာ စာတိုက် စာပို့ စနစ်နှင့် တူသည့် အင်တာ န သုံး စာပို့ခြငတူသည့််း Application တူသည့် အင်တာ နက်သုံး စာပို့ခြင်း Application&hellip;</a></div>
               </article>
-            </a>
+
           </div>
           
 
-          <div class="artbox">
-          	<a href="/articles/incognito/">
+          <div class="artbox" onclick="location.href='\/articles\/incognito\/';" style="cursor: pointer;">
+          	
             <article>
-            	 <h4 class="arttitle"><a href="/articles/incognito/" class="arttitle" >Incognito Mode</a></h4>
-            	
-              <li class=" artinfo">Feb 27, 2020</li>
+              
+            	 <div class="arttitle">Incognito Mode</div>
+            	 <div class=" artinfo">Feb 27, 2020</div>
              
             </ul>
             <div class="tlevel">
@@ -2114,15 +2174,16 @@ top: 2773px;
               
              <div class="sum sumtxt"><a style="color: #2E2E2E" href="/articles/incognito/" >Incognito ဆိုသည်မှာ Chrome တွင်ပါရှိသော private mode တစ်ခုဖြစ်ပါသည်။ Incognito mode အားအသုံးပြုပါက</a></div>
               </article>
-            </a>
+
           </div>
           
       	  
    			
-
-</div>
 <a href="/articles"><button class="longbtn">ဆောင်းပါးတွေဆီသို့</button></a> 
 </div>
+
+</div>
+
 </section>
 	<div class="scm"><style type="text/css">
 @media (max-width:480px){
@@ -2441,7 +2502,7 @@ background-color: #FFFFFF
 	<label class="title">အားပေးပါဦး!</label>
  <label class="subtxt"> ဖောက်သည်အရင်းချာများ subscribe လုပ်ရန်</label> 
     
-    <input type="text" id="email" class="formsc" name="email" placeholder=" E-mail ">
+    <input type="text" id="email" class="formsc" name="email" placeholder=" သင့်၏ E-mail လိပ်စာထည့်ပါ ">
   <button class="subbtn" type="submit" value="submit">Submit</button>
  <a href="https://web.facebook.com/digitalteahouse2020"><img src="/Logo_fb.png" class="fb"></a>
  <a href=""><img src="/logo_email.png" class="email"></a>

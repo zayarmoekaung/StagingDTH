@@ -374,31 +374,31 @@ display: none;
         
         
         <li class="nav-item">
-          <a class="nav-link text-uppercase text-dark" href="/"> ပင်မစာမျက်နှာ </a>
+          <a class="nav-link teext" href="/"> ပင်မစာမျက်နှာ </a>
         </li>
         
         
         
         <li class="nav-item">
-          <a class="nav-link text-uppercase text-dark" href="/articles"> ဒစ်ဂျစ်တယ်ဖတ်စရာများ </a>
+          <a class="nav-link teext" href="/articles"> ဒစ်ဂျစ်တယ်ဖတ်စရာများ </a>
         </li>
         
         
         
         <li class="nav-item">
-          <a class="nav-link text-uppercase text-dark" href="/materials"> စာအုပ်စင် </a>
+          <a class="nav-link teext" href="/materials"> စာအုပ်စင် </a>
         </li>
         
         
         
         <li class="nav-item">
-          <a class="nav-link text-uppercase text-dark" href="/radio"> ဒစ်ဂျစ်တယ်ရေဒီယို </a>
+          <a class="nav-link teext" href="/radio"> ဒစ်ဂျစ်တယ်ရေဒီယို </a>
         </li>
         
         
         
         <li class="nav-item">
-          <a class="nav-link text-uppercase text-dark" href="/about"> လဖက်ရည်ဆိုင်အကြောင်း </a>
+          <a class="nav-link teext" href="/about"> လဖက်ရည်ဆိုင်အကြောင်း </a>
         </li>
         
         
@@ -450,6 +450,17 @@ display: none;
 
 <section class="contain"><style type="text/css">
 @media (max-width:480px){
+.fsubmit{
+position: absolute;	
+width: 100%;
+height: 29.8px;
+background: #F57000;
+border-radius: 6px;
+border-color: #0000;
+color: #FFFFFF;
+margin-top: 20px;
+bottom: 10px;
+}	
 .fbtn1{
 position: absolute;
 left: 10px;
@@ -539,7 +550,7 @@ left: 65.83%;
 right: 25.28%;
 top: 30.71%;
 bottom: 92.2%;
-z-index: 100;
+z-index: 50;
 
  
 
@@ -638,7 +649,7 @@ height: 20.29px;
 left: 241px;
 top: 50%;
 cursor: pointer;
-z-index: 100;
+z-index: 80;
 
  
 
@@ -745,7 +756,42 @@ color: #F57000;
 
 }
 
+.mbtn2{
+position: absolute;	
+background: #FFFFFF;
+width: 165px;height: 35px;
+ 
 
+box-shadow: 0px 3px 3px rgba(117, 117, 117, 0.26);
+border-radius: 6px;
+border-width: 2px;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 25px;
+ 
+
+display: flex;
+align-items: center;
+text-align: center;
+
+ 
+
+color: #F57000;
+}
+.mbtn2:hover {border-color: #F57000;
+	color: #FFFFFF;
+}
+
+.mbtn2:active {
+  border-color: #F57000;
+  box-shadow: 0 5px #F57000;
+  transform: translateY(4px);
+  color: #FFFFFF;
+
+}
 }
 
 @media (min-width: 500px){
@@ -840,7 +886,7 @@ height: 19px;
 left: 255px;
 top: 134px;
 cursor: pointer;
-z-index: 199;
+z-index: 90;
 
  
 
@@ -944,6 +990,41 @@ color: #F57000;
   transform: translateY(4px);
   color: #FFFFFF;
 }
+.mbtn2{
+position: absolute;	
+background: #FFFFFF;
+width: 165px;height: 35px;
+ 
+
+box-shadow: 0px 3px 3px rgba(117, 117, 117, 0.26);
+border-radius: 6px;
+border-width: 2px;
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 25px;
+ 
+
+display: flex;
+align-items: center;
+text-align: center;
+
+ 
+
+color: #F57000;
+}
+.mbtn2:hover {border-color: #F57000;
+	color: #FFFFFF;
+}
+
+.mbtn2:active {
+  border-color: #F57000;
+  box-shadow: 0 5px #F57000;
+  transform: translateY(4px);
+  color: #FFFFFF;
+
+}
 .filterbox{
 
 }
@@ -980,7 +1061,9 @@ top: 244px;
 .fbtn3{
 top: 284px;
 }
-
+.fsubmit{
+	display: none;
+}
 }	
 
 .artmenuimg{
@@ -1000,7 +1083,6 @@ top: 284px;
 			<label class="indc cat">Category( )</label>
 			<label class="indc tlv">Tea level ( )</label>
 			<label class="indc tg">Tag ( )</label>
-
 		</div>
 			
 		
@@ -1037,17 +1119,17 @@ top: 284px;
 			</button>
 		</div>
 		<div id="teal" class="teal" style="display: none;">
-			<button class="mbtn fbtn1" class="t1" style="top: 406px;">
-				<img class="artmenuimg" src="/tlv1.png">
+			<button class="mbtn2  fbtn1" class="t1" style="top: 406px;">
+				<img  src="/tlv1.png">
 			</button>
-			<button class="mbtn fbtn2" class="t1" style=" top: 406px;">
-				<img class="artmenuimg" src="/tlv2.png">
+			<button class="mbtn2  fbtn2" class="t1" style=" top: 406px;">
+				<img  src="/tlv2.png">
 			</button>
-			<button class="mbtn fbtn1" class="t2" style="top: 455px;">
-				<img class="artmenuimg" src="/tlv3.png">
+			<button class="mbtn2 fbtn1" class="t2" style="top: 455px;">
+				<img  src="/tlv3.png">
 			</button>
-			<button class="mbtn fbtn2" class="t2" style="top: 455px;">
-				<img class="artmenuimg" src="/tlv4.png">
+			<button class="mbtn2  fbtn2" class="t2" style="top: 455px;">
+				<img  src="/tlv4.png">
 			</button>
 		</div>
 
@@ -1071,20 +1153,20 @@ top: 284px;
 			</button>
 		</div>
 		<div id="tealw" class="teal" style="display: none;">
-			<button class="mbtn "  style="left: 395px; top: 204px;">
+			<button class="mbtn2 "  style="left: 395px; top: 204px;">
 				<img src="/tlv1.png">
 			</button>
-			<button class="mbtn "  style=" left: 565px; top: 204px;">
+			<button class="mbtn2 "  style=" left: 565px; top: 204px;">
 				<img src="/tlv2.png">
 			</button>
-			<button class="mbtn "  style="left: 395px; top: 249px;">
+			<button class="mbtn2 "  style="left: 395px; top: 249px;">
 				<img src="/tlv3.png">
 			</button>
-			<button class="mbtn "  style="left: 565px; top: 249px;">
+			<button class="mbtn2 "  style="left: 565px; top: 249px;">
 				<img src="/tlv4.png">
 			</button>
 		</div>
-
+		<button type="submit" class="fsubmit">Submit</button>
 		</div>
 <script type="text/javascript">
 	mycat = document.getElementById('cate')
@@ -1502,6 +1584,7 @@ height: 35px;
 left: 15px;
 top: 348px;
 background: #F2F2F2;
+border:none;
 border-radius: 6px;
 
 }
@@ -1661,7 +1744,7 @@ color: #FFFFFF;
 }
 
 </style>
-<audio id="audio" ontimeupdate="updateBar()"  >
+<audio id="audio"  ontimeupdate="updateBar()"  >
   <source src="https://otamyanmar.podbean.com/mf/play/n8f29q/11.mp3" type="audio/mpeg">
   </audio>
 
@@ -1733,6 +1816,64 @@ window.SetVolume = function(val)
     player.volume = val / 100;
     console.log('After: ' + player.volume);
 }
+
+ 
+function setCookie(c_name,value,exdays)
+{
+    var exdate=new Date();
+    exdate.setDate(exdate.getDate() + exdays);
+    var c_value=escape(value) + 
+    ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+    document.cookie=c_name + "=" + c_value;
+}
+
+function getCookie(c_name)
+{
+    var i,x,y,ARRcookies=document.cookie.split(";");
+    for (i=0;i<ARRcookies.length;i++)
+    {
+      x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+      y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+      x=x.replace(/^\s+|\s+$/g,"");
+      if (x==c_name)
+        {
+        return unescape(y);
+        }
+      }
+}
+
+var song = document.getElementsByTagName('audio')[0];
+var played = false;
+var tillPlayed = getCookie('timePlayed');
+function update()
+{
+    if(!played){
+        if(tillPlayed){
+        song.currentTime = tillPlayed;
+        song.play();
+        played = true;
+        audioControl.src="/pause.png"
+        audioControl2.src="/pause.png"
+        }
+        else {
+                song.play();
+                played = true;
+                   audioControl.src="/pbt.png"
+                    audioControl2.src="/pbt.png"
+        }
+    }
+
+    else {
+    setCookie('timePlayed', song.currentTime);
+    }
+    }
+setInterval(update,1000); 
+     
+
+
+
+
+
 
 
 var canvasWidth = 200
@@ -1824,20 +1965,17 @@ function convertElapsedTime(inputSeconds) {
 position: relative;
 overflow: hidden;    
 width: 100%;
-max-width: 480px;
-min-width: 300px;
 height: 100%;
-
+padding: 15px;
 margin-top: 20px;
 background: #F2F2F2;
   }
   .artbox{
-
 width: 100%;
-max-width: 380px;
-min-width: 300px;
 height: 200px;
 background: #FFFFFF;
+margin-right: 15px;
+margin-left: 15px;
 } 
 
 .artheader{
@@ -1913,7 +2051,7 @@ top: 45.61%;
 bottom: 17.54%;
 width: 220px;
  
-overflow: scroll;
+height: 100%;
 
 }
 .sumtxt{
@@ -1971,8 +2109,8 @@ background: #F2F2F2;
   }
   .artbox{
   
-margin-left: 20px;
-margin-right: 10px;
+margin-left: 15px;
+margin-right: 15px;
 width: 670px;
 height: 228px;
 left: 235px;
@@ -2054,9 +2192,7 @@ top: 45.61%;
 bottom: 17.54%;
 width: 365px;
 margin-left: 15px;
- 
-overflow: scroll;
--ms-overflow-style: none;
+height: 100%;
 
 }
 .sum::-webkit-scrollbar {
@@ -2135,8 +2271,7 @@ top: 2773px;
               
                
               
-             <div class="sum sumtxt"><a style="color: #2E2E2E" href="/articles/facebooksecurity/" ><p>Facebook ကို လူအများအပြားမှ လူမှုရေး စီးပွားရေး နိုင်ငံရေး အစရှိသည့် နယ်ပယ်ပေါင်းစုံတွင်</p>
-<p>ရည်ရွယ်ချက်အမျိုးမျိုးဖြင့် ကျယ်ပြန့်စွာ အသုံးပြုလာကြရာ အမြတ်ထုတ်မှုများ ၊ မသမာမှုများနှင့် ငွေကြေးခြိမ်းခြောက်လိုမှုများကြောင့်   လုံခြုံရေးဆိုင်ရာပြဿနာတွေကို ကြုံတွေ့လာရပါသည်။</p></a></div>
+             <div class="sum sumtxt"><a style="color: #2E2E2E" href="/articles/facebooksecurity/" >Facebook ကို လူအများအပြားမှ လူမှုရေး စီးပွားရေး နိုင်ငံရေး အစရှိသည့် နယ်ပယ်ပေါင်းစုံတွင် ရည်ရွယ်ချက်အမျိုးမျိုးဖြင့်</a></div>
               </article>
             </a>
           </div>
@@ -2537,7 +2672,7 @@ background-color: #FFFFFF
 	<label class="title">အားပေးပါဦး!</label>
  <label class="subtxt"> ဖောက်သည်အရင်းချာများ subscribe လုပ်ရန်</label> 
     
-    <input type="text" id="email" class="formsc" name="email" placeholder=" E-mail ">
+    <input type="text" id="email" class="formsc" name="email" placeholder=" သင့်၏ E-mail လိပ်စာထည့်ပါ ">
   <button class="subbtn" type="submit" value="submit">Submit</button>
  <a href="https://web.facebook.com/digitalteahouse2020"><img src="/Logo_fb.png" class="fb"></a>
  <a href=""><img src="/logo_email.png" class="email"></a>
