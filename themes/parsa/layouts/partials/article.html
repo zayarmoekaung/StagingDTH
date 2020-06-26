@@ -37,13 +37,13 @@ color: #2E2E2E;
 
 .arttitle{
 position: absolute;
-top: 5%;
-right: 65.26%;
-margin-left: 15px;
+left: 15px;
+top: 15px;
+width: 100%;
 font-family: Pyidaungsu;
 font-style: normal;
 font-weight: bold;
-font-size: 16px;
+font-size: 14px;
 line-height: 36px;
 
 /* Text Black */
@@ -52,9 +52,10 @@ color: #2E2E2E;
 }
 .artinfo{
 position: absolute;
-top: 6%;
-margin-left: 15px;
-  font-family: Pyidaungsu;
+position: absolute;  
+top: 41px;
+left: 15px;
+font-family: Pyidaungsu;
 font-style: normal;
 font-weight: normal;
 font-size: 12px;
@@ -149,13 +150,11 @@ margin-top: 80px;
 background: #F2F2F2;
 	}
   .artbox{
-  
+position: relative;  
 margin-left: 20px;
 margin-right: 10px;
 width: 670px;
 height: 228px;
-left: 235px;
-top: 1821px;
 margin-bottom: 10px;
 
 background: #FFFFFF;
@@ -179,12 +178,11 @@ color: #2E2E2E;
 } 
 
 .arttitle{
-left: 2.63%;
-right: 65.26%;
-top: 5%;
-margin-top: 15px;
-margin-left: 15px;
-  font-family: Pyidaungsu;
+position: absolute;  
+left: 15px;
+top: 15px;
+
+font-family: Pyidaungsu;
 font-style: normal;
 font-weight: bold;
 font-size: 21px;
@@ -195,9 +193,10 @@ line-height: 36px;
 color: #2E2E2E;
 }
 .artinfo{
-top: 6%;
-margin-left: 15px;
-  font-family: Pyidaungsu;
+position: absolute;  
+top: 61px;
+left: 15px;
+font-family: Pyidaungsu;
 font-style: normal;
 font-weight: normal;
 font-size: 12px;
@@ -208,10 +207,10 @@ line-height: 22px;
 color: #9C9C9C;
 }
 .tlevel{
-  position: absolute;
+position: absolute;
 width: 62.91px;
 height: 16px;
-margin-left: 15px;
+left: 15px;
 top: 78px;
 }
 .postimg{
@@ -298,13 +297,12 @@ a.fill-div {
         <div class="row masonry-container">
           {{ range $paginator.Pages }}
 
-          <div class="artbox">
+          <div class="artbox" onclick="location.href='{{.Permalink}}';" style="cursor: pointer;">
           	
             <article>
-              <
+              
             	 <div class="arttitle">{{.Title}}</div>
-            	
-              <div class=" artinfo">{{ .PublishDate.Format "Jan 02, 2006" }}</div>
+            	 <div class=" artinfo">{{ .PublishDate.Format "Jan 02, 2006" }}</div>
              
             </ul>
             <div class="tlevel">
