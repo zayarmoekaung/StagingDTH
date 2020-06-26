@@ -2,7 +2,7 @@ baseURL = "/"
 languageCode = "en-us"
 title = "Digital Tea House"
 theme = "parsa"
-summaryLength = "10"
+summaryLength = "5"
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]

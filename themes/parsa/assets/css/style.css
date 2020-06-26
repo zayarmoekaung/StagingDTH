@@ -114,6 +114,14 @@ width: 220px;
 overflow: scroll;
 
 }
+.teext{
+font-family: Pyidaungsu;
+font-weight: bold;
+font-size: 14px;
+line-height: 22px;
+/* identical to box height, or 157% */
+color: #9C9C9C;
+}
 .sumtxt{
   font-family: Pyidaungsu;
 font-style: normal;
