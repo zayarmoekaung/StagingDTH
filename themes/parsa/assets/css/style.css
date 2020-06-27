@@ -494,13 +494,14 @@ color: #2E2E2E;
 }
 .artinfo{
 position: absolute;  
-top: 61px;
+top: 51px;
 left: 15px;
 font-family: Pyidaungsu;
 font-style: normal;
 font-weight: normal;
 font-size: 12px;
 line-height: 22px;
+margin-bottom:10px; 
 /* identical to box height, or 157% */
 
 
@@ -511,7 +512,7 @@ position: absolute;
 width: 62.91px;
 height: 16px;
 left: 15px;
-top: 78px;
+top: 75px;
 }
 .postimg{
   position: absolute;
@@ -526,12 +527,10 @@ margin-right: 15px;
 }
 .sum{
 position: absolute;
-left: 2.63%;
-right: 33.33%;
-top: 45.61%;
+left: 15px;
+top: 47.61%;
 bottom: 17.54%;
 width: 365px;
-margin-left: 15px;
 height: 100%;
 
 
@@ -539,7 +538,7 @@ height: 100%;
 }
 
 .sumtxt{
-  font-family: Pyidaungsu;
+font-family: Pyidaungsu;
 font-style: normal;
 font-weight: normal;
 font-size: 16px;
