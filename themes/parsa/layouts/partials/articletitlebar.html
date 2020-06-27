@@ -370,6 +370,7 @@ background: #FFFFFF;
 
 border: 1px solid #8E8E8E;
 box-sizing: border-box;
+margin-bottom: 40px;
 }
 .tbanner{
 	overflow: hidden;
@@ -582,22 +583,23 @@ color: #F57000;
 	display: none;
 }
 .cate{
-	display: none;
-	position: absolute;
+display: none;
+position: absolute;
 left: 15%;
 right: 63.5%;
 top: 10.45%;
 bottom: 8.6%;
-z-index: 99;
+z-index: 60;
+
 }
 .teal{
-	display: none;
-	position: absolute;
+display: none;
+position: absolute;
 left: 17%;
 right: 63.5%;
 top: 10.45%;
 bottom: 8.6%;
-z-index: 90;
+z-index: 60;
 }
 .mftitle{
 	display: none;
@@ -622,7 +624,7 @@ top: 284px;
 	
 </style>
 
-<div class="tbar">
+<div id="tbar" class="tbar">
 	<div class="tbanner">
 		<label class="titletext">{{.Title}}</label>
 	</div>
@@ -745,12 +747,14 @@ top: 284px;
 			mycatw.style.display = "block";
 			myteaw.style.display = "block";
 			filterbox.style.display = "block";
+			tbar.style.height="360px";
 			isit = false;
 			
 		}else{
 			mycatw.style.display = "none";
 			myteaw.style.display = "none";
 			filterbox.style.display = "none";
+			tbar.style.height="224px"
 			isit = true;
 
 	}

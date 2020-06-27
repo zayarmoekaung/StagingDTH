@@ -42,6 +42,7 @@ width: 100%;
 height: 400px;
 left: 0px;
 margin-top: 40px;
+margin-bottom: 40PX;
 background: #FFFFFF;
 /* Text Grey */
 
@@ -109,13 +110,8 @@ color: #2E2E2E;
 .mart{
 position: relative;
 width: 100%;
-
 height: 100%;
 left: 0px;
-margin-top: 20px;
-
-/* Grey */
-
 background: #F2F2F2;
 }
 .marttitle{
@@ -254,6 +250,7 @@ width: 1000px;
 height: 228px;
 left: 220px;
 margin-top: 40px;
+margin-bottom: 40px;
 background: #FFFFFF;
 /* Text Grey */
 
@@ -317,11 +314,11 @@ align-items: flex-end;
 color: #2E2E2E;
 }
 .mart{
-	position: relative;
+position: relative;
 width: 600px;
 height: 100%;
 left: 220px;
-margin-top: 20px;
+
 
 /* Grey */
 
@@ -502,8 +499,10 @@ cursor: pointer;
 
 </div>
 
-
+<div style="position: relative;">
+{{- partial "subscribe.html" . -}}
 <div class="mart">
+
 	<label id="title" class="marttitle">FaceBookPost</label>
 	<label class="martdate">June 2020</label>
 	<div id="fbbox" class="fbbox">
@@ -551,9 +550,10 @@ cursor: pointer;
 		</div>
 		
 	</div>
-	
+	{{- partial "mobilesub.html" . -}}
 </div>
-{{- partial "subscribe.html" . -}}
+
+</div>
 <script type="text/javascript">
 	function showfb(n){
 		n.style.color="#F57000";

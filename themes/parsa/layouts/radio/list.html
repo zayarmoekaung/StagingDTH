@@ -397,6 +397,7 @@ color: #2E2E2E;
 .webbanner{
   position: relative;
   margin-top: 80px;
+  margin-bottom: 40px;
 }  
 .seemore{
   display: none;
@@ -749,7 +750,9 @@ color: #2E2E2E;
     <img class="pod" src="/bean.png" style="left: 212px;">
   </div>
 </div>
+<div style="position: relative;">
 
+  {{- partial "subscribe.html" . -}}
 <div class="castlist">
 	<label class="casttitle">Latest Episode</label>
 	<div class="podbox">
@@ -817,8 +820,9 @@ color: #2E2E2E;
 	</div>
 	
 </div>
-
-  {{- partial "subscribe.html" . -}}
+{{- partial "mobilesub.html" . -}}
+</div>
+  
 
 <script>
 

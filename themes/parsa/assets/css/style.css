@@ -136,6 +136,310 @@ color: #2E2E2E;
 }
 
   }
+@media (max-width:480px){
+.sub{
+overflow: hidden; 
+position: relative;
+width: 100%
+min-width: 360px;
+max-width: 480px;
+height: 382px;
+left: 0px;
+margin-top: 80px;
+margin-bottom: 40px;
+background: #FFFFFF;
+}
+
+.title{
+  position: absolute;
+width: 130px;
+height: 36px;
+left: 15px;
+top: 40px;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+line-height: 36px;
+display: flex;
+align-items: flex-end;
+
+/* [old] Text Black */
+
+color: #535353;
+
+}
+
+.subtxt{
+  position: absolute;
+width: 226px;
+height: 40.86px;
+left: 15px;
+top: 71px;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 20px;
+
+/* Text Black */
+
+color: #2E2E2E;
+}
+.formsc{
+
+width: 55px;
+height: 35px;
+left: 0px;
+top: 35.23%;
+bottom: 54.83%;
+border-radius: 6px;
+border-width: 2px;
+background: #F2F2F2;
+}
+.subbtn{
+  position: absolute;
+width: 100%;
+height: 29.8px;
+left:0px;
+top: 40.8%;
+bottom: 58.83%;
+background: #F57000;
+border-radius: 6px;
+border-color: #0000;
+color: #FFFFFF;
+margin-top: 20px;
+}
+.fb{
+  position: absolute;
+left: 5.86%;
+right: 82.42%;
+top: 60.35%;
+bottom: 40.91%;
+}
+.email{
+  position: absolute;
+left: 24.61%;
+right: 63.67%;
+top: 60.68%;
+bottom: 40.58%;
+}
+.share{
+  position: absolute;
+width: 228px;
+height: 50px;
+left: 15px;
+top: 70%;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 25px;
+/* or 179% */
+
+display: flex;
+align-items: center;
+
+/* Text Black */
+
+color: #2E2E2E;
+}
+.sharebtn{
+  position: absolute;
+left: 5.86%;
+right: 61.72%;
+top: 85.39%;
+bottom: 4.87%;
+}
+.sharebtn{
+  position: absolute;
+  width: 100%;
+  height: 80px;
+left: 5%;
+right: 65.67%;
+top: 89.04%;
+z-index: 100;
+bottom: 5.06%;
+background-color: #FFFFFF
+
+}
+.fbs{
+    position: absolute;
+   
+    z-index: 80;
+    left: 5%;
+    top: 89.04%;
+    bottom: 5.06%;
+    
+  }
+    .tweet{
+    position: absolute;
+    justify-content: center;
+    z-index: 80;
+    left: 30%;
+    margin-left: 10px;
+    top: 89.14%;
+    bottom: 5.06%;
+    
+  }
+
+}
+@media (min-width: 500px){
+  .sub{
+position: absolute;
+top: 0%;
+width: 256px;
+height: 308px;
+left: 944px;
+background: #FFFFFF;
+box-shadow: 0px 3px 3px rgba(117, 117, 117, 0.26);
+}
+
+.title{
+  position: absolute;
+width: 110px;
+height: 36px;
+left: 15px;
+top: 20px;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 21px;
+line-height: 36px;
+display: flex;
+align-items: flex-end;
+
+/* [old] Text Black */
+
+color: #535353;
+
+}
+
+.subtxt{
+  position: absolute;
+width: 226px;
+height: 40.86px;
+left: 15px;
+top: 61px;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 24px;
+
+/* Text Black */
+
+color: #2E2E2E;
+}
+.formsc{
+  position: absolute;
+width: 137px;
+height: 20.93px;
+left: 29px;
+top: 121.8px;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 21px;
+/* identical to box height */
+
+text-align: center;
+border: none;
+/* text grey */
+
+color: #8E8E8E;
+}
+.subbtn{
+  position: absolute;
+width: 63.15px;
+height: 29.8px;
+left: 188.23px;
+top: 117.2px;
+background: #F57000;
+border: none;
+color: #FFFFFF;
+}
+.fb{
+  position: absolute;
+left: 5.86%;
+right: 82.42%;
+top: 49.35%;
+bottom: 40.91%;
+}
+.email{
+  position: absolute;
+left: 24.61%;
+right: 63.67%;
+top: 49.68%;
+bottom: 40.58%;
+}
+.share{
+  position: absolute;
+width: 228px;
+height: 50px;
+left: 15px;
+top: 203px;
+
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 25px;
+/* or 179% */
+
+display: flex;
+align-items: center;
+
+/* Text Black */
+
+color: #2E2E2E;
+}
+.sharebtn{
+  position: absolute;
+left: 5.86%;
+right: 61.72%;
+top: 85.39%;
+bottom: 4.87%;
+}
+.sharebtn{
+  position: absolute;
+  width: 100%;
+  height: 80px;
+left: 5%;
+right: 65.67%;
+top: 89.04%;
+z-index: 100;
+bottom: 5.06%;
+background-color: #FFFFFF
+
+}
+.fbs{
+    position: absolute;
+   
+    z-index: 80;
+    left: 5%;
+    top: 80.04%;
+    bottom: 5.06%;
+    
+  }
+    .tweet{
+    position: absolute;
+    justify-content: center;
+    z-index: 80;
+    left: 50%;
+    top: 89.04%;
+    bottom: 5.06%;
+    
+  }
+
+  }
 
   @media (min-width: 500px){
   .art{
@@ -143,7 +447,6 @@ position: relative;
 width: 699px;
 height: 100%;
 left: 220px;
-margin-top: 80px;
 background: #F2F2F2;
   }
   .artbox{
