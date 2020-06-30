@@ -4,12 +4,15 @@
 <section class="contain">
 
 {{- partial "articletitlebar.html" . -}}
-{{- partial "podcast.html" . -}}
-{{- partial "allarticles.html" . -}}
 
 </section>
+<div style="position: relative;">
+
+{{- partial "allarticles.html" . -}}
+{{- partial "subscribe.html" . -}}
+</div>
 <div class="scm">
-	{{- partial "subscribe.html" . -}}
+	{{- partial "podcast.html" . -}}
 </div>
 
 
