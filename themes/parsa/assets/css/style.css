@@ -7,8 +7,16 @@ VERSION:	0.1.1
 /*------------------------------------------------------------------
 [TABLE OF CONTENTS]
 -------------------------------------------------------------------*/
-
-
+.postcv{
+width: 100%;
+}
+p
+{
+  font-size: 16px; 
+  color: #2e2e2e; 
+  line-height: 28%; 
+  letter-spacing: 1%;
+}
 .longbtn{
 position: relative;
 width: 100%;
@@ -17,7 +25,6 @@ left: 0;
 margin-top: 10px;
 margin-bottom: 20px;
 background: #FFFFFF;
-box-shadow: 0px 3px 3px rgba(117, 117, 117, 0.26);
 border: none;
 }
 /*for articles list*/
@@ -481,7 +488,7 @@ color: #2E2E2E;
 position: absolute;  
 left: 15px;
 top: 15px;
-
+width: 100%;
 font-family: Pyidaungsu;
 font-style: normal;
 font-weight: bold;
@@ -494,7 +501,7 @@ color: #2E2E2E;
 }
 .artinfo{
 position: absolute;  
-top: 51px;
+top: 55px;
 left: 15px;
 font-family: Pyidaungsu;
 font-style: normal;

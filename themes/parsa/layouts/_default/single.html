@@ -2,8 +2,8 @@
 <style type="text/css">
   .back{
    
-left: 180px;
 
+margin-left: 150px;
 top: 180px;
 padding: 10px;
 cursor: pointer;
@@ -88,7 +88,7 @@ color: #2E2E2E;
 <!-- /page-title -->
 
 <!-- blog single -->
-<section>
+<section style="margin-bottom: 100px;">
   <div class="container">
     <div class="row">
       <div class="col-lg-8">
@@ -97,7 +97,7 @@ color: #2E2E2E;
           
         </ul>
         <article class="content">
-          <img src="{{.Params.Image | absURL }}" alt="post-thumb" class=" postcvcrop">
+          <img src="{{.Params.Image | absURL }}" alt="post-thumb" class=" postcv">
           
         <!--converter-->
 
@@ -127,11 +127,11 @@ color: #2E2E2E;
             <article >
                <h4 class="arttitle"><a class="arttitle" >{{.Title}}</a></h4>
               
-              <li class="list-inline-item artinfo"><i class=" mr-2"></i>{{ .PublishDate.Format "Jan 02, 2006" }}</li>
+              <li class=" artinfo">{{ .PublishDate.Format "Jan 02, 2006" }}</li>
               
             </ul>
             <div class="tlevel">
-              <img src="/tlevel1.png">
+              <img style="margin-left: 15px;" src="/artlevel1.png">
             </div>
               <a href="{{.Permalink}}" >
                 
