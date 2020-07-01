@@ -7,6 +7,258 @@ VERSION:	0.1.1
 /*------------------------------------------------------------------
 [TABLE OF CONTENTS]
 -------------------------------------------------------------------*/
+@font-face {
+  font-family: Pyidaungsu;
+  font-weight: 400;
+  font-style: normal;
+  src: url(/fonts/Pyidaungsu-2.5.3_Regular.ttf) format('truetype');
+} 
+/*----------------------category Form --------------------------------------*/
+@media (max-width:480px){
+.mrow1{
+top: 0px;
+} 
+.mrow2{
+top: 61px;
+}
+.mrow3{
+top: 123px;
+}
+.mcol1{
+left: 0px;
+margin-right: 2%;
+}
+.mcol2{
+  right: 0px;
+}
+
+.vban{
+
+position: relative; 
+overflow: hidden;
+width: 100%;
+
+height: 487px;
+
+margin-top: 20px;
+background: #F2F2F2;
+}
+.catimg{
+position: relative;
+width: 187px;
+height: auto;
+left: 20%;
+margin-top: 20px
+
+background: #C4C4C4;
+}
+.catbtn{
+  
+  width: 130.54px;
+height: 35px;
+margin-bottom: 10px;
+background: #FFFFFF;
+/* Shadow */
+
+box-shadow: 0px 3px 3px rgba(117, 117, 117, 0.26);
+border: none;
+
+justify-content: center;
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 25px;
+color: #F57000;
+
+}
+.web{
+  display: none;
+}
+.mobile{
+  position: relative;
+}
+
+}
+
+ @media (min-width: 500px){
+ .mobile{
+  display: none;
+ }
+ .web{
+  padding-bottom: 30px;
+  margin-left: 60px;
+  margin-right: 60px;
+  
+ 
+ }
+  
+.vban{
+position: relative;
+width: 700px;
+height: 380px;
+left: 220px;
+margin-top: 80px;
+background: #F2F2F2;
+}
+
+.catimg{
+position: absolute;
+left: 30.39%;
+right: 36.98%;
+top: 6.91%;
+bottom: 80.94%;
+padding: 30px;
+margin-top: 30px;
+z-index: 80;
+}
+.catbtn{
+  background: #FFFFFF;
+/* Shadow */
+
+box-shadow: 0px 3px 3px rgba(117, 117, 117, 0.26);
+border-radius: 6px;
+width: 228px;
+height: 40px;
+justify-content: center;
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 15px;
+padding-left:58px;
+color: #F57000;
+}
+  }
+
+.cattit{
+padding-top: 30px;
+padding-bottom: 30px;
+padding-left: 15%;
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 28px;
+line-height: 48px;
+display: flex;
+align-items: flex-end;
+
+/* Text Black */
+
+color: #2E2E2E;
+}
+/*-----------------End--------------------*/
+
+/*--------------------Level Form------------------------*/
+@media (max-width:480px){
+  .level{
+overflow: hidden;   
+position: relative;
+width: 100%;
+max-width: 480px;
+min-width: 300px;
+height:100%;
+
+margin-top: 40px;
+background: #F2F2F2;
+  }
+.labl{
+
+width: 100%;
+height: 25px;
+left: 49px; 
+margin-left: 25%;
+font-family: Pyidaungsu;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 25px;
+/* identical to box height, or 139% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+/* text black */
+
+color: #2E2E2E;
+
+}
+} 
+
+@media (min-width: 500px){  
+  .level{
+overflow: hidden;   
+position: relative;
+width: 700px;
+height: 100%;
+left: 220px;
+margin-top: 80px;
+margin-bottom: 80px;
+padding-left: 60px;
+padding-right: 60px; 
+  
+background: #F2F2F2;
+
+
+  }
+
+  
+.labl{
+  padding-top: 10px;
+  display: none;
+}
+.lab1c{
+  transition: ease-in-out all .15s;
+  display: block;
+  opacity: 0;
+  
+}
+.teacuptit{
+  padding-left: 60px;
+  padding-right:  60px;
+
+}
+.teadis{
+  padding-left: 60px;
+  padding-right:  60px;
+}
+.btt{
+  padding-left: 60px;
+  padding-right:  60px;
+}
+
+}
+.teacuptit{
+  padding-top: 30px;
+  font-family: Pyidaungsu;
+font-style: normal;
+font-weight: bold;
+font-size: 28px;
+line-height: 48px;
+display: flex;
+align-items: flex-end;
+
+/* Text Black */
+
+color: #2E2E2E;
+
+}
+.teadis{
+  padding-top: 20px;
+  font-family: Pyidaungsu;
+  font-style: normal;
+
+}
+.lvbtn{
+  width: auto;
+  background-color: #0000;
+  
+}
+
+
+/*---------------------End----------------------------*/
+
 .postcv{
 width: 100%;
 }
@@ -1197,7 +1449,7 @@ align-items: flex-end;
 /* Text Black */
 
 color: #2E2E2E;
-  padding: 20px 15px;
+padding: 20px 15px;
 }
 
 @media (max-width: 991px) {
