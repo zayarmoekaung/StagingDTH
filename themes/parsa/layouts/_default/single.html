@@ -1,5 +1,12 @@
 {{ define "main" }}
 <style type="text/css">
+ @media (min-width: 500px){
+.subsig{
+  position: absolute;
+  top: 743px;
+
+}
+
   .back{
    
 
@@ -105,7 +112,9 @@ color: #2E2E2E;
 
         <!--converter-->  
         {{- partial "popular.html" . -}} 
+        <div class="subsig">
         {{- partial "subscribe.html" . -}}  
+        </div>
         </article>
 
       
