@@ -33,6 +33,11 @@ bottom: 20.63%;
   width: 60px;
   height: 45px;
 }
+.poputitle{
+  margin-left: 5px;
+  color: #2e2e2e;
+  font-family: pyidaungzu;
+}
 .popularbody{
   position: absolute;
 width: 229px;
@@ -53,12 +58,12 @@ background: #FFFFFF;
 <div class="popu">
   
  <div class="popular"  >
-    <h6 class="mb-4" style="margin-top: 5px;">Popular ဆောင်းပါးများ</h6>
+    <h6 class="mb-4" style="margin-top: 5px; margin-left: 5px;">Popular ဆောင်းပါးများ</h6>
     {{ range first 4 ( where .Site.Pages "Type" "post") }}
     <div class="popularblock">
      
       <div class="popularbody">
-        <h6><a class="text-dark" href="{{ .Permalink }}">{{.Title}}</a></h6>
+        <h6><a class="poputitle" href="{{ .Permalink }}">{{.Title}}</a></h6>
       </div>
        <div class="popularthumb popularimg" >
         <a href="{{ .Permalink }}"><img class="mr-3 post-thumb-sm"
