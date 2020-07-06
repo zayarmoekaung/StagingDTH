@@ -69,7 +69,7 @@ font-style: normal;
 font-weight: bold;
 font-size: 12px;
 line-height: 25px;
-color: #F57000;
+color: #E87B2E;
 
 }
 .web{
@@ -127,7 +127,7 @@ font-weight: bold;
 font-size: 14px;
 line-height: 15px;
 padding-left:58px;
-color: #F57000;
+color: #E87B2E;
 }
   }
 
@@ -465,7 +465,7 @@ height: 29.8px;
 left:0px;
 top: 40.8%;
 bottom: 58.83%;
-background: #F57000;
+background: #E87B2E;
 border-radius: 6px;
 border-color: #0000;
 color: #FFFFFF;
@@ -621,7 +621,7 @@ width: 63.15px;
 height: 29.8px;
 left: 188.23px;
 top: 117.2px;
-background: #F57000;
+background: #E87B2E;
 border: none;
 color: #FFFFFF;
 }
@@ -825,7 +825,7 @@ overflow: hidden;
 position: relative;
 width: 100%;
 height: 100%;
-background: #F57000;
+background: #E87B2E;
 padding: 30px;
 } 
 .mbmenu{
@@ -1308,11 +1308,11 @@ a.text-dark:hover {
 }
 
 .bg-primary {
-  background: #f57000 !important;
+  background: #E87B2E !important;
 }
 
 .bg-secondary {
-  background: #f57000 !important;
+  background: #E87B2E !important;
 }
 
 .text-primary {
