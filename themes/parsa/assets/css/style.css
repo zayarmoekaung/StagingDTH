@@ -151,6 +151,13 @@ color: #2E2E2E;
 
 /*--------------------Level Form------------------------*/
 @media (max-width:480px){
+  .igg{
+   width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0px 3px 3px rgba(117, 117, 117, 0.26);
+ 
+}
   .level{
 overflow: hidden;   
 position: relative;
@@ -202,7 +209,14 @@ background: #F2F2F2;
 
 
   }
-
+.igg{
+   width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0px 3px 3px rgba(117, 117, 117, 0.26);
+    margin-left: 60px;
+    
+}
   
 .labl{
   padding-top: 10px;
@@ -924,8 +938,8 @@ margin-top: 80px;
     width: 100%;
     height: auto;
     border-radius: 6px;
-  box-shadow: 0px 3px 3px rgba(117, 117, 117, 0.26);
-  margin-left: 60px;
+    box-shadow: 0px 3px 3px rgba(117, 117, 117, 0.26);
+
   }
 
 .crop{
